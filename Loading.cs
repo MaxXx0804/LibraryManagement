@@ -40,6 +40,14 @@ namespace Final_Project_OOP_and_DSA
             this.Top += e.Y - lastPoint.Y;
         }
     }
-}
+
+        private void TextChange_Tick(object sender, EventArgs e)
+        {
+            string[] LoadingScreenText = {"Finding books...", "Cleaning books...", "Checking dictionary...", "Debugging program..."};
+            Random rand = new Random();
+            int num = rand.Next(LoadingScreenText.Length);
+            lbl_LoadingScreenText.Text = LoadingScreenText[num];
+        }
+    }
 
 }
