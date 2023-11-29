@@ -29,11 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Loading));
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.lbl_LoadingScreenText = new System.Windows.Forms.Label();
+            this.TextChange = new System.Windows.Forms.Timer(this.components);
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.TextChange = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -59,6 +60,12 @@
             this.lbl_LoadingScreenText.TabIndex = 3;
             this.lbl_LoadingScreenText.Text = "Checking resources...";
             // 
+            // TextChange
+            // 
+            this.TextChange.Enabled = true;
+            this.TextChange.Interval = 3000;
+            this.TextChange.Tick += new System.EventHandler(this.TextChange_Tick);
+            // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
@@ -81,12 +88,6 @@
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
-            // TextChange
-            // 
-            this.TextChange.Enabled = true;
-            this.TextChange.Interval = 3000;
-            this.TextChange.Tick += new System.EventHandler(this.TextChange_Tick);
-            // 
             // Loading
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -97,6 +98,7 @@
             this.Controls.Add(this.lbl_LoadingScreenText);
             this.Controls.Add(this.progressBar1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Loading";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
