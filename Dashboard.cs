@@ -90,6 +90,12 @@ namespace Final_Project_OOP_and_DSA
                 panel_Logo_LogoHandler.Size = new Size(175, 50);
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+            tc_Dashboard_TabControl.SelectedTab = tb_Dashboard;
+        }
     }
 }
 

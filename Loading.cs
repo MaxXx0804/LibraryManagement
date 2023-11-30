@@ -13,45 +13,60 @@ namespace Final_Project_OOP_and_DSA
 {
 
     public partial class Loading : Form
-    {     
-
-    public Loading()
     {
-            InitializeComponent();
-    }    
+        private int ticks = 2;
+        private NotifyIcon notifyIcon;
+        public Loading()
+        {
+                InitializeComponent();
+        }    
     
-    private Point lastPoint;
+        private Point lastPoint;
 
-    protected override void OnMouseDown(MouseEventArgs e)
-    {
-        base.OnMouseDown(e);
-        if (e.Button == MouseButtons.Left)
+        protected override void OnMouseDown(MouseEventArgs e)
         {
-            lastPoint = new Point(e.X, e.Y);
+            base.OnMouseDown(e);
+            if (e.Button == MouseButtons.Left)
+            {
+                lastPoint = new Point(e.X, e.Y);
+            }
         }
-    }
 
-    protected override void OnMouseMove(MouseEventArgs e)
-    {
-        base.OnMouseMove(e);
-        if (e.Button == MouseButtons.Left)
+        protected override void OnMouseMove(MouseEventArgs e)
         {
-            this.Left += e.X - lastPoint.X;
-            this.Top += e.Y - lastPoint.Y;
-        }
-    }
-
-        private void TextChange_Tick(object sender, EventArgs e)
-        {
-            string[] LoadingScreenText = {"Finding books...", "Cleaning books...", "Checking dictionary...", "Debugging program..."};
-            Random rand = new Random();
-            int num = rand.Next(LoadingScreenText.Length);
-            lbl_LoadingScreenText.Text = LoadingScreenText[num];
+            base.OnMouseMove(e);
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - lastPoint.X;
+                this.Top += e.Y - lastPoint.Y;
+            }
         }
 
         private void Loading_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void TextChange_Tick(object sender, EventArgs e)
+        {
+            string[] LoadingScreenText = { "Finding books...", "Cleaning books...", "Checking dictionary...", "Debugging program..." , "Bombing Hiroshima..."};
+            Random rand = new Random();
+            int num = rand.Next(LoadingScreenText.Length);
+            lbl_LoadingScreenText.Text = LoadingScreenText[num];
+            if (ticks > 0)
+            {
+                ticks--;
+            }
+            else
+            {
+                frm_Login frm = new frm_Login();
+                frm.Show();
+                notifyIcon = new NotifyIcon();
+                notifyIcon.Icon = this.Icon;
+                notifyIcon.Visible = false;
+                this.Hide();
+                TextChange.Stop();
+            }
         }
     }
 
