@@ -103,9 +103,29 @@ namespace Final_Project_OOP_and_DSA.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_Black {
+            get {
+                object obj = ResourceManager.GetObject("Icon Black", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Loading_Screen_Image {
             get {
                 object obj = ResourceManager.GetObject("Loading Screen Image", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Login_SideImage {
+            get {
+                object obj = ResourceManager.GetObject("Login SideImage", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
