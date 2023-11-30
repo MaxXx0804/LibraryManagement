@@ -17,6 +17,8 @@ namespace Final_Project_OOP_and_DSA
         public Dashboard()
         {
             InitializeComponent();
+            tc_Dashboard_TabControl.Location = new Point(35, -20);
+            panel_Sidebar_Sidebar.Location = new Point(0, 0);
         }
 
         private void Dashboard_Load(object sender, EventArgs e)
@@ -93,8 +95,32 @@ namespace Final_Project_OOP_and_DSA
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
             tc_Dashboard_TabControl.SelectedTab = tb_Dashboard;
+        }
+
+        private void btn_BookList_Click(object sender, EventArgs e)
+        {
+            tc_Dashboard_TabControl.SelectedTab = tb_BookList;
+        }
+
+        private void btn_BookBorrowing_Click(object sender, EventArgs e)
+        {
+            tc_Dashboard_TabControl.SelectedTab = tb_BookBorrowing;
+        }
+
+        private void btn_BookReturning_Click(object sender, EventArgs e)
+        {
+            tc_Dashboard_TabControl.SelectedTab = tb_BookReturning;
+        }
+
+        private void btn_BorrowerList_Click(object sender, EventArgs e)
+        {
+            tc_Dashboard_TabControl.SelectedTab = tb_BorrowerList;
+        }
+
+        private void btn_Payment_Click(object sender, EventArgs e)
+        {
+            tc_Dashboard_TabControl.SelectedTab = tb_Payment;
         }
     }
 }
