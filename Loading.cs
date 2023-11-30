@@ -48,6 +48,11 @@ namespace Final_Project_OOP_and_DSA
             int num = rand.Next(LoadingScreenText.Length);
             lbl_LoadingScreenText.Text = LoadingScreenText[num];
         }
+
+        private void Loading_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

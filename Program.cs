@@ -16,7 +16,7 @@ namespace Final_Project_OOP_and_DSA
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Loading());
+            Application.Run(new Dashboard());
         }
     }
 }
