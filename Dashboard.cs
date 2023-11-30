@@ -96,6 +96,13 @@ namespace Final_Project_OOP_and_DSA
             
             tc_Dashboard_TabControl.SelectedTab = tb_Dashboard;
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            frm_Login loginForm = new frm_Login();
+            loginForm.Show();
+        }
     }
 }
 

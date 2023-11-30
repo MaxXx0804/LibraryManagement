@@ -24,5 +24,20 @@ namespace Final_Project_OOP_and_DSA
             this.Close();
 
         }
+
+        private void frm_Login_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void close_Btn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
