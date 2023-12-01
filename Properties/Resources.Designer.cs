@@ -63,6 +63,36 @@ namespace Final_Project_OOP_and_DSA.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Book_Listed {
+            get {
+                object obj = ResourceManager.GetObject("Book Listed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Books_Available {
+            get {
+                object obj = ResourceManager.GetObject("Books Available", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Books_Lent {
+            get {
+                object obj = ResourceManager.GetObject("Books Lent", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Circle_Logo {
             get {
                 object obj = ResourceManager.GetObject("Circle Logo", resourceCulture);
@@ -126,6 +156,26 @@ namespace Final_Project_OOP_and_DSA.Properties {
         internal static System.Drawing.Bitmap Login_SideImage {
             get {
                 object obj = ResourceManager.GetObject("Login SideImage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Pending_Payment {
+            get {
+                object obj = ResourceManager.GetObject("Pending Payment", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Registered_User {
+            get {
+                object obj = ResourceManager.GetObject("Registered User", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
