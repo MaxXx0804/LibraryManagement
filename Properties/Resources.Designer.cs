@@ -63,6 +63,16 @@ namespace Final_Project_OOP_and_DSA.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Berenice {
+            get {
+                object obj = ResourceManager.GetObject("Berenice", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Book_Listed {
             get {
                 object obj = ResourceManager.GetObject("Book Listed", resourceCulture);
@@ -113,6 +123,16 @@ namespace Final_Project_OOP_and_DSA.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Dracula {
+            get {
+                object obj = ResourceManager.GetObject("Dracula", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Final_Project_Designs {
             get {
                 object obj = ResourceManager.GetObject("Final Project Designs", resourceCulture);
@@ -143,6 +163,16 @@ namespace Final_Project_OOP_and_DSA.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap In_a_Grove {
+            get {
+                object obj = ResourceManager.GetObject("In_a_Grove", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Loading_Screen_Image {
             get {
                 object obj = ResourceManager.GetObject("Loading Screen Image", resourceCulture);
@@ -156,6 +186,26 @@ namespace Final_Project_OOP_and_DSA.Properties {
         internal static System.Drawing.Bitmap Login_SideImage {
             get {
                 object obj = ResourceManager.GetObject("Login SideImage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Memoir_of_Queen_Adelaide {
+            get {
+                object obj = ResourceManager.GetObject("Memoir_of_Queen_Adelaide", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap My_Own_Affairs {
+            get {
+                object obj = ResourceManager.GetObject("My_Own_Affairs", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -183,9 +233,59 @@ namespace Final_Project_OOP_and_DSA.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Royal_Girls_and_Royal_Courts {
+            get {
+                object obj = ResourceManager.GetObject("Royal_Girls_and_Royal_Courts", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Sidebar_Exit_Logo {
             get {
                 object obj = ResourceManager.GetObject("Sidebar Exit Logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap The_Demon_Spell {
+            get {
+                object obj = ResourceManager.GetObject("The_Demon_Spell", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap The_Golden_Bough {
+            get {
+                object obj = ResourceManager.GetObject("The_Golden_Bough", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap The_Worst_Journey_in_the_World {
+            get {
+                object obj = ResourceManager.GetObject("The_Worst_Journey_in_the_World", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap The_Yellow_Wallpaper {
+            get {
+                object obj = ResourceManager.GetObject("The_Yellow_Wallpaper", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

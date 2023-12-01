@@ -329,6 +329,36 @@
   <ItemGroup>
     <None Include="Resources\Top Line Design.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Berenice.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dracula.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\In a Grove.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Memoir of Queen Adelaide.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\My Own Affairs.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Royal Girls and Royal Courts.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\The Demon Spell.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\The Golden Bough.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\The Worst Journey in the World.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\The Yellow Wallpaper.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\Microsoft.Data.SqlClient.SNI.5.1.1\build\net462\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('packages\Microsoft.Data.SqlClient.SNI.5.1.1\build\net462\Microsoft.Data.SqlClient.SNI.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

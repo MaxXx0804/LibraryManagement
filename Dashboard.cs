@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Diagnostics;
+using Final_Project_OOP_and_DSA.Properties;
 
 namespace Final_Project_OOP_and_DSA
 {
@@ -16,6 +17,8 @@ namespace Final_Project_OOP_and_DSA
     {
         private int limit = -140;
         private int currentPosition = 0;
+        private Color panelBackground = Color.Transparent;
+        private Color labelForeColor = Color.Black;
         public Dashboard()
         {
             InitializeComponent();
@@ -27,50 +30,73 @@ namespace Final_Project_OOP_and_DSA
 
         public void InitializeBookListContent()
         {
+            flp_BookList.Controls.Clear();
             DatabaseConnection databaseConnection = new DatabaseConnection();
             SqlConnection cn = databaseConnection.DatabaseConnect();
             List<string[]> results = databaseConnection.QueryDatabase(cn);
             for (int i = 0; i < results.Count; i++)
             {
-                object[] res = null;
+                object[] res = results[i];
+
+                PictureBox pictureBox = new PictureBox();
+                pictureBox.Dock = DockStyle.Fill;
+                pictureBox.Image = (Bitmap)Resources.ResourceManager.GetObject(res[7].ToString());
+                pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+
                 Label lbl = new Label();
-                res = results[i];
-                Debug.WriteLine(res[1].ToString());
-                lbl.Text = res[1].ToString();
+                lbl.Text = res[0].ToString();
                 lbl.Dock = DockStyle.Bottom;
                 lbl.TextAlign = ContentAlignment.MiddleCenter;
                 lbl.Size = new Size(0, 30);
-                lbl.ForeColor = Color.White;
+                lbl.ForeColor = labelForeColor;
                 lbl.Font = new Font("Bahnschrift", 7);
 
                 Panel panel = new Panel();
                 panel.Size = new Size(125, 175);
-                panel.BackColor = Color.ForestGreen;
+                panel.BackColor = panelBackground;
+
+                panel.Controls.Add(pictureBox);
                 panel.Controls.Add(lbl);
                 flp_BookList.Controls.Add(panel);
             }
         }
         public void InitializeBookListContentByFilter(string filter)
         {
+            flp_BookList.Controls.Clear();
             DatabaseConnection databaseConnection = new DatabaseConnection();
             SqlConnection cn = databaseConnection.DatabaseConnect();
             List<string[]> results = databaseConnection.QueryDatabase(cn, filter);
-            for (int i = 0; i < results.Count; i++)
+            try
             {
-                Label lbl = new Label();
-                object[] res = results[i];
-                lbl.Text = res[1].ToString();
-                lbl.Dock = DockStyle.Bottom;
-                lbl.TextAlign = ContentAlignment.MiddleCenter;
-                lbl.Size = new Size(0, 30);
-                lbl.ForeColor = Color.White;
-                lbl.Font = new Font("Bahnschrift", 7);
 
-                Panel panel = new Panel();
-                panel.Size = new Size(125, 175);
-                panel.BackColor = Color.ForestGreen;
-                panel.Controls.Add(lbl);
-                flp_BookList.Controls.Add(panel);
+                for (int i = 0; i < results.Count; i++)
+                {
+                    object[] res = results[i];
+
+                    PictureBox pictureBox = new PictureBox();
+                    pictureBox.Dock = DockStyle.Fill;
+                    pictureBox.Image = (Bitmap) Resources.ResourceManager.GetObject(res[7].ToString());
+                    pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+
+                    Label lbl = new Label();
+                    lbl.Text = res[0].ToString();
+                    lbl.Dock = DockStyle.Bottom;
+                    lbl.TextAlign = ContentAlignment.MiddleCenter;
+                    lbl.Size = new Size(0, 30);
+                    lbl.ForeColor = labelForeColor;
+                    lbl.Font = new Font("Bahnschrift", 7);
+
+                    Panel panel = new Panel();
+                    panel.Size = new Size(125, 175);
+                    panel.BackColor = panelBackground;
+
+                    panel.Controls.Add(pictureBox);
+                    panel.Controls.Add(lbl);
+                    flp_BookList.Controls.Add(panel);
+                }
+            }catch(Exception ex)
+            {
+
             }
         }
 
@@ -179,7 +205,32 @@ namespace Final_Project_OOP_and_DSA
 
         private void btn_Filter_Available_Click(object sender, EventArgs e)
         {
+            InitializeBookListContentByFilter("Available");
+        }
 
+        private void btn_Filter_Borrowed_Click(object sender, EventArgs e)
+        {
+            InitializeBookListContentByFilter("Borrowed");
+        }
+
+        private void btn_Filter_Reserved_Click(object sender, EventArgs e)
+        {
+            InitializeBookListContentByFilter("Reserved");
+        }
+
+        private void btn_Filter_Fictional_Click(object sender, EventArgs e)
+        {
+            InitializeBookListContentByFilter("Fictional");
+        }
+
+        private void btn_Filter_Non_Fictional_Click(object sender, EventArgs e)
+        {
+            InitializeBookListContentByFilter("Non-Fictional");
+        }
+
+        private void btn_Filter_Academic_Click(object sender, EventArgs e)
+        {
+            InitializeBookListContentByFilter("Academic");
         }
     }
 }

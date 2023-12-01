@@ -32,7 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.panel_Sidebar_Sidebar = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.btn_Sidebar_SidebarExit = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
             this.button7 = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -48,8 +47,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.btn_Dashboard = new System.Windows.Forms.Button();
             this.panel_Logo_LogoHandler = new System.Windows.Forms.Panel();
-            this.btn_Sidebar = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tmr_Sidebar_SidebarExitAnimation = new System.Windows.Forms.Timer(this.components);
             this.tmr_Sidebar_SidebarEntryAnimation = new System.Windows.Forms.Timer(this.components);
             this.tc_Dashboard_TabControl = new System.Windows.Forms.TabControl();
@@ -59,23 +56,18 @@
             this.panel_BookListed = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.lbl_BookListed_Quantity = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel11 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.panel12 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tb_BookList = new System.Windows.Forms.TabPage();
             this.tb_BookBorrowing = new System.Windows.Forms.TabPage();
@@ -104,6 +96,17 @@
             this.btn_Filter_Academic = new System.Windows.Forms.Button();
             this.btn_Filter_Non_Fictional = new System.Windows.Forms.Button();
             this.btn_Filter_Fictional = new System.Windows.Forms.Button();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.label17 = new System.Windows.Forms.Label();
+            this.btn_Sidebar_SidebarExit = new System.Windows.Forms.Button();
+            this.btn_Sidebar = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.panel_Sidebar_Sidebar.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -114,20 +117,14 @@
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel_Logo_LogoHandler.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tc_Dashboard_TabControl.SuspendLayout();
             this.tb_Dashboard.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel_BookListed.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel12.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.tb_BookList.SuspendLayout();
             this.tb_BookBorrowing.SuspendLayout();
             this.tb_BookReturning.SuspendLayout();
@@ -137,6 +134,14 @@
             this.panel17.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panel14.SuspendLayout();
+            this.panel15.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_Sidebar_Sidebar
@@ -169,28 +174,6 @@
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(20, 25);
             this.panel10.TabIndex = 4;
-            // 
-            // btn_Sidebar_SidebarExit
-            // 
-            this.btn_Sidebar_SidebarExit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Sidebar_SidebarExit.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Sidebar_SidebarExit.BackgroundImage = global::Final_Project_OOP_and_DSA.Properties.Resources.Sidebar_Exit_Logo;
-            this.btn_Sidebar_SidebarExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Sidebar_SidebarExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Sidebar_SidebarExit.FlatAppearance.BorderSize = 0;
-            this.btn_Sidebar_SidebarExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_Sidebar_SidebarExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Sidebar_SidebarExit.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Sidebar_SidebarExit.ForeColor = System.Drawing.Color.White;
-            this.btn_Sidebar_SidebarExit.Location = new System.Drawing.Point(0, 0);
-            this.btn_Sidebar_SidebarExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btn_Sidebar_SidebarExit.Name = "btn_Sidebar_SidebarExit";
-            this.btn_Sidebar_SidebarExit.Size = new System.Drawing.Size(20, 25);
-            this.btn_Sidebar_SidebarExit.TabIndex = 0;
-            this.btn_Sidebar_SidebarExit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Sidebar_SidebarExit.UseVisualStyleBackColor = false;
-            this.btn_Sidebar_SidebarExit.Click += new System.EventHandler(this.button8_Click);
             // 
             // panel9
             // 
@@ -406,39 +389,6 @@
             this.panel_Logo_LogoHandler.Size = new System.Drawing.Size(175, 50);
             this.panel_Logo_LogoHandler.TabIndex = 0;
             // 
-            // btn_Sidebar
-            // 
-            this.btn_Sidebar.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Sidebar.BackgroundImage = global::Final_Project_OOP_and_DSA.Properties.Resources.Icon;
-            this.btn_Sidebar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Sidebar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Sidebar.FlatAppearance.BorderSize = 0;
-            this.btn_Sidebar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_Sidebar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Sidebar.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Sidebar.ForeColor = System.Drawing.Color.White;
-            this.btn_Sidebar.Location = new System.Drawing.Point(145, 5);
-            this.btn_Sidebar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btn_Sidebar.Name = "btn_Sidebar";
-            this.btn_Sidebar.Size = new System.Drawing.Size(25, 20);
-            this.btn_Sidebar.TabIndex = 1;
-            this.btn_Sidebar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Sidebar.UseVisualStyleBackColor = false;
-            this.btn_Sidebar.Visible = false;
-            this.btn_Sidebar.Click += new System.EventHandler(this.button8_Click_1);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Final_Project_OOP_and_DSA.Properties.Resources.Icon;
-            this.pictureBox1.InitialImage = global::Final_Project_OOP_and_DSA.Properties.Resources.Icon;
-            this.pictureBox1.Location = new System.Drawing.Point(55, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(60, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // tmr_Sidebar_SidebarExitAnimation
             // 
             this.tmr_Sidebar_SidebarExitAnimation.Interval = 10;
@@ -537,19 +487,6 @@
             this.lbl_BookListed_Quantity.Text = "15";
             this.lbl_BookListed_Quantity.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.Image = global::Final_Project_OOP_and_DSA.Properties.Resources.Book_Listed;
-            this.pictureBox2.Location = new System.Drawing.Point(50, 19);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(36, 42);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
@@ -584,19 +521,6 @@
             this.label9.TabIndex = 1;
             this.label9.Text = "13";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox3.Image = global::Final_Project_OOP_and_DSA.Properties.Resources.Registered_User;
-            this.pictureBox3.Location = new System.Drawing.Point(50, 26);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(36, 33);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 0;
-            this.pictureBox3.TabStop = false;
             // 
             // panel2
             // 
@@ -633,19 +557,6 @@
             this.label11.Text = "0";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox4.Image = global::Final_Project_OOP_and_DSA.Properties.Resources.Pending_Payment;
-            this.pictureBox4.Location = new System.Drawing.Point(50, 30);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(36, 29);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 0;
-            this.pictureBox4.TabStop = false;
-            // 
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
@@ -680,19 +591,6 @@
             this.label13.TabIndex = 1;
             this.label13.Text = "15";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox5.Image = global::Final_Project_OOP_and_DSA.Properties.Resources.Books_Available;
-            this.pictureBox5.Location = new System.Drawing.Point(50, 30);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(36, 29);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 0;
-            this.pictureBox5.TabStop = false;
             // 
             // panel12
             // 
@@ -729,19 +627,6 @@
             this.label15.Text = "0";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox6.Image = global::Final_Project_OOP_and_DSA.Properties.Resources.Books_Lent;
-            this.pictureBox6.Location = new System.Drawing.Point(50, 30);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(36, 29);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 0;
-            this.pictureBox6.TabStop = false;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -754,6 +639,7 @@
             // 
             // tb_BookList
             // 
+            this.tb_BookList.Controls.Add(this.panel17);
             this.tb_BookList.Controls.Add(this.panel13);
             this.tb_BookList.Controls.Add(this.flp_BookList);
             this.tb_BookList.Controls.Add(this.label18);
@@ -770,7 +656,7 @@
             this.tb_BookBorrowing.Controls.Add(this.label3);
             this.tb_BookBorrowing.Location = new System.Drawing.Point(4, 22);
             this.tb_BookBorrowing.Name = "tb_BookBorrowing";
-            this.tb_BookBorrowing.Size = new System.Drawing.Size(958, 794);
+            this.tb_BookBorrowing.Size = new System.Drawing.Size(1058, 594);
             this.tb_BookBorrowing.TabIndex = 2;
             this.tb_BookBorrowing.Text = "Book Borrowing";
             this.tb_BookBorrowing.UseVisualStyleBackColor = true;
@@ -789,7 +675,7 @@
             this.tb_BookReturning.Controls.Add(this.label4);
             this.tb_BookReturning.Location = new System.Drawing.Point(4, 22);
             this.tb_BookReturning.Name = "tb_BookReturning";
-            this.tb_BookReturning.Size = new System.Drawing.Size(958, 794);
+            this.tb_BookReturning.Size = new System.Drawing.Size(1058, 594);
             this.tb_BookReturning.TabIndex = 3;
             this.tb_BookReturning.Text = "Book Returning";
             this.tb_BookReturning.UseVisualStyleBackColor = true;
@@ -808,7 +694,7 @@
             this.tb_BorrowerList.Controls.Add(this.label5);
             this.tb_BorrowerList.Location = new System.Drawing.Point(4, 22);
             this.tb_BorrowerList.Name = "tb_BorrowerList";
-            this.tb_BorrowerList.Size = new System.Drawing.Size(958, 794);
+            this.tb_BorrowerList.Size = new System.Drawing.Size(1058, 594);
             this.tb_BorrowerList.TabIndex = 4;
             this.tb_BorrowerList.Text = "Borrower List";
             this.tb_BorrowerList.UseVisualStyleBackColor = true;
@@ -827,7 +713,7 @@
             this.tb_Payment.Controls.Add(this.label6);
             this.tb_Payment.Location = new System.Drawing.Point(4, 22);
             this.tb_Payment.Name = "tb_Payment";
-            this.tb_Payment.Size = new System.Drawing.Size(958, 794);
+            this.tb_Payment.Size = new System.Drawing.Size(1058, 594);
             this.tb_Payment.TabIndex = 5;
             this.tb_Payment.Text = "Payment";
             this.tb_Payment.UseVisualStyleBackColor = true;
@@ -854,11 +740,12 @@
             // 
             // flp_BookList
             // 
+            this.flp_BookList.AutoScroll = true;
             this.flp_BookList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.flp_BookList.Controls.Add(this.panel17);
-            this.flp_BookList.Location = new System.Drawing.Point(13, 91);
+            this.flp_BookList.Controls.Add(this.panel15);
+            this.flp_BookList.Location = new System.Drawing.Point(13, 145);
             this.flp_BookList.Name = "flp_BookList";
-            this.flp_BookList.Size = new System.Drawing.Size(761, 404);
+            this.flp_BookList.Size = new System.Drawing.Size(761, 350);
             this.flp_BookList.TabIndex = 4;
             // 
             // panel17
@@ -866,10 +753,9 @@
             this.panel17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.panel17.Controls.Add(this.label20);
             this.panel17.Controls.Add(this.label21);
-            this.panel17.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel17.Location = new System.Drawing.Point(3, 3);
+            this.panel17.Location = new System.Drawing.Point(13, 94);
             this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(756, 50);
+            this.panel17.Size = new System.Drawing.Size(761, 50);
             this.panel17.TabIndex = 4;
             // 
             // label20
@@ -969,6 +855,7 @@
             this.btn_Filter_Borrowed.TabIndex = 7;
             this.btn_Filter_Borrowed.Text = "Borrowed";
             this.btn_Filter_Borrowed.UseVisualStyleBackColor = true;
+            this.btn_Filter_Borrowed.Click += new System.EventHandler(this.btn_Filter_Borrowed_Click);
             // 
             // btn_Filter_Reserved
             // 
@@ -981,6 +868,7 @@
             this.btn_Filter_Reserved.TabIndex = 8;
             this.btn_Filter_Reserved.Text = "Reserved";
             this.btn_Filter_Reserved.UseVisualStyleBackColor = true;
+            this.btn_Filter_Reserved.Click += new System.EventHandler(this.btn_Filter_Reserved_Click);
             // 
             // label19
             // 
@@ -1022,6 +910,7 @@
             this.btn_Filter_Academic.TabIndex = 13;
             this.btn_Filter_Academic.Text = "Academic";
             this.btn_Filter_Academic.UseVisualStyleBackColor = true;
+            this.btn_Filter_Academic.Click += new System.EventHandler(this.btn_Filter_Academic_Click);
             // 
             // btn_Filter_Non_Fictional
             // 
@@ -1034,6 +923,7 @@
             this.btn_Filter_Non_Fictional.TabIndex = 12;
             this.btn_Filter_Non_Fictional.Text = "Non-Fictional";
             this.btn_Filter_Non_Fictional.UseVisualStyleBackColor = true;
+            this.btn_Filter_Non_Fictional.Click += new System.EventHandler(this.btn_Filter_Non_Fictional_Click);
             // 
             // btn_Filter_Fictional
             // 
@@ -1046,6 +936,155 @@
             this.btn_Filter_Fictional.TabIndex = 11;
             this.btn_Filter_Fictional.Text = "Fictional";
             this.btn_Filter_Fictional.UseVisualStyleBackColor = true;
+            this.btn_Filter_Fictional.Click += new System.EventHandler(this.btn_Filter_Fictional_Click);
+            // 
+            // panel15
+            // 
+            this.panel15.Controls.Add(this.pictureBox7);
+            this.panel15.Controls.Add(this.label17);
+            this.panel15.Location = new System.Drawing.Point(3, 3);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(125, 175);
+            this.panel15.TabIndex = 5;
+            // 
+            // label17
+            // 
+            this.label17.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label17.Location = new System.Drawing.Point(0, 145);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(125, 30);
+            this.label17.TabIndex = 0;
+            this.label17.Text = "label17";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btn_Sidebar_SidebarExit
+            // 
+            this.btn_Sidebar_SidebarExit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Sidebar_SidebarExit.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Sidebar_SidebarExit.BackgroundImage = global::Final_Project_OOP_and_DSA.Properties.Resources.Sidebar_Exit_Logo;
+            this.btn_Sidebar_SidebarExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Sidebar_SidebarExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Sidebar_SidebarExit.FlatAppearance.BorderSize = 0;
+            this.btn_Sidebar_SidebarExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_Sidebar_SidebarExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Sidebar_SidebarExit.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Sidebar_SidebarExit.ForeColor = System.Drawing.Color.White;
+            this.btn_Sidebar_SidebarExit.Location = new System.Drawing.Point(0, 0);
+            this.btn_Sidebar_SidebarExit.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Sidebar_SidebarExit.Name = "btn_Sidebar_SidebarExit";
+            this.btn_Sidebar_SidebarExit.Size = new System.Drawing.Size(20, 25);
+            this.btn_Sidebar_SidebarExit.TabIndex = 0;
+            this.btn_Sidebar_SidebarExit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Sidebar_SidebarExit.UseVisualStyleBackColor = false;
+            this.btn_Sidebar_SidebarExit.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // btn_Sidebar
+            // 
+            this.btn_Sidebar.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Sidebar.BackgroundImage = global::Final_Project_OOP_and_DSA.Properties.Resources.Icon;
+            this.btn_Sidebar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Sidebar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Sidebar.FlatAppearance.BorderSize = 0;
+            this.btn_Sidebar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_Sidebar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Sidebar.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Sidebar.ForeColor = System.Drawing.Color.White;
+            this.btn_Sidebar.Location = new System.Drawing.Point(145, 5);
+            this.btn_Sidebar.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Sidebar.Name = "btn_Sidebar";
+            this.btn_Sidebar.Size = new System.Drawing.Size(25, 20);
+            this.btn_Sidebar.TabIndex = 1;
+            this.btn_Sidebar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Sidebar.UseVisualStyleBackColor = false;
+            this.btn_Sidebar.Visible = false;
+            this.btn_Sidebar.Click += new System.EventHandler(this.button8_Click_1);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Final_Project_OOP_and_DSA.Properties.Resources.Icon;
+            this.pictureBox1.InitialImage = global::Final_Project_OOP_and_DSA.Properties.Resources.Icon;
+            this.pictureBox1.Location = new System.Drawing.Point(55, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(60, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.Image = global::Final_Project_OOP_and_DSA.Properties.Resources.Book_Listed;
+            this.pictureBox2.Location = new System.Drawing.Point(50, 19);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(36, 42);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox3.Image = global::Final_Project_OOP_and_DSA.Properties.Resources.Registered_User;
+            this.pictureBox3.Location = new System.Drawing.Point(50, 26);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(36, 33);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 0;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox4.Image = global::Final_Project_OOP_and_DSA.Properties.Resources.Pending_Payment;
+            this.pictureBox4.Location = new System.Drawing.Point(50, 30);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(36, 29);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 0;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox5.Image = global::Final_Project_OOP_and_DSA.Properties.Resources.Books_Available;
+            this.pictureBox5.Location = new System.Drawing.Point(50, 30);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(36, 29);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 0;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox6.Image = global::Final_Project_OOP_and_DSA.Properties.Resources.Books_Lent;
+            this.pictureBox6.Location = new System.Drawing.Point(50, 30);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(36, 29);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 0;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox7.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(125, 145);
+            this.pictureBox7.TabIndex = 1;
+            this.pictureBox7.TabStop = false;
             // 
             // Dashboard
             // 
@@ -1072,21 +1111,15 @@
             this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel_Logo_LogoHandler.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tc_Dashboard_TabControl.ResumeLayout(false);
             this.tb_Dashboard.ResumeLayout(false);
             this.tb_Dashboard.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panel_BookListed.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel11.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panel12.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.tb_BookList.ResumeLayout(false);
             this.tb_BookList.PerformLayout();
             this.tb_BookBorrowing.ResumeLayout(false);
@@ -1104,6 +1137,14 @@
             this.panel13.PerformLayout();
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
+            this.panel15.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1184,5 +1225,8 @@
         private System.Windows.Forms.Button btn_Filter_Academic;
         private System.Windows.Forms.Button btn_Filter_Non_Fictional;
         private System.Windows.Forms.Button btn_Filter_Fictional;
+        private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.Label label17;
     }
 }

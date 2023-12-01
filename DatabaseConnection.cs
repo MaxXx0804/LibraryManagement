@@ -38,10 +38,10 @@ namespace Final_Project_OOP_and_DSA
                 dataReader = cmd.ExecuteReader();
                 while (dataReader.Read())
                 {
-                    output = new string[9];
-                    for (int i = 1; i < dataReader.FieldCount - 1; i++)
+                    output = new string[10];
+                    for (int i = 1; i < dataReader.FieldCount; i++)
                     {
-                        output[i] = dataReader.GetString(i);
+                        output[i - 1] = dataReader.GetString(i);
                     }
                     results.Add(output);
                 }
@@ -62,18 +62,18 @@ namespace Final_Project_OOP_and_DSA
                 SqlCommand cmd;
                 SqlDataReader dataReader;
                 String sql;
-                string[] output = new string[9];
-                sql = "SELECT * FROM Books WHERE books_category = " + filter + "OR book_status = " + filter;
+                string[] output;
+                sql = "SELECT * FROM Books WHERE book_category = '" + filter + "' OR book_status = '" + filter+"'";
                 cmd = new SqlCommand(sql, cn);
                 dataReader = cmd.ExecuteReader();
                 while (dataReader.Read())
                 {
-                    for (int i = 1; i < dataReader.FieldCount - 1; i++)
+                    output = new string[9];
+                    for (int i = 1; i < dataReader.FieldCount; i++)
                     {
-                        output[i] = dataReader.GetString(i);
+                        output[i - 1] = dataReader.GetString(i);
                     }
                     results.Add(output);
-                    Debug.WriteLine(output);
                 }
                 cn.Close();
 
