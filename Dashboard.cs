@@ -7,7 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Microsoft.Data.SqlClient;
+using System.Data.SqlClient;
+using System.Diagnostics;
 
 namespace Final_Project_OOP_and_DSA
 {
@@ -20,6 +21,57 @@ namespace Final_Project_OOP_and_DSA
             InitializeComponent();
             tc_Dashboard_TabControl.Location = new Point(35, -20);
             panel_Sidebar_Sidebar.Location = new Point(0, 0);
+            InitializeBookListContent();
+           
+        }
+
+        public void InitializeBookListContent()
+        {
+            DatabaseConnection databaseConnection = new DatabaseConnection();
+            SqlConnection cn = databaseConnection.DatabaseConnect();
+            List<string[]> results = databaseConnection.QueryDatabase(cn);
+            for (int i = 0; i < results.Count; i++)
+            {
+                object[] res = null;
+                Label lbl = new Label();
+                res = results[i];
+                Debug.WriteLine(res[1].ToString());
+                lbl.Text = res[1].ToString();
+                lbl.Dock = DockStyle.Bottom;
+                lbl.TextAlign = ContentAlignment.MiddleCenter;
+                lbl.Size = new Size(0, 30);
+                lbl.ForeColor = Color.White;
+                lbl.Font = new Font("Bahnschrift", 7);
+
+                Panel panel = new Panel();
+                panel.Size = new Size(125, 175);
+                panel.BackColor = Color.ForestGreen;
+                panel.Controls.Add(lbl);
+                flp_BookList.Controls.Add(panel);
+            }
+        }
+        public void InitializeBookListContentByFilter(string filter)
+        {
+            DatabaseConnection databaseConnection = new DatabaseConnection();
+            SqlConnection cn = databaseConnection.DatabaseConnect();
+            List<string[]> results = databaseConnection.QueryDatabase(cn, filter);
+            for (int i = 0; i < results.Count; i++)
+            {
+                Label lbl = new Label();
+                object[] res = results[i];
+                lbl.Text = res[1].ToString();
+                lbl.Dock = DockStyle.Bottom;
+                lbl.TextAlign = ContentAlignment.MiddleCenter;
+                lbl.Size = new Size(0, 30);
+                lbl.ForeColor = Color.White;
+                lbl.Font = new Font("Bahnschrift", 7);
+
+                Panel panel = new Panel();
+                panel.Size = new Size(125, 175);
+                panel.BackColor = Color.ForestGreen;
+                panel.Controls.Add(lbl);
+                flp_BookList.Controls.Add(panel);
+            }
         }
 
         private void Dashboard_Load(object sender, EventArgs e)
@@ -122,6 +174,12 @@ namespace Final_Project_OOP_and_DSA
         private void btn_Payment_Click(object sender, EventArgs e)
         {
             tc_Dashboard_TabControl.SelectedTab = tb_Payment;
+        }
+
+
+        private void btn_Filter_Available_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
