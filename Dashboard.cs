@@ -22,12 +22,29 @@ namespace Final_Project_OOP_and_DSA
         public Dashboard()
         {
             InitializeComponent();
-            tc_Dashboard_TabControl.Location = new Point(35, -20);
-            panel_Sidebar_Sidebar.Location = new Point(0, 0);
             InitializeBookListContent();
-           
+            InitializeDashboardContents();
+
+            tc_Dashboard_TabControl.Location = new Point(35, -20);
+            //panel_Sidebar_Sidebar.Location = new Point(0, 0);
+
         }
 
+        public void InitializeDashboardContents()
+        {
+            DatabaseConnection databaseConnection = new DatabaseConnection();
+            SqlConnection cn = databaseConnection.DatabaseConnect();
+            List<string[]> resultBooks = databaseConnection.QueryDatabaseDashboardInformation(cn, "SELECT * FROM Books");
+            List<string[]> studentTotal = databaseConnection.QueryDatabaseDashboardInformation(cn, "SELECT * FROM Student");
+            List<string[]> teacherTotal = databaseConnection.QueryDatabaseDashboardInformation(cn, "SELECT * FROM Teacher");
+            List<string[]> resultBooksAvailable = databaseConnection.QueryDatabaseDashboardInformation(cn, "SELECT * FROM Books WHERE book_status = 'Available'");
+            List<string[]> resultBooksBorrowed = databaseConnection.QueryDatabaseDashboardInformation(cn, "SELECT * FROM Books WHERE book_status = 'Borrowed'");
+
+            lbl_BookListed_Quantity.Text = resultBooks.Count.ToString();
+            lbl_RegisteredUser_Quantity.Text = (studentTotal.Count + teacherTotal.Count).ToString();
+            lbl_BooksAvailable_Quantity.Text = resultBooksAvailable.Count.ToString();
+            lbl_BooksLent_Quantity.Text = resultBooksBorrowed.Count.ToString();
+        }
         public void InitializeBookListContent()
         {
             flp_BookList.Controls.Clear();
@@ -42,18 +59,25 @@ namespace Final_Project_OOP_and_DSA
                 pictureBox.Dock = DockStyle.Fill;
                 pictureBox.Image = (Bitmap)Resources.ResourceManager.GetObject(res[7].ToString());
                 pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+                pictureBox.Name = res[7].ToString();
+                pictureBox.BringToFront();
+                pictureBox.Click += new EventHandler(btn_BookDisplay_Information);
 
-                Label lbl = new Label();
-                lbl.Text = res[0].ToString();
-                lbl.Dock = DockStyle.Bottom;
-                lbl.TextAlign = ContentAlignment.MiddleCenter;
-                lbl.Size = new Size(0, 30);
-                lbl.ForeColor = labelForeColor;
-                lbl.Font = new Font("Bahnschrift", 7);
+                Label lbl = new Label
+                {
+                    Text = res[0].ToString(),
+                    Dock = DockStyle.Bottom,
+                    TextAlign = ContentAlignment.MiddleCenter,
+                    Size = new Size(0, 30),
+                    ForeColor = labelForeColor,
+                    Font = new Font("Bahnschrift", 7)
+                };
 
-                Panel panel = new Panel();
-                panel.Size = new Size(125, 175);
-                panel.BackColor = panelBackground;
+                Panel panel = new Panel()
+                {
+                    Size = new Size(125, 175),
+                    BackColor = panelBackground,
+                };
 
                 panel.Controls.Add(pictureBox);
                 panel.Controls.Add(lbl);
@@ -75,59 +99,35 @@ namespace Final_Project_OOP_and_DSA
 
                     PictureBox pictureBox = new PictureBox();
                     pictureBox.Dock = DockStyle.Fill;
-                    pictureBox.Image = (Bitmap) Resources.ResourceManager.GetObject(res[7].ToString());
+                    pictureBox.Image = (Bitmap)Resources.ResourceManager.GetObject(res[7].ToString());
                     pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+                    pictureBox.Name = res[7].ToString();
+                    pictureBox.BringToFront();
+                    pictureBox.Click += new EventHandler(btn_BookDisplay_Information);
 
-                    Label lbl = new Label();
-                    lbl.Text = res[0].ToString();
-                    lbl.Dock = DockStyle.Bottom;
-                    lbl.TextAlign = ContentAlignment.MiddleCenter;
-                    lbl.Size = new Size(0, 30);
-                    lbl.ForeColor = labelForeColor;
-                    lbl.Font = new Font("Bahnschrift", 7);
+                    Label lbl = new Label
+                    {
+                        Text = res[0].ToString(),
+                        Dock = DockStyle.Bottom,
+                        TextAlign = ContentAlignment.MiddleCenter,
+                        Size = new Size(0, 30),
+                        ForeColor = labelForeColor,
+                        Font = new Font("Bahnschrift", 7)
+                    };
 
-                    Panel panel = new Panel();
-                    panel.Size = new Size(125, 175);
-                    panel.BackColor = panelBackground;
-
+                    Panel panel = new Panel()
+                    {
+                        Size = new Size(125, 175),
+                        BackColor = panelBackground,
+                    };
                     panel.Controls.Add(pictureBox);
                     panel.Controls.Add(lbl);
                     flp_BookList.Controls.Add(panel);
                 }
             }catch(Exception ex)
             {
-
+                Debug.WriteLine(ex.Message);
             }
-        }
-
-        private void Dashboard_Load(object sender, EventArgs e)
-        {
-
-        }
-        private Point lastPoint;
-
-        protected override void OnMouseDown(MouseEventArgs e)
-        {
-            base.OnMouseDown(e);
-            if (e.Button == MouseButtons.Left)
-            {
-                lastPoint = new Point(e.X, e.Y);
-            }
-        }
-
-        protected override void OnMouseMove(MouseEventArgs e)
-        {
-            base.OnMouseMove(e);
-            if (e.Button == MouseButtons.Left)
-            {
-                this.Left += e.X - lastPoint.X;
-                this.Top += e.Y - lastPoint.Y;
-            }
-        }
-
-        private void Loading_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -231,6 +231,59 @@ namespace Final_Project_OOP_and_DSA
         private void btn_Filter_Academic_Click(object sender, EventArgs e)
         {
             InitializeBookListContentByFilter("Academic");
+        }
+
+        private void tb_BookList_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Filter_All_Click(object sender, EventArgs e)
+        {
+            InitializeBookListContent();
+        }
+        private void btn_BookDisplay_Information(object sender, EventArgs e)
+        {
+            try
+            {
+                PictureBox pb = (PictureBox)sender;
+                DatabaseConnection databaseConnection = new DatabaseConnection();
+                SqlConnection cn = databaseConnection.DatabaseConnect();
+                List<string[]> results = databaseConnection.QueryDatabase(cn, pb.Name);
+                string[] contents = results[0];
+                BookInformationDisplay bookInformationDisplay = new BookInformationDisplay(results);
+                bookInformationDisplay.Show();
+            }catch (Exception ex) { }
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_ChangeTab(object sender, EventArgs e)
+        {
+            Panel panel = (Panel)sender;
+            if(panel.Name == "panel_NewMember")
+            {
+                NewMemberForm nmb = new NewMemberForm();
+                nmb.Show();
+            }
+        }
+
+        private void panel_NewMember_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -193,6 +193,16 @@ namespace Final_Project_OOP_and_DSA.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Member {
+            get {
+                object obj = ResourceManager.GetObject("Member", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Memoir_of_Queen_Adelaide {
             get {
                 object obj = ResourceManager.GetObject("Memoir_of_Queen_Adelaide", resourceCulture);
@@ -206,6 +216,26 @@ namespace Final_Project_OOP_and_DSA.Properties {
         internal static System.Drawing.Bitmap My_Own_Affairs {
             get {
                 object obj = ResourceManager.GetObject("My_Own_Affairs", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap New_Member {
+            get {
+                object obj = ResourceManager.GetObject("New Member", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap New_Member_Background {
+            get {
+                object obj = ResourceManager.GetObject("New Member Background", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
