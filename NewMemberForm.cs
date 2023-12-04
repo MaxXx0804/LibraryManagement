@@ -19,6 +19,7 @@ namespace Final_Project_OOP_and_DSA
         public NewMemberForm()
         {
             InitializeComponent();
+            rb_NewMember_Student.Checked = true;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -68,19 +69,66 @@ namespace Final_Project_OOP_and_DSA
             {
                 DatabaseConnection databaseConnection = new DatabaseConnection();
                 SqlConnection cn = databaseConnection.DatabaseConnect();
-                if (rb_NewMember_Student.Checked)
+                
                 {
-                    string sql = "INSERT INTO Student (student_name, student_id, student_year_level, student_section) VALUES (@name, @id, @yearlevel, @section)";
-                    cn.Open();
-                    SqlCommand cmd = new SqlCommand(sql, cn);
-                    string name = txt_NewMember_LastName.Text + ", " + txt_NewMember_FirstName.Text + " " + txt_NewMember_MiddleName.Text;
-                    cmd.Parameters.AddWithValue("@name", name);
-                    cmd.Parameters.AddWithValue("@id", txt_NewMember_StudentID.Text);
-                    cmd.Parameters.AddWithValue("@yearlevel", txt_NewMember_YearLevel.Text);
-                    cmd.Parameters.AddWithValue("@section", txt_NewMember_Section.Text);
-                    
-                    cmd.ExecuteNonQuery();
-                    cn.Close();
+
+                    if (rb_NewMember_Student.Checked)
+                    {
+                        if (txt_NewMember_LastName.Text != "" && txt_NewMember_FirstName.Text != "" && txt_NewMember_StudentID.Text != "" && txt_NewMember_YearLevel.Text != "" && txt_NewMember_Section.Text != "")
+                        {
+                            string sql = "INSERT INTO Student (student_name, student_id, student_year_level, student_section) VALUES (@name, @id, @yearlevel, @section)";
+                            cn.Open();
+                            SqlCommand cmd = new SqlCommand(sql, cn);
+                            string name = txt_NewMember_LastName.Text + ", " + txt_NewMember_FirstName.Text + " " + txt_NewMember_MiddleName.Text;
+                            cmd.Parameters.AddWithValue("@name", name);
+                            cmd.Parameters.AddWithValue("@id", txt_NewMember_StudentID.Text);
+                            cmd.Parameters.AddWithValue("@yearlevel", txt_NewMember_YearLevel.Text);
+                            cmd.Parameters.AddWithValue("@section", txt_NewMember_Section.Text);
+
+                            int Saved = cmd.ExecuteNonQuery();
+                            if (Saved != 0)
+                            {
+                                MessageBox.Show("Registered Successfully!");
+                            }
+                            else
+                            {
+                                MessageBox.Show("There is a problem registering!");
+                            }
+                            cn.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Make sure to fill up all the necessary information!");
+                        }
+                    }
+                    else
+                    {
+                        if (txt_NewMember_LastName.Text != "" && txt_NewMember_FirstName.Text != "" && txt_NewMember_EmployeeID.Text != "" && txt_NewMember_Department.Text != "")
+                        {
+                            string sql = "INSERT INTO Teacher (teacher_name, employee_id, teacher_department) VALUES (@name, @id, @department)";
+                            cn.Open();
+                            SqlCommand cmd = new SqlCommand(sql, cn);
+                            string name = txt_NewMember_LastName.Text + ", " + txt_NewMember_FirstName.Text + " " + txt_NewMember_MiddleName.Text;
+                            cmd.Parameters.AddWithValue("@name", name);
+                            cmd.Parameters.AddWithValue("@id", txt_NewMember_EmployeeID.Text);
+                            cmd.Parameters.AddWithValue("@department", txt_NewMember_Department.Text);
+
+                            int Saved = cmd.ExecuteNonQuery();
+                            if (Saved != 0)
+                            {
+                                MessageBox.Show("Registered Successfully!");
+                            }
+                            else
+                            {
+                                MessageBox.Show("There is a problem registering!");
+                            }
+                            cn.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Make sure to fill up all the necessary information!");
+                        }
+                    }
                 }
             }catch(Exception ex)
             {

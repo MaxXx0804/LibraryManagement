@@ -1780,6 +1780,8 @@ namespace Final_Project_OOP_and_DSA {
             
             private global::System.Data.DataColumn columnstudent_section;
             
+            private global::System.Data.DataColumn columnstudent_book_borrowed;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public StudentDataTable() {
@@ -1855,6 +1857,14 @@ namespace Final_Project_OOP_and_DSA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn student_book_borrowedColumn {
+                get {
+                    return this.columnstudent_book_borrowed;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1890,14 +1900,15 @@ namespace Final_Project_OOP_and_DSA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public StudentRow AddStudentRow(int id, string student_name, string student_id, string student_year_level, string student_section) {
+            public StudentRow AddStudentRow(int id, string student_name, string student_id, string student_year_level, string student_section, string student_book_borrowed) {
                 StudentRow rowStudentRow = ((StudentRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         id,
                         student_name,
                         student_id,
                         student_year_level,
-                        student_section};
+                        student_section,
+                        student_book_borrowed};
                 rowStudentRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowStudentRow);
                 return rowStudentRow;
@@ -1925,6 +1936,7 @@ namespace Final_Project_OOP_and_DSA {
                 this.columnstudent_id = base.Columns["student_id"];
                 this.columnstudent_year_level = base.Columns["student_year_level"];
                 this.columnstudent_section = base.Columns["student_section"];
+                this.columnstudent_book_borrowed = base.Columns["student_book_borrowed"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1940,6 +1952,8 @@ namespace Final_Project_OOP_and_DSA {
                 base.Columns.Add(this.columnstudent_year_level);
                 this.columnstudent_section = new global::System.Data.DataColumn("student_section", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnstudent_section);
+                this.columnstudent_book_borrowed = new global::System.Data.DataColumn("student_book_borrowed", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnstudent_book_borrowed);
                 this.columnid.AllowDBNull = false;
                 this.columnstudent_name.AllowDBNull = false;
                 this.columnstudent_name.MaxLength = 50;
@@ -1949,6 +1963,7 @@ namespace Final_Project_OOP_and_DSA {
                 this.columnstudent_year_level.MaxLength = 50;
                 this.columnstudent_section.AllowDBNull = false;
                 this.columnstudent_section.MaxLength = 50;
+                this.columnstudent_book_borrowed.MaxLength = 300;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2082,13 +2097,13 @@ namespace Final_Project_OOP_and_DSA {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class TeacherDataTable : global::System.Data.TypedTableBase<TeacherRow> {
             
-            private global::System.Data.DataColumn columnteacher_id;
-            
             private global::System.Data.DataColumn columnteacher_name;
             
             private global::System.Data.DataColumn columnemployee_id;
             
             private global::System.Data.DataColumn columnteacher_department;
+            
+            private global::System.Data.DataColumn columnid;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -2125,14 +2140,6 @@ namespace Final_Project_OOP_and_DSA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn teacher_idColumn {
-                get {
-                    return this.columnteacher_id;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public global::System.Data.DataColumn teacher_nameColumn {
                 get {
                     return this.columnteacher_name;
@@ -2152,6 +2159,14 @@ namespace Final_Project_OOP_and_DSA {
             public global::System.Data.DataColumn teacher_departmentColumn {
                 get {
                     return this.columnteacher_department;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn idColumn {
+                get {
+                    return this.columnid;
                 }
             }
             
@@ -2192,13 +2207,13 @@ namespace Final_Project_OOP_and_DSA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public TeacherRow AddTeacherRow(int teacher_id, string teacher_name, string employee_id, string teacher_department) {
+            public TeacherRow AddTeacherRow(string teacher_name, string employee_id, string teacher_department, int id) {
                 TeacherRow rowTeacherRow = ((TeacherRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        teacher_id,
                         teacher_name,
                         employee_id,
-                        teacher_department};
+                        teacher_department,
+                        id};
                 rowTeacherRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowTeacherRow);
                 return rowTeacherRow;
@@ -2221,30 +2236,30 @@ namespace Final_Project_OOP_and_DSA {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnteacher_id = base.Columns["teacher_id"];
                 this.columnteacher_name = base.Columns["teacher_name"];
                 this.columnemployee_id = base.Columns["employee_id"];
                 this.columnteacher_department = base.Columns["teacher_department"];
+                this.columnid = base.Columns["id"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnteacher_id = new global::System.Data.DataColumn("teacher_id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnteacher_id);
                 this.columnteacher_name = new global::System.Data.DataColumn("teacher_name", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnteacher_name);
                 this.columnemployee_id = new global::System.Data.DataColumn("employee_id", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnemployee_id);
                 this.columnteacher_department = new global::System.Data.DataColumn("teacher_department", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnteacher_department);
-                this.columnteacher_id.AllowDBNull = false;
+                this.columnid = new global::System.Data.DataColumn("id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid);
                 this.columnteacher_name.AllowDBNull = false;
                 this.columnteacher_name.MaxLength = 50;
                 this.columnemployee_id.AllowDBNull = false;
                 this.columnemployee_id.MaxLength = 50;
                 this.columnteacher_department.AllowDBNull = false;
                 this.columnteacher_department.MaxLength = 50;
+                this.columnid.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3160,6 +3175,34 @@ namespace Final_Project_OOP_and_DSA {
                     this[this.tableStudent.student_sectionColumn] = value;
                 }
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string student_book_borrowed {
+                get {
+                    try {
+                        return ((string)(this[this.tableStudent.student_book_borrowedColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'student_book_borrowed\' in table \'Student\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableStudent.student_book_borrowedColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Isstudent_book_borrowedNull() {
+                return this.IsNull(this.tableStudent.student_book_borrowedColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setstudent_book_borrowedNull() {
+                this[this.tableStudent.student_book_borrowedColumn] = global::System.Convert.DBNull;
+            }
         }
         
         /// <summary>
@@ -3174,17 +3217,6 @@ namespace Final_Project_OOP_and_DSA {
             internal TeacherRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
                 this.tableTeacher = ((TeacherDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int teacher_id {
-                get {
-                    return ((int)(this[this.tableTeacher.teacher_idColumn]));
-                }
-                set {
-                    this[this.tableTeacher.teacher_idColumn] = value;
-                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3217,6 +3249,17 @@ namespace Final_Project_OOP_and_DSA {
                 }
                 set {
                     this[this.tableTeacher.teacher_departmentColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int id {
+                get {
+                    return ((int)(this[this.tableTeacher.idColumn]));
+                }
+                set {
+                    this[this.tableTeacher.idColumn] = value;
                 }
             }
         }
@@ -4982,18 +5025,19 @@ SELECT book_id, book_title, book_ISBN, book_category, book_author, book_copyrigh
             tableMapping.ColumnMappings.Add("student_id", "student_id");
             tableMapping.ColumnMappings.Add("student_year_level", "student_year_level");
             tableMapping.ColumnMappings.Add("student_section", "student_section");
+            tableMapping.ColumnMappings.Add("student_book_borrowed", "student_book_borrowed");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Student] ([id], [student_name], [student_id], [student_year_le" +
-                "vel], [student_section]) VALUES (@id, @student_name, @student_id, @student_year_" +
-                "level, @student_section)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [Student] ([student_name], [student_id], [student_year_level], [stude" +
+                "nt_section], [student_book_borrowed]) VALUES (@student_name, @student_id, @stude" +
+                "nt_year_level, @student_section, @student_book_borrowed)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@student_name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "student_name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@student_id", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "student_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@student_year_level", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "student_year_level", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@student_section", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "student_section", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@student_book_borrowed", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "student_book_borrowed", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5009,8 +5053,8 @@ SELECT book_id, book_title, book_ISBN, book_category, book_author, book_copyrigh
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT id, student_name, student_id, student_year_level, student_section FROM dbo" +
-                ".Student";
+            this._commandCollection[0].CommandText = "SELECT id, student_name, student_id, student_year_level, student_section, student" +
+                "_book_borrowed FROM Student";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -5071,31 +5115,36 @@ SELECT book_id, book_title, book_ISBN, book_category, book_author, book_copyrigh
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int id, string student_name, string student_id, string student_year_level, string student_section) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(id));
+        public virtual int Insert(string student_name, string student_id, string student_year_level, string student_section, string student_book_borrowed) {
             if ((student_name == null)) {
                 throw new global::System.ArgumentNullException("student_name");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(student_name));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(student_name));
             }
             if ((student_id == null)) {
                 throw new global::System.ArgumentNullException("student_id");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(student_id));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(student_id));
             }
             if ((student_year_level == null)) {
                 throw new global::System.ArgumentNullException("student_year_level");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(student_year_level));
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(student_year_level));
             }
             if ((student_section == null)) {
                 throw new global::System.ArgumentNullException("student_section");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(student_section));
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(student_section));
+            }
+            if ((student_book_borrowed == null)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(student_book_borrowed));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -5235,21 +5284,20 @@ SELECT book_id, book_title, book_ISBN, book_category, book_author, book_copyrigh
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Teacher";
-            tableMapping.ColumnMappings.Add("teacher_id", "teacher_id");
             tableMapping.ColumnMappings.Add("teacher_name", "teacher_name");
             tableMapping.ColumnMappings.Add("employee_id", "employee_id");
             tableMapping.ColumnMappings.Add("teacher_department", "teacher_department");
+            tableMapping.ColumnMappings.Add("id", "id");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Teacher] ([teacher_id], [teacher_name], [employee_id], [teache" +
-                "r_department]) VALUES (@teacher_id, @teacher_name, @employee_id, @teacher_depart" +
-                "ment)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [Teacher] ([teacher_name], [employee_id], [teacher_department], [id])" +
+                " VALUES (@teacher_name, @employee_id, @teacher_department, @id)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@teacher_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "teacher_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@teacher_name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "teacher_name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@employee_id", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "employee_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@teacher_department", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "teacher_department", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5265,8 +5313,7 @@ SELECT book_id, book_title, book_ISBN, book_category, book_author, book_copyrigh
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT teacher_id, teacher_name, employee_id, teacher_department FROM dbo.Teacher" +
-                "";
+            this._commandCollection[0].CommandText = "SELECT teacher_name, employee_id, teacher_department, id FROM Teacher";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -5327,26 +5374,26 @@ SELECT book_id, book_title, book_ISBN, book_category, book_author, book_copyrigh
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int teacher_id, string teacher_name, string employee_id, string teacher_department) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(teacher_id));
+        public virtual int Insert(string teacher_name, string employee_id, string teacher_department, int id) {
             if ((teacher_name == null)) {
                 throw new global::System.ArgumentNullException("teacher_name");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(teacher_name));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(teacher_name));
             }
             if ((employee_id == null)) {
                 throw new global::System.ArgumentNullException("employee_id");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(employee_id));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(employee_id));
             }
             if ((teacher_department == null)) {
                 throw new global::System.ArgumentNullException("teacher_department");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(teacher_department));
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(teacher_department));
             }
+            this.Adapter.InsertCommand.Parameters[3].Value = ((int)(id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {

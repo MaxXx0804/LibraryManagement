@@ -56,9 +56,10 @@ namespace Final_Project_OOP_and_DSA
         public List<string[]> QueryDatabase(SqlConnection cn, string filter)
         {
             List<string[]> results = new List<string[]>();
+            cn.Open();
             try
             {
-                cn.Open();
+                
                 SqlCommand cmd;
                 SqlDataReader dataReader;
                 String sql;
@@ -75,21 +76,23 @@ namespace Final_Project_OOP_and_DSA
                     }
                     results.Add(output);
                 }
-                cn.Close();
+               
 
             }
             catch (Exception ex)
             {
                 Debug.WriteLine(ex);
             }
+            cn.Close();
             return results;
         }
         public List<string[]> QueryDatabaseDashboardInformation(SqlConnection cn, String sqlQuery)
         {
             List<string[]> results = new List<string[]>();
+            cn.Open();
             try
             {
-                cn.Open();
+                
                 SqlCommand cmd;
                 SqlDataReader dataReader;
                 String sql;
@@ -102,18 +105,55 @@ namespace Final_Project_OOP_and_DSA
                     output = new string[10];
                     for (int i = 1; i < dataReader.FieldCount; i++)
                     {
-                        output[i - 1] = dataReader.GetString(i);
+                        if (!dataReader.IsDBNull(i))
+                        {
+                            output[i - 1] = dataReader.GetString(i);
+                        }
                     }
                     results.Add(output);
                 }
-                cn.Close();
+               
 
             }
             catch (Exception ex)
             {
                 Debug.WriteLine(ex);
             }
-            
+            cn.Close();
+            //else if(filter == "BooksAvailable")
+            return results;
+        }
+        public List<string[]> QueryDatabaseDashboardInformationBook(SqlConnection cn, String sqlQuery)
+        {
+            List<string[]> results = new List<string[]>();
+            cn.Open();
+            try
+            {
+               
+                SqlCommand cmd;
+                SqlDataReader dataReader;
+                String sql;
+                string[] output;
+                sql = sqlQuery;
+                cmd = new SqlCommand(sql, cn);
+                dataReader = cmd.ExecuteReader();
+                while (dataReader.Read())
+                {
+                    output = new string[10];
+                    for (int i = 0; i < dataReader.FieldCount; i++)
+                    {
+                        output[i] = dataReader.GetString(i);
+                    }
+                    results.Add(output);
+                }
+                
+
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex);
+            }
+            cn.Close();
             //else if(filter == "BooksAvailable")
             return results;
         }
