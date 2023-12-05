@@ -410,6 +410,14 @@ namespace Final_Project_OOP_and_DSA
                     BooksBeingBorrowed.Add(snd.Text);
                     memberCurrentBookNumberSelected++;
                 }
+                if(memberCurrentBookNumberSelected > 0)
+                {
+                    cb_Member_BorrowerType.Enabled = false;
+                }
+                else if(memberCurrentBookNumberSelected == 0)
+                {
+                    cb_Member_BorrowerType.Enabled = true;
+                }
             }catch(Exception ex)
             {
 
@@ -420,8 +428,8 @@ namespace Final_Project_OOP_and_DSA
         {
             DatabaseConnection databaseConnection = new DatabaseConnection();
             SqlConnection cn = databaseConnection.DatabaseConnect();
-            List<string[]> studentName = databaseConnection.QueryDatabaseDashboardInformationBook(cn, "SELECT student_name FROM Student");
-            List<string[]> teacherName = databaseConnection.QueryDatabaseDashboardInformationBook(cn, "SELECT teacher_name FROM Teacher");
+            List<string[]> studentName = databaseConnection.QueryDatabaseDashboardInformationBook(cn, "SELECT student_name, student_book_borrowed FROM Student");
+            List<string[]> teacherName = databaseConnection.QueryDatabaseDashboardInformationBook(cn, "SELECT teacher_name, teacher_book_borrowed FROM Teacher");
             if (cb_Member_BorrowerType.Text == "Student" || cb_Member_BorrowerType.Text == "Teacher")
             {
                 flp_Member_BookDisplay.Enabled = true;
@@ -437,7 +445,10 @@ namespace Final_Project_OOP_and_DSA
                 lbl_Member_BorrowerType.Text = "Borrower Name: Student";
                 foreach (string[] x in studentName)
                 {
-                    cb_Member_Name.Items.Add(x[0]); 
+                    if (x[1] == null || x[1] == "")
+                    {
+                        cb_Member_Name.Items.Add(x[0]);
+                    }
                 }
             } 
             else if(cb_Member_BorrowerType.Text == "Teacher")
@@ -447,7 +458,10 @@ namespace Final_Project_OOP_and_DSA
                 memberNumberOfBooksCanBeSelected = 5;
                 foreach (string[] x in teacherName)
                 {
-                    cb_Member_Name.Items.Add(x[0]);
+                    if (x[1] == null || x[1] == "")
+                    {
+                        cb_Member_Name.Items.Add(x[0]);
+                    }
                 }
             }
             
@@ -465,7 +479,48 @@ namespace Final_Project_OOP_and_DSA
 
         private void btn_Member_Confirm_Click(object sender, EventArgs e)
         {
-
+            string[] BookName = new string[5];
+            int i = 0;
+            foreach (string x in BooksBeingBorrowed)
+            {
+                BookName[i] = x;
+                i++;
+            }
+            string BooksToBeSentToDatabase = string.Join("~", BookName);
+            try
+            {
+                DatabaseConnection databaseConnection = new DatabaseConnection();
+                SqlConnection cn = databaseConnection.DatabaseConnect();
+                string sql = "";
+                if(cb_Member_BorrowerType.Text == "Student")
+                {
+                    sql = $"UPDATE Student SET student_book_borrowed = @books WHERE student_name = '{cb_Member_Name.Text}'"; 
+                }
+                else if(cb_Member_BorrowerType.Text == "Teacher")
+                { 
+                    sql = $"UPDATE Teacher SET teacher_book_borrowed = @books WHERE teacher_name = '{cb_Member_Name.Text}'"; 
+                };
+                cn.Open();
+                SqlCommand cmd = new SqlCommand(sql, cn);
+                cmd.Parameters.AddWithValue("@books", BooksToBeSentToDatabase);
+                int Saved = cmd.ExecuteNonQuery();
+                if(Saved != 0)
+                {
+                    Debug.WriteLine("Successful.");
+                }
+                else
+                {
+                    Debug.WriteLine("Denied Saving.");
+                }
+                cn.Close();
+            }
+            catch(Exception ex)
+            {
+                Debug.WriteLine(ex);
+            }
+            
+            //var arr = all.Split(new string[] { "~" }, StringSplitOptions.None);
+            
         }
     }
 }

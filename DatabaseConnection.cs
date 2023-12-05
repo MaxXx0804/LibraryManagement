@@ -142,7 +142,14 @@ namespace Final_Project_OOP_and_DSA
                     output = new string[10];
                     for (int i = 0; i < dataReader.FieldCount; i++)
                     {
-                        output[i] = dataReader.GetString(i);
+                        if (!dataReader.IsDBNull(i))
+                        {
+                            output[i] = dataReader.GetString(i);
+                        }
+                        else
+                        {
+                            output[i] = "";
+                        }
                     }
                     results.Add(output);
                 }
