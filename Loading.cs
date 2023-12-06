@@ -49,7 +49,7 @@ namespace Final_Project_OOP_and_DSA
 
         private void TextChange_Tick(object sender, EventArgs e)
         {
-            string[] LoadingScreenText = { "Finding books...", "Cleaning books...", "Checking dictionary...", "Debugging program..." , "Bombing Hiroshima..."};
+            string[] LoadingScreenText = { "Finding books...", "Cleaning books...", "Checking dictionary...", "Debugging program..." , "Bombing Hiroshima...", "Starting Trojan Sequence..."};
             Random rand = new Random();
             int num = rand.Next(LoadingScreenText.Length);
             lbl_LoadingScreenText.Text = LoadingScreenText[num];

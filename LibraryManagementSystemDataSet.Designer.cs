@@ -489,8 +489,6 @@ namespace Final_Project_OOP_and_DSA {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class BookBorrowingDataTable : global::System.Data.TypedTableBase<BookBorrowingRow> {
             
-            private global::System.Data.DataColumn columnborrowing_id;
-            
             private global::System.Data.DataColumn columnborrower_name;
             
             private global::System.Data.DataColumn columnbooks_borrowed;
@@ -498,6 +496,8 @@ namespace Final_Project_OOP_and_DSA {
             private global::System.Data.DataColumn columndate_borrowed;
             
             private global::System.Data.DataColumn columndue_date;
+            
+            private global::System.Data.DataColumn columnbook_id;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -534,14 +534,6 @@ namespace Final_Project_OOP_and_DSA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn borrowing_idColumn {
-                get {
-                    return this.columnborrowing_id;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public global::System.Data.DataColumn borrower_nameColumn {
                 get {
                     return this.columnborrower_name;
@@ -569,6 +561,14 @@ namespace Final_Project_OOP_and_DSA {
             public global::System.Data.DataColumn due_dateColumn {
                 get {
                     return this.columndue_date;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn book_idColumn {
+                get {
+                    return this.columnbook_id;
                 }
             }
             
@@ -609,14 +609,14 @@ namespace Final_Project_OOP_and_DSA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public BookBorrowingRow AddBookBorrowingRow(int borrowing_id, string borrower_name, string books_borrowed, System.DateTime date_borrowed, System.DateTime due_date) {
+            public BookBorrowingRow AddBookBorrowingRow(string borrower_name, string books_borrowed, System.DateTime date_borrowed, System.DateTime due_date) {
                 BookBorrowingRow rowBookBorrowingRow = ((BookBorrowingRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        borrowing_id,
                         borrower_name,
                         books_borrowed,
                         date_borrowed,
-                        due_date};
+                        due_date,
+                        null};
                 rowBookBorrowingRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowBookBorrowingRow);
                 return rowBookBorrowingRow;
@@ -639,18 +639,16 @@ namespace Final_Project_OOP_and_DSA {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnborrowing_id = base.Columns["borrowing_id"];
                 this.columnborrower_name = base.Columns["borrower_name"];
                 this.columnbooks_borrowed = base.Columns["books_borrowed"];
                 this.columndate_borrowed = base.Columns["date_borrowed"];
                 this.columndue_date = base.Columns["due_date"];
+                this.columnbook_id = base.Columns["book_id"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnborrowing_id = new global::System.Data.DataColumn("borrowing_id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnborrowing_id);
                 this.columnborrower_name = new global::System.Data.DataColumn("borrower_name", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnborrower_name);
                 this.columnbooks_borrowed = new global::System.Data.DataColumn("books_borrowed", typeof(string), null, global::System.Data.MappingType.Element);
@@ -659,12 +657,18 @@ namespace Final_Project_OOP_and_DSA {
                 base.Columns.Add(this.columndate_borrowed);
                 this.columndue_date = new global::System.Data.DataColumn("due_date", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndue_date);
-                this.columnborrowing_id.AllowDBNull = false;
+                this.columnbook_id = new global::System.Data.DataColumn("book_id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnbook_id);
                 this.columnborrower_name.AllowDBNull = false;
                 this.columnborrower_name.MaxLength = 50;
                 this.columnbooks_borrowed.AllowDBNull = false;
                 this.columnbooks_borrowed.MaxLength = 50;
                 this.columndate_borrowed.AllowDBNull = false;
+                this.columnbook_id.AutoIncrement = true;
+                this.columnbook_id.AutoIncrementSeed = -1;
+                this.columnbook_id.AutoIncrementStep = -1;
+                this.columnbook_id.AllowDBNull = false;
+                this.columnbook_id.ReadOnly = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2685,17 +2689,6 @@ namespace Final_Project_OOP_and_DSA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int borrowing_id {
-                get {
-                    return ((int)(this[this.tableBookBorrowing.borrowing_idColumn]));
-                }
-                set {
-                    this[this.tableBookBorrowing.borrowing_idColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string borrower_name {
                 get {
                     return ((string)(this[this.tableBookBorrowing.borrower_nameColumn]));
@@ -2740,6 +2733,17 @@ namespace Final_Project_OOP_and_DSA {
                 }
                 set {
                     this[this.tableBookBorrowing.due_dateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int book_id {
+                get {
+                    return ((int)(this[this.tableBookBorrowing.book_idColumn]));
+                }
+                set {
+                    this[this.tableBookBorrowing.book_idColumn] = value;
                 }
             }
             
@@ -3675,19 +3679,17 @@ namespace Final_Project_OOP_and_DSA.LibraryManagementSystemDataSetTableAdapters 
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "BookBorrowing";
-            tableMapping.ColumnMappings.Add("borrowing_id", "borrowing_id");
             tableMapping.ColumnMappings.Add("borrower_name", "borrower_name");
             tableMapping.ColumnMappings.Add("books_borrowed", "books_borrowed");
             tableMapping.ColumnMappings.Add("date_borrowed", "date_borrowed");
             tableMapping.ColumnMappings.Add("due_date", "due_date");
+            tableMapping.ColumnMappings.Add("book_id", "book_id");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[BookBorrowing] ([borrowing_id], [borrower_name], [books_borrow" +
-                "ed], [date_borrowed], [due_date]) VALUES (@borrowing_id, @borrower_name, @books_" +
-                "borrowed, @date_borrowed, @due_date)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [BookBorrowing] ([borrower_name], [books_borrowed], [date_borrowed], " +
+                "[due_date]) VALUES (@borrower_name, @books_borrowed, @date_borrowed, @due_date)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@borrowing_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "borrowing_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@borrower_name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "borrower_name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@books_borrowed", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "books_borrowed", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@date_borrowed", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date_borrowed", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -3707,8 +3709,8 @@ namespace Final_Project_OOP_and_DSA.LibraryManagementSystemDataSetTableAdapters 
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT borrowing_id, borrower_name, books_borrowed, date_borrowed, due_date FROM " +
-                "dbo.BookBorrowing";
+            this._commandCollection[0].CommandText = "SELECT borrower_name, books_borrowed, date_borrowed, due_date, book_id FROM BookB" +
+                "orrowing";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -3769,26 +3771,25 @@ namespace Final_Project_OOP_and_DSA.LibraryManagementSystemDataSetTableAdapters 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int borrowing_id, string borrower_name, string books_borrowed, System.DateTime date_borrowed, global::System.Nullable<global::System.DateTime> due_date) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(borrowing_id));
+        public virtual int Insert(string borrower_name, string books_borrowed, System.DateTime date_borrowed, global::System.Nullable<global::System.DateTime> due_date) {
             if ((borrower_name == null)) {
                 throw new global::System.ArgumentNullException("borrower_name");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(borrower_name));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(borrower_name));
             }
             if ((books_borrowed == null)) {
                 throw new global::System.ArgumentNullException("books_borrowed");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(books_borrowed));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(books_borrowed));
             }
-            this.Adapter.InsertCommand.Parameters[3].Value = ((System.DateTime)(date_borrowed));
+            this.Adapter.InsertCommand.Parameters[2].Value = ((System.DateTime)(date_borrowed));
             if ((due_date.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((System.DateTime)(due_date.Value));
+                this.Adapter.InsertCommand.Parameters[3].Value = ((System.DateTime)(due_date.Value));
             }
             else {
-                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 

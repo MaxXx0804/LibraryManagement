@@ -492,7 +492,12 @@ namespace Final_Project_OOP_and_DSA
                 DatabaseConnection databaseConnection = new DatabaseConnection();
                 SqlConnection cn = databaseConnection.DatabaseConnect();
                 string sql = "";
-                if(cb_Member_BorrowerType.Text == "Student")
+
+                var arr = BooksToBeSentToDatabase.Split(new string[] { "~" }, StringSplitOptions.None);
+
+
+
+                if (cb_Member_BorrowerType.Text == "Student")
                 {
                     sql = $"UPDATE Student SET student_book_borrowed = @books WHERE student_name = '{cb_Member_Name.Text}'"; 
                 }
@@ -507,6 +512,8 @@ namespace Final_Project_OOP_and_DSA
                 if(Saved != 0)
                 {
                     Debug.WriteLine("Successful.");
+                    BookStatusChanger(BooksToBeSentToDatabase);
+                    BookBorrowingChanger(BooksToBeSentToDatabase);
                 }
                 else
                 {
@@ -519,8 +526,80 @@ namespace Final_Project_OOP_and_DSA
                 Debug.WriteLine(ex);
             }
             
-            //var arr = all.Split(new string[] { "~" }, StringSplitOptions.None);
             
+            
+        }
+        public void BookStatusChanger(string books)
+        {
+            try
+            {
+                DatabaseConnection databaseConnection = new DatabaseConnection();
+                SqlConnection cn = databaseConnection.DatabaseConnect();
+                string sql = "";
+                string[] arr = books.Split(new string[] { "~" }, StringSplitOptions.None);
+                foreach (string x in arr)
+                {
+                    sql = "UPDATE Books SET book_status = 'Borrowed' WHERE book_title = @name";
+                    SqlCommand cmd = new SqlCommand(sql, cn);
+                    cmd.Parameters.AddWithValue("@name", x);
+                    cn.Open();
+                    int Saved = cmd.ExecuteNonQuery();
+                    if (Saved != 0)
+                    {
+                        Debug.WriteLine("BookStatus: Saved.");
+                    }
+                    else
+                    {
+                        Debug.WriteLine("BookStatus: Error.");
+                    }
+                    cn.Close();
+                }
+            }catch(Exception ex)
+            {
+                Debug.WriteLine(ex);
+            }
+        }
+        public void BookBorrowingChanger(string books)
+        {
+            try
+            {
+                DatabaseConnection databaseConnection = new DatabaseConnection();
+                SqlConnection cn = databaseConnection.DatabaseConnect();
+                string sql = "";
+                cn.Open();
+                SqlCommand cmd;
+                if (cb_Member_BorrowerType.Text == "Teacher")
+                {
+                    sql = "INSERT INTO BookBorrowing (borrower_name, books_borrowed, date_borrowed) VALUES (@name, @books, @dateborrowed)";
+                    cmd = new SqlCommand(sql, cn);
+                    cmd.Parameters.AddWithValue("@name", cb_Member_Name.Text);
+                    cmd.Parameters.AddWithValue("@books", books);
+                    cmd.Parameters.AddWithValue("@dateborrowed", DateTime.Now.Date);
+                }
+                else
+                {
+                    sql = "INSERT INTO BookBorrowing (borrower_name, books_borrowed, date_borrowed, due_date) VALUES (@name, @books, @dateborrowed, @due)";
+                    cmd = new SqlCommand(sql, cn);
+                    cmd.Parameters.AddWithValue("@name", cb_Member_Name.Text);
+                    cmd.Parameters.AddWithValue("@books", books);
+                    cmd.Parameters.AddWithValue("@dateborrowed", DateTime.Now.Date);
+                    cmd.Parameters.AddWithValue("@due", DateTime.Now.Date.AddDays(3));
+                }
+                int Saved = cmd.ExecuteNonQuery();
+                if(Saved != 0)
+                {
+                    Debug.WriteLine("BookBorrowing: Saved");
+                }
+                else
+                {
+                    Debug.WriteLine("BookBorrowing: Error");
+                }
+                cn.Close();
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex);
+            }
         }
     }
 }
