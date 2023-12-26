@@ -29,15 +29,81 @@ namespace Final_Project_OOP_and_DSA
             InitializeBookListContent();
             InitializeDashboardContents();
             InitializeBookBorrowingContents();
-            
+            InitializeBorrowerListContent();
+            //InitializeReturnBooksContent();
+
             tc_Dashboard_TabControl.Location = new Point(35, -20);
             //panel_Sidebar_Sidebar.Location = new Point(0, 0);
             panel_Sidebar_Sidebar.Size = new Size(175, 600);
-            this.Size = new Size(1100, 600);
             lbl_Member_BookListDisplay.Text += "\n";
-
+            
         }
+        public void InitializeBorrowerListContent()
+        {
+            DatabaseConnection databaseConnection = new DatabaseConnection();
+            SqlConnection cn = databaseConnection.DatabaseConnect();
+            List<string[]> studentTotal = databaseConnection.QueryDatabaseDashboardInformation(cn, "SELECT * FROM Student");
+            List<string[]> teacherTotal = databaseConnection.QueryDatabaseDashboardInformation(cn, "SELECT * FROM Teacher");
+            foreach (string[] x in studentTotal)
+            {
+                FlowLayoutPanel flp = new FlowLayoutPanel()
+                {
+                    Size = new Size(1035, 30),
+                    FlowDirection = FlowDirection.TopDown,
+                    BorderStyle = BorderStyle.FixedSingle,
+                };
+                for(int i = 0; i < 4; i++)
+                {
+                    if (x[i] != null)
+                    {
+                        Panel panel = new Panel()
+                        {
+                            Size = new Size(250, 30)
+                        };
+                        Label lbl = new Label()
+                        {
+                            Text = x[i],
+                            AutoSize = true,
+                            Font = new Font("Tahoma", 10)
+                            
+                        };
+                        panel.Controls.Add(lbl);
+                        flp.Controls.Add(panel);
+                    }
+                }
+                flp_BorrowerList_Student.Controls.Add(flp);
+            }
+            foreach (string[] x in teacherTotal)
+            {
+                FlowLayoutPanel flp = new FlowLayoutPanel()
+                {
+                    Size = new Size(1035, 30),
+                    FlowDirection = FlowDirection.TopDown,
+                    BorderStyle = BorderStyle.FixedSingle,
+                };
+                for (int i = 0; i < 3; i++)
+                {
+                    if (x[i] != null)
+                    {
+                        
+                        Panel panel = new Panel()
+                        {
+                            Size = new Size(250, 30)
+                        };
+                        Label lbl = new Label()
+                        {
+                            Text = x[i],
+                            AutoSize = true,
+                            Font = new Font("Tahoma", 10)
 
+                        };
+                        panel.Controls.Add(lbl);
+                        flp.Controls.Add(panel);
+                    }
+                }
+                flp_BorrowerList_Teacher.Controls.Add(flp);
+            }
+        }
         public void InitializeDashboardContents()
         {
             DatabaseConnection databaseConnection = new DatabaseConnection();
@@ -53,11 +119,56 @@ namespace Final_Project_OOP_and_DSA
             lbl_RegisteredUser_Quantity.Text = (studentTotal.Count + teacherTotal.Count).ToString();
             lbl_BooksAvailable_Quantity.Text = resultBooksAvailable.Count.ToString();
             lbl_BooksLent_Quantity.Text = resultBooksBorrowed.Count.ToString();
-            Debug.WriteLine("DEBUG: "+studentTotal.Count + " " + teacherTotal.Count);
         }
         public void InitializeBookBorrowingContents()
         {
             InitializeBookListContentByFilterWithCheckBox("SELECT * FROM Books WHERE book_status = 'Available'");
+            
+        }
+        public void InitializeReturnBooksContent()
+        {
+            flp_BooksReturn.Controls.Clear();
+            DatabaseConnection databaseConnection = new DatabaseConnection();
+            SqlConnection cn = databaseConnection.DatabaseConnect();
+            List<string[]> results = databaseConnection.QueryDatabaseDashboardInformation(cn,"SELECT * FROM Books WHERE book_status = 'Borrowed'");
+            try
+            {
+
+                for (int i = 0; i < results.Count; i++)
+                {
+                    object[] res = results[i];
+
+                    PictureBox pictureBox = new PictureBox();
+                    pictureBox.Dock = DockStyle.Fill;
+                    pictureBox.Image = (Bitmap)Resources.ResourceManager.GetObject(res[7].ToString());
+                    pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+                    pictureBox.Name = res[7].ToString();
+                    pictureBox.BringToFront();
+
+                    CheckBox cb = new CheckBox
+                    {
+                        Text = res[0].ToString(),
+                        Dock = DockStyle.Bottom,
+                        TextAlign = ContentAlignment.MiddleCenter,
+                        Size = new Size(0, 30),
+                        ForeColor = labelForeColor,
+                        Font = new Font("Bahnschrift", 7)
+                    };
+                    cb.CheckedChanged += new EventHandler(memberCheckBoxLimitChecker);
+                    Panel panel = new Panel()
+                    {
+                        Size = new Size(125, 175),
+                        BackColor = panelBackground,
+                    };
+                    panel.Controls.Add(pictureBox);
+                    panel.Controls.Add(cb);
+                    flp_BooksReturn.Controls.Add(panel);
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+            }
             
         }
         public void InitializeBookListContent()
@@ -147,6 +258,7 @@ namespace Final_Project_OOP_and_DSA
 
         public void InitializeBookListContentByFilterWithCheckBox(string filter)
         {
+            flp_Member_BookDisplay.Controls.Clear();
             DatabaseConnection databaseConnection = new DatabaseConnection();
             SqlConnection cn = databaseConnection.DatabaseConnect();
             List<string[]> results = databaseConnection.QueryDatabaseDashboardInformation(cn, filter);
@@ -402,7 +514,6 @@ namespace Final_Project_OOP_and_DSA
                     lbl_Member_BookListDisplay.Text = lbl_Member_BookListDisplay.Text.Remove(start, end + 1);
                     BooksBeingBorrowed.Remove(snd.Text);
                     memberCurrentBookNumberSelected--;
-                    Debug.WriteLine(BooksBeingBorrowed.Count);
                 }
                 else if (memberCurrentBookNumberSelected < memberNumberOfBooksCanBeSelected)
                 {
@@ -442,7 +553,7 @@ namespace Final_Project_OOP_and_DSA
             {
                 cb_Member_Name.Items.Clear();
                 memberNumberOfBooksCanBeSelected = 2;
-                lbl_Member_BorrowerType.Text = "Borrower Name: Student";
+                lbl_Member_BorrowerType.Text = "Borrower Type: Student";
                 foreach (string[] x in studentName)
                 {
                     if (x[1] == null || x[1] == "")
@@ -454,7 +565,7 @@ namespace Final_Project_OOP_and_DSA
             else if(cb_Member_BorrowerType.Text == "Teacher")
             {
                 cb_Member_Name.Items.Clear();
-                lbl_Member_BorrowerType.Text = "Borrower Name: Teacher";
+                lbl_Member_BorrowerType.Text = "Borrower Type: Teacher";
                 memberNumberOfBooksCanBeSelected = 5;
                 foreach (string[] x in teacherName)
                 {
@@ -472,134 +583,81 @@ namespace Final_Project_OOP_and_DSA
             lbl_Member_Name.Text = "Borrower Name: " + cb_Member_Name.Text;
         }
 
-        private void lbl_Member_BorrowerType_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btn_Member_Confirm_Click(object sender, EventArgs e)
         {
-            string[] BookName = new string[5];
-            int i = 0;
-            foreach (string x in BooksBeingBorrowed)
-            {
-                BookName[i] = x;
-                i++;
-            }
-            string BooksToBeSentToDatabase = string.Join("~", BookName);
-            try
-            {
-                DatabaseConnection databaseConnection = new DatabaseConnection();
-                SqlConnection cn = databaseConnection.DatabaseConnect();
-                string sql = "";
-
-                var arr = BooksToBeSentToDatabase.Split(new string[] { "~" }, StringSplitOptions.None);
-
-
-
-                if (cb_Member_BorrowerType.Text == "Student")
-                {
-                    sql = $"UPDATE Student SET student_book_borrowed = @books WHERE student_name = '{cb_Member_Name.Text}'"; 
-                }
-                else if(cb_Member_BorrowerType.Text == "Teacher")
-                { 
-                    sql = $"UPDATE Teacher SET teacher_book_borrowed = @books WHERE teacher_name = '{cb_Member_Name.Text}'"; 
-                };
-                cn.Open();
-                SqlCommand cmd = new SqlCommand(sql, cn);
-                cmd.Parameters.AddWithValue("@books", BooksToBeSentToDatabase);
-                int Saved = cmd.ExecuteNonQuery();
-                if(Saved != 0)
-                {
-                    Debug.WriteLine("Successful.");
-                    BookStatusChanger(BooksToBeSentToDatabase);
-                    BookBorrowingChanger(BooksToBeSentToDatabase);
-                }
-                else
-                {
-                    Debug.WriteLine("Denied Saving.");
-                }
-                cn.Close();
-            }
-            catch(Exception ex)
-            {
-                Debug.WriteLine(ex);
-            }
-            
-            
-            
+            BookBorrowingCode.BookBorrowing(BooksBeingBorrowed);
+            InitializeBookListContentByFilterWithCheckBox("SELECT * FROM Books WHERE book_status = 'Available'");
+            memberCurrentBookNumberSelected = 0;
         }
-        public void BookStatusChanger(string books)
+        
+        private void tb_Dashboard_Click(object sender, EventArgs e)
         {
-            try
+
+        }
+
+        private void cb_BookReturn_Name_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            BookReturningCode.ChangeContent(cb_BookReturn_Name.Text);
+        }
+
+        private void cb_BookReturn_BorrowerType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+            DatabaseConnection databaseConnection = new DatabaseConnection();
+            SqlConnection cn = databaseConnection.DatabaseConnect();
+            List<string[]> studentName = databaseConnection.QueryDatabaseDashboardInformationBook(cn, "SELECT student_name, student_book_borrowed FROM Student");
+            List<string[]> teacherName = databaseConnection.QueryDatabaseDashboardInformationBook(cn, "SELECT teacher_name, teacher_book_borrowed FROM Teacher");
+            if (cb_BookReturn_BorrowerType.Text == "Student" || cb_BookReturn_BorrowerType.Text == "Teacher")
             {
-                DatabaseConnection databaseConnection = new DatabaseConnection();
-                SqlConnection cn = databaseConnection.DatabaseConnect();
-                string sql = "";
-                string[] arr = books.Split(new string[] { "~" }, StringSplitOptions.None);
-                foreach (string x in arr)
+                flp_BooksReturn.Enabled = true;
+            }
+            else
+            {
+                flp_BooksReturn.Enabled = false;
+            }
+            if (cb_BookReturn_BorrowerType.Text == "Student")
+            {
+                
+                cb_BookReturn_Name.Items.Clear();
+                lbl_BookReturn_ReturnerType.Text = "Borrower Type: Student";
+                memberNumberOfBooksCanBeSelected = 2;
+                foreach (string[] x in studentName)
                 {
-                    sql = "UPDATE Books SET book_status = 'Borrowed' WHERE book_title = @name";
-                    SqlCommand cmd = new SqlCommand(sql, cn);
-                    cmd.Parameters.AddWithValue("@name", x);
-                    cn.Open();
-                    int Saved = cmd.ExecuteNonQuery();
-                    if (Saved != 0)
+                    if (x[1] != null || x[1] != "")
                     {
-                        Debug.WriteLine("BookStatus: Saved.");
+                        cb_BookReturn_Name.Items.Add(x[0]);
                     }
-                    else
-                    {
-                        Debug.WriteLine("BookStatus: Error.");
-                    }
-                    cn.Close();
                 }
-            }catch(Exception ex)
+            }
+            else if (cb_BookReturn_BorrowerType.Text == "Teacher")
             {
-                Debug.WriteLine(ex);
+                cb_BookReturn_Name.Items.Clear();
+                lbl_BookReturn_ReturnerType.Text = "Borrower Type: Teacher";
+                memberNumberOfBooksCanBeSelected = 5;
+                foreach (string[] x in teacherName)
+                {
+                    if (x[1] != null || x[1] != "")
+                    {
+                        cb_BookReturn_Name.Items.Add(x[0]);
+                    }
+                }
             }
         }
-        public void BookBorrowingChanger(string books)
+        private void btn_CloseApplications(object sender, EventArgs e)
         {
-            try
-            {
-                DatabaseConnection databaseConnection = new DatabaseConnection();
-                SqlConnection cn = databaseConnection.DatabaseConnect();
-                string sql = "";
-                cn.Open();
-                SqlCommand cmd;
-                if (cb_Member_BorrowerType.Text == "Teacher")
-                {
-                    sql = "INSERT INTO BookBorrowing (borrower_name, books_borrowed, date_borrowed) VALUES (@name, @books, @dateborrowed)";
-                    cmd = new SqlCommand(sql, cn);
-                    cmd.Parameters.AddWithValue("@name", cb_Member_Name.Text);
-                    cmd.Parameters.AddWithValue("@books", books);
-                    cmd.Parameters.AddWithValue("@dateborrowed", DateTime.Now.Date);
-                }
-                else
-                {
-                    sql = "INSERT INTO BookBorrowing (borrower_name, books_borrowed, date_borrowed, due_date) VALUES (@name, @books, @dateborrowed, @due)";
-                    cmd = new SqlCommand(sql, cn);
-                    cmd.Parameters.AddWithValue("@name", cb_Member_Name.Text);
-                    cmd.Parameters.AddWithValue("@books", books);
-                    cmd.Parameters.AddWithValue("@dateborrowed", DateTime.Now.Date);
-                    cmd.Parameters.AddWithValue("@due", DateTime.Now.Date.AddDays(3));
-                }
-                int Saved = cmd.ExecuteNonQuery();
-                if(Saved != 0)
-                {
-                    Debug.WriteLine("BookBorrowing: Saved");
-                }
-                else
-                {
-                    Debug.WriteLine("BookBorrowing: Error");
-                }
-                cn.Close();
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine(ex);
-            }
+            Application.Exit();
+        }
+
+        private void btn_Sidebar_Logout_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            frm_Login login = new frm_Login();
+            login.Show();
+        }
+
+        private void btn_BookReturn_Return_Click(object sender, EventArgs e)
+        {
+            BookReturningCode.InitiateBookReturning();
         }
     }
 }

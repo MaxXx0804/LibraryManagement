@@ -34,7 +34,7 @@
             this.panel10 = new System.Windows.Forms.Panel();
             this.btn_Sidebar_SidebarExit = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
+            this.btn_Sidebar_Logout = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
             this.btn_Payment = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -54,6 +54,7 @@
             this.tmr_Sidebar_SidebarEntryAnimation = new System.Windows.Forms.Timer(this.components);
             this.tc_Dashboard_TabControl = new System.Windows.Forms.TabControl();
             this.tb_Dashboard = new System.Windows.Forms.TabPage();
+            this.button3 = new System.Windows.Forms.Button();
             this.lbl_TopLineDesign = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel_BookListed = new System.Windows.Forms.Panel();
@@ -126,12 +127,40 @@
             this.label13 = new System.Windows.Forms.Label();
             this.flp_Member_BookDisplay = new System.Windows.Forms.FlowLayoutPanel();
             this.tb_BookReturning = new System.Windows.Forms.TabPage();
+            this.label24 = new System.Windows.Forms.Label();
+            this.cb_BookReturn_BorrowerType = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.cb_BookReturn_Name = new System.Windows.Forms.ComboBox();
+            this.panel20 = new System.Windows.Forms.Panel();
+            this.btn_BookReturn_Return = new System.Windows.Forms.Button();
+            this.lbl_BookReturn_ReturnerType = new System.Windows.Forms.Label();
+            this.lbl_BookReturn_DueDate = new System.Windows.Forms.Label();
+            this.lbl_BookReturn_DateBorrowed = new System.Windows.Forms.Label();
+            this.lbl_BookReturn_BookList = new System.Windows.Forms.Label();
+            this.lbl_BookReturn_ReturnerName = new System.Windows.Forms.Label();
+            this.panel22 = new System.Windows.Forms.Panel();
+            this.flp_BooksReturn = new System.Windows.Forms.FlowLayoutPanel();
             this.tb_BorrowerList = new System.Windows.Forms.TabPage();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.flp_BorrowerList_Teacher = new System.Windows.Forms.FlowLayoutPanel();
             this.label5 = new System.Windows.Forms.Label();
+            this.flp_BorrowerList_Student = new System.Windows.Forms.FlowLayoutPanel();
             this.tb_Payment = new System.Windows.Forms.TabPage();
             this.label6 = new System.Windows.Forms.Label();
+            this.tb_Reservation = new System.Windows.Forms.TabPage();
             this.tmr_Update = new System.Windows.Forms.Timer(this.components);
+            this.label33 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.panel21 = new System.Windows.Forms.Panel();
+            this.label31 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel_Sidebar_Sidebar.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -172,6 +201,7 @@
             this.panel19.SuspendLayout();
             this.panel15.SuspendLayout();
             this.tb_BookReturning.SuspendLayout();
+            this.panel20.SuspendLayout();
             this.tb_BorrowerList.SuspendLayout();
             this.tb_Payment.SuspendLayout();
             this.SuspendLayout();
@@ -193,7 +223,7 @@
             this.panel_Sidebar_Sidebar.Location = new System.Drawing.Point(-140, 0);
             this.panel_Sidebar_Sidebar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel_Sidebar_Sidebar.Name = "panel_Sidebar_Sidebar";
-            this.panel_Sidebar_Sidebar.Size = new System.Drawing.Size(175, 722);
+            this.panel_Sidebar_Sidebar.Size = new System.Drawing.Size(175, 1210);
             this.panel_Sidebar_Sidebar.TabIndex = 0;
             // 
             // panel10
@@ -201,7 +231,7 @@
             this.panel10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel10.Controls.Add(this.btn_Sidebar_SidebarExit);
-            this.panel10.Location = new System.Drawing.Point(153, 695);
+            this.panel10.Location = new System.Drawing.Point(153, 1183);
             this.panel10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(20, 25);
@@ -231,31 +261,32 @@
             // 
             // panel9
             // 
-            this.panel9.Controls.Add(this.button7);
+            this.panel9.Controls.Add(this.btn_Sidebar_Logout);
             this.panel9.Location = new System.Drawing.Point(0, 310);
             this.panel9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(177, 39);
             this.panel9.TabIndex = 3;
             // 
-            // button7
+            // btn_Sidebar_Logout
             // 
-            this.button7.BackColor = System.Drawing.Color.Transparent;
-            this.button7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(0, 0);
-            this.button7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button7.Name = "button7";
-            this.button7.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.button7.Size = new System.Drawing.Size(177, 39);
-            this.button7.TabIndex = 0;
-            this.button7.Text = "Log out";
-            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.UseVisualStyleBackColor = false;
+            this.btn_Sidebar_Logout.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Sidebar_Logout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_Sidebar_Logout.FlatAppearance.BorderSize = 0;
+            this.btn_Sidebar_Logout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_Sidebar_Logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Sidebar_Logout.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Sidebar_Logout.ForeColor = System.Drawing.Color.White;
+            this.btn_Sidebar_Logout.Location = new System.Drawing.Point(0, 0);
+            this.btn_Sidebar_Logout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Sidebar_Logout.Name = "btn_Sidebar_Logout";
+            this.btn_Sidebar_Logout.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btn_Sidebar_Logout.Size = new System.Drawing.Size(177, 39);
+            this.btn_Sidebar_Logout.TabIndex = 0;
+            this.btn_Sidebar_Logout.Text = "Log out";
+            this.btn_Sidebar_Logout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Sidebar_Logout.UseVisualStyleBackColor = false;
+            this.btn_Sidebar_Logout.Click += new System.EventHandler(this.btn_Sidebar_Logout_Click);
             // 
             // panel8
             // 
@@ -497,24 +528,39 @@
             this.tc_Dashboard_TabControl.Controls.Add(this.tb_BookReturning);
             this.tc_Dashboard_TabControl.Controls.Add(this.tb_BorrowerList);
             this.tc_Dashboard_TabControl.Controls.Add(this.tb_Payment);
+            this.tc_Dashboard_TabControl.Controls.Add(this.tb_Reservation);
             this.tc_Dashboard_TabControl.Location = new System.Drawing.Point(35, 0);
             this.tc_Dashboard_TabControl.Name = "tc_Dashboard_TabControl";
             this.tc_Dashboard_TabControl.SelectedIndex = 0;
-            this.tc_Dashboard_TabControl.Size = new System.Drawing.Size(1100, 620);
+            this.tc_Dashboard_TabControl.Size = new System.Drawing.Size(1060, 620);
             this.tc_Dashboard_TabControl.TabIndex = 1;
             // 
             // tb_Dashboard
             // 
+            this.tb_Dashboard.Controls.Add(this.button3);
             this.tb_Dashboard.Controls.Add(this.lbl_TopLineDesign);
             this.tb_Dashboard.Controls.Add(this.flowLayoutPanel1);
             this.tb_Dashboard.Controls.Add(this.label1);
             this.tb_Dashboard.Location = new System.Drawing.Point(4, 22);
             this.tb_Dashboard.Name = "tb_Dashboard";
             this.tb_Dashboard.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tb_Dashboard.Size = new System.Drawing.Size(1092, 594);
+            this.tb_Dashboard.Size = new System.Drawing.Size(1052, 594);
             this.tb_Dashboard.TabIndex = 0;
             this.tb_Dashboard.Text = "Dashboard";
             this.tb_Dashboard.UseVisualStyleBackColor = true;
+            this.tb_Dashboard.Click += new System.EventHandler(this.tb_Dashboard_Click);
+            // 
+            // button3
+            // 
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button3.Font = new System.Drawing.Font("Bahnschrift", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(1000, -10);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(50, 50);
+            this.button3.TabIndex = 9;
+            this.button3.Text = "x";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.btn_CloseApplications);
             // 
             // lbl_TopLineDesign
             // 
@@ -1034,7 +1080,7 @@
             this.tb_BookBorrowing.Controls.Add(this.tc_Member_New);
             this.tb_BookBorrowing.Location = new System.Drawing.Point(4, 22);
             this.tb_BookBorrowing.Name = "tb_BookBorrowing";
-            this.tb_BookBorrowing.Size = new System.Drawing.Size(1092, 594);
+            this.tb_BookBorrowing.Size = new System.Drawing.Size(1062, 594);
             this.tb_BookBorrowing.TabIndex = 2;
             this.tb_BookBorrowing.Text = "Book Borrowing";
             this.tb_BookBorrowing.UseVisualStyleBackColor = true;
@@ -1047,7 +1093,7 @@
             this.tc_Member_New.Location = new System.Drawing.Point(0, 0);
             this.tc_Member_New.Name = "tc_Member_New";
             this.tc_Member_New.SelectedIndex = 0;
-            this.tc_Member_New.Size = new System.Drawing.Size(1092, 594);
+            this.tc_Member_New.Size = new System.Drawing.Size(1062, 594);
             this.tc_Member_New.TabIndex = 0;
             // 
             // tb_Choice
@@ -1059,7 +1105,7 @@
             this.tb_Choice.Location = new System.Drawing.Point(4, 22);
             this.tb_Choice.Name = "tb_Choice";
             this.tb_Choice.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tb_Choice.Size = new System.Drawing.Size(1084, 568);
+            this.tb_Choice.Size = new System.Drawing.Size(1054, 568);
             this.tb_Choice.TabIndex = 0;
             this.tb_Choice.Text = "Choice";
             this.tb_Choice.UseVisualStyleBackColor = true;
@@ -1140,13 +1186,14 @@
             this.tb_Member.Location = new System.Drawing.Point(4, 22);
             this.tb_Member.Name = "tb_Member";
             this.tb_Member.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tb_Member.Size = new System.Drawing.Size(1084, 568);
+            this.tb_Member.Size = new System.Drawing.Size(1054, 569);
             this.tb_Member.TabIndex = 1;
             this.tb_Member.Text = "Member";
             this.tb_Member.UseVisualStyleBackColor = true;
             // 
             // cb_Member_BorrowerType
             // 
+            this.cb_Member_BorrowerType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_Member_BorrowerType.Font = new System.Drawing.Font("Bahnschrift", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_Member_BorrowerType.FormattingEnabled = true;
             this.cb_Member_BorrowerType.Items.AddRange(new object[] {
@@ -1285,7 +1332,6 @@
             this.lbl_Member_BorrowerType.Size = new System.Drawing.Size(83, 13);
             this.lbl_Member_BorrowerType.TabIndex = 10;
             this.lbl_Member_BorrowerType.Text = "Borrower Type:";
-            this.lbl_Member_BorrowerType.Click += new System.EventHandler(this.lbl_Member_BorrowerType_Click);
             // 
             // lbl_Member_Name
             // 
@@ -1362,41 +1408,278 @@
             // 
             // tb_BookReturning
             // 
+            this.tb_BookReturning.Controls.Add(this.label24);
+            this.tb_BookReturning.Controls.Add(this.cb_BookReturn_BorrowerType);
             this.tb_BookReturning.Controls.Add(this.label4);
+            this.tb_BookReturning.Controls.Add(this.label15);
+            this.tb_BookReturning.Controls.Add(this.cb_BookReturn_Name);
+            this.tb_BookReturning.Controls.Add(this.panel20);
+            this.tb_BookReturning.Controls.Add(this.panel22);
+            this.tb_BookReturning.Controls.Add(this.flp_BooksReturn);
             this.tb_BookReturning.Location = new System.Drawing.Point(4, 22);
             this.tb_BookReturning.Name = "tb_BookReturning";
-            this.tb_BookReturning.Size = new System.Drawing.Size(1062, 594);
+            this.tb_BookReturning.Size = new System.Drawing.Size(1052, 594);
             this.tb_BookReturning.TabIndex = 3;
             this.tb_BookReturning.Text = "Book Returning";
             this.tb_BookReturning.UseVisualStyleBackColor = true;
             // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.ForeColor = System.Drawing.Color.Black;
+            this.label24.Location = new System.Drawing.Point(16, 30);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(157, 23);
+            this.label24.TabIndex = 25;
+            this.label24.Text = "Book Returning";
+            // 
+            // cb_BookReturn_BorrowerType
+            // 
+            this.cb_BookReturn_BorrowerType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_BookReturn_BorrowerType.Font = new System.Drawing.Font("Bahnschrift", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_BookReturn_BorrowerType.FormattingEnabled = true;
+            this.cb_BookReturn_BorrowerType.Items.AddRange(new object[] {
+            "Student",
+            "Teacher"});
+            this.cb_BookReturn_BorrowerType.Location = new System.Drawing.Point(499, 68);
+            this.cb_BookReturn_BorrowerType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cb_BookReturn_BorrowerType.Name = "cb_BookReturn_BorrowerType";
+            this.cb_BookReturn_BorrowerType.Size = new System.Drawing.Size(212, 24);
+            this.cb_BookReturn_BorrowerType.TabIndex = 24;
+            this.cb_BookReturn_BorrowerType.SelectedIndexChanged += new System.EventHandler(this.cb_BookReturn_BorrowerType_SelectedIndexChanged);
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(390, 225);
+            this.label4.Font = new System.Drawing.Font("Bahnschrift", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(388, 71);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(81, 13);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Book Returning";
+            this.label4.Size = new System.Drawing.Size(0, 17);
+            this.label4.TabIndex = 23;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Bahnschrift", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(17, 71);
+            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(0, 17);
+            this.label15.TabIndex = 22;
+            // 
+            // cb_BookReturn_Name
+            // 
+            this.cb_BookReturn_Name.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_BookReturn_Name.Font = new System.Drawing.Font("Bahnschrift", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_BookReturn_Name.FormattingEnabled = true;
+            this.cb_BookReturn_Name.Location = new System.Drawing.Point(65, 69);
+            this.cb_BookReturn_Name.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cb_BookReturn_Name.Name = "cb_BookReturn_Name";
+            this.cb_BookReturn_Name.Size = new System.Drawing.Size(212, 24);
+            this.cb_BookReturn_Name.TabIndex = 21;
+            this.cb_BookReturn_Name.SelectedIndexChanged += new System.EventHandler(this.cb_BookReturn_Name_SelectedIndexChanged);
+            // 
+            // panel20
+            // 
+            this.panel20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.panel20.Controls.Add(this.btn_BookReturn_Return);
+            this.panel20.Controls.Add(this.lbl_BookReturn_ReturnerType);
+            this.panel20.Controls.Add(this.lbl_BookReturn_DueDate);
+            this.panel20.Controls.Add(this.lbl_BookReturn_DateBorrowed);
+            this.panel20.Controls.Add(this.lbl_BookReturn_BookList);
+            this.panel20.Controls.Add(this.lbl_BookReturn_ReturnerName);
+            this.panel20.Location = new System.Drawing.Point(793, 105);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(227, 401);
+            this.panel20.TabIndex = 20;
+            // 
+            // btn_BookReturn_Return
+            // 
+            this.btn_BookReturn_Return.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_BookReturn_Return.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_BookReturn_Return.Location = new System.Drawing.Point(18, 354);
+            this.btn_BookReturn_Return.Name = "btn_BookReturn_Return";
+            this.btn_BookReturn_Return.Size = new System.Drawing.Size(75, 28);
+            this.btn_BookReturn_Return.TabIndex = 6;
+            this.btn_BookReturn_Return.Text = "Return";
+            this.btn_BookReturn_Return.UseVisualStyleBackColor = true;
+            this.btn_BookReturn_Return.Click += new System.EventHandler(this.btn_BookReturn_Return_Click);
+            // 
+            // lbl_BookReturn_ReturnerType
+            // 
+            this.lbl_BookReturn_ReturnerType.AutoSize = true;
+            this.lbl_BookReturn_ReturnerType.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_BookReturn_ReturnerType.Location = new System.Drawing.Point(3, 80);
+            this.lbl_BookReturn_ReturnerType.Name = "lbl_BookReturn_ReturnerType";
+            this.lbl_BookReturn_ReturnerType.Size = new System.Drawing.Size(43, 13);
+            this.lbl_BookReturn_ReturnerType.TabIndex = 5;
+            this.lbl_BookReturn_ReturnerType.Text = "label25";
+            // 
+            // lbl_BookReturn_DueDate
+            // 
+            this.lbl_BookReturn_DueDate.AutoSize = true;
+            this.lbl_BookReturn_DueDate.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_BookReturn_DueDate.Location = new System.Drawing.Point(3, 272);
+            this.lbl_BookReturn_DueDate.Name = "lbl_BookReturn_DueDate";
+            this.lbl_BookReturn_DueDate.Size = new System.Drawing.Size(43, 13);
+            this.lbl_BookReturn_DueDate.TabIndex = 4;
+            this.lbl_BookReturn_DueDate.Text = "label30";
+            // 
+            // lbl_BookReturn_DateBorrowed
+            // 
+            this.lbl_BookReturn_DateBorrowed.AutoSize = true;
+            this.lbl_BookReturn_DateBorrowed.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_BookReturn_DateBorrowed.Location = new System.Drawing.Point(3, 216);
+            this.lbl_BookReturn_DateBorrowed.Name = "lbl_BookReturn_DateBorrowed";
+            this.lbl_BookReturn_DateBorrowed.Size = new System.Drawing.Size(43, 13);
+            this.lbl_BookReturn_DateBorrowed.TabIndex = 3;
+            this.lbl_BookReturn_DateBorrowed.Text = "label27";
+            // 
+            // lbl_BookReturn_BookList
+            // 
+            this.lbl_BookReturn_BookList.AutoSize = true;
+            this.lbl_BookReturn_BookList.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_BookReturn_BookList.Location = new System.Drawing.Point(3, 143);
+            this.lbl_BookReturn_BookList.Name = "lbl_BookReturn_BookList";
+            this.lbl_BookReturn_BookList.Size = new System.Drawing.Size(43, 13);
+            this.lbl_BookReturn_BookList.TabIndex = 1;
+            this.lbl_BookReturn_BookList.Text = "label25";
+            // 
+            // lbl_BookReturn_ReturnerName
+            // 
+            this.lbl_BookReturn_ReturnerName.AutoSize = true;
+            this.lbl_BookReturn_ReturnerName.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_BookReturn_ReturnerName.Location = new System.Drawing.Point(3, 37);
+            this.lbl_BookReturn_ReturnerName.Name = "lbl_BookReturn_ReturnerName";
+            this.lbl_BookReturn_ReturnerName.Size = new System.Drawing.Size(43, 13);
+            this.lbl_BookReturn_ReturnerName.TabIndex = 0;
+            this.lbl_BookReturn_ReturnerName.Text = "label25";
+            // 
+            // panel22
+            // 
+            this.panel22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.panel22.Location = new System.Drawing.Point(17, 105);
+            this.panel22.Name = "panel22";
+            this.panel22.Size = new System.Drawing.Size(761, 50);
+            this.panel22.TabIndex = 19;
+            // 
+            // flp_BooksReturn
+            // 
+            this.flp_BooksReturn.AutoScroll = true;
+            this.flp_BooksReturn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.flp_BooksReturn.Enabled = false;
+            this.flp_BooksReturn.Location = new System.Drawing.Point(17, 156);
+            this.flp_BooksReturn.Name = "flp_BooksReturn";
+            this.flp_BooksReturn.Size = new System.Drawing.Size(761, 350);
+            this.flp_BooksReturn.TabIndex = 18;
             // 
             // tb_BorrowerList
             // 
+            this.tb_BorrowerList.Controls.Add(this.label41);
+            this.tb_BorrowerList.Controls.Add(this.label40);
+            this.tb_BorrowerList.Controls.Add(this.label37);
+            this.tb_BorrowerList.Controls.Add(this.label39);
+            this.tb_BorrowerList.Controls.Add(this.label38);
+            this.tb_BorrowerList.Controls.Add(this.label17);
+            this.tb_BorrowerList.Controls.Add(this.flp_BorrowerList_Teacher);
             this.tb_BorrowerList.Controls.Add(this.label5);
+            this.tb_BorrowerList.Controls.Add(this.flp_BorrowerList_Student);
             this.tb_BorrowerList.Location = new System.Drawing.Point(4, 22);
             this.tb_BorrowerList.Name = "tb_BorrowerList";
-            this.tb_BorrowerList.Size = new System.Drawing.Size(1062, 594);
+            this.tb_BorrowerList.Size = new System.Drawing.Size(1052, 594);
             this.tb_BorrowerList.TabIndex = 4;
             this.tb_BorrowerList.Text = "Borrower List";
             this.tb_BorrowerList.UseVisualStyleBackColor = true;
             // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label41.Location = new System.Drawing.Point(524, 305);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(82, 17);
+            this.label41.TabIndex = 9;
+            this.label41.Text = "Department";
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label40.Location = new System.Drawing.Point(268, 305);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(86, 17);
+            this.label40.TabIndex = 8;
+            this.label40.Text = "Employee ID";
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.Location = new System.Drawing.Point(12, 305);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(43, 17);
+            this.label37.TabIndex = 7;
+            this.label37.Text = "Name";
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.Location = new System.Drawing.Point(780, 13);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(53, 17);
+            this.label39.TabIndex = 6;
+            this.label39.Text = "Section";
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label38.Location = new System.Drawing.Point(524, 13);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(71, 17);
+            this.label38.TabIndex = 5;
+            this.label38.Text = "Year-Level";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(268, 13);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(75, 17);
+            this.label17.TabIndex = 4;
+            this.label17.Text = "Student ID";
+            // 
+            // flp_BorrowerList_Teacher
+            // 
+            this.flp_BorrowerList_Teacher.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flp_BorrowerList_Teacher.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flp_BorrowerList_Teacher.Location = new System.Drawing.Point(3, 325);
+            this.flp_BorrowerList_Teacher.Name = "flp_BorrowerList_Teacher";
+            this.flp_BorrowerList_Teacher.Size = new System.Drawing.Size(1045, 254);
+            this.flp_BorrowerList_Teacher.TabIndex = 3;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(390, 225);
+            this.label5.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(12, 13);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(68, 13);
+            this.label5.Size = new System.Drawing.Size(43, 17);
             this.label5.TabIndex = 1;
-            this.label5.Text = "Borrower List";
+            this.label5.Text = "Name";
+            // 
+            // flp_BorrowerList_Student
+            // 
+            this.flp_BorrowerList_Student.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flp_BorrowerList_Student.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flp_BorrowerList_Student.Location = new System.Drawing.Point(3, 33);
+            this.flp_BorrowerList_Student.Name = "flp_BorrowerList_Student";
+            this.flp_BorrowerList_Student.Size = new System.Drawing.Size(1045, 254);
+            this.flp_BorrowerList_Student.TabIndex = 0;
             // 
             // tb_Payment
             // 
@@ -1417,10 +1700,86 @@
             this.label6.TabIndex = 1;
             this.label6.Text = "Payment";
             // 
+            // tb_Reservation
+            // 
+            this.tb_Reservation.Location = new System.Drawing.Point(4, 22);
+            this.tb_Reservation.Name = "tb_Reservation";
+            this.tb_Reservation.Size = new System.Drawing.Size(1062, 594);
+            this.tb_Reservation.TabIndex = 6;
+            this.tb_Reservation.Text = "Reservation";
+            this.tb_Reservation.UseVisualStyleBackColor = true;
+            // 
             // tmr_Update
             // 
             this.tmr_Update.Interval = 5000;
             this.tmr_Update.Tick += new System.EventHandler(this.tmr_Update_Tick);
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(0, 0);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(41, 13);
+            this.label33.TabIndex = 0;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label32.Font = new System.Drawing.Font("Bahnschrift", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.ForeColor = System.Drawing.Color.White;
+            this.label32.Location = new System.Drawing.Point(0, 0);
+            this.label32.Name = "label32";
+            this.label32.Padding = new System.Windows.Forms.Padding(13);
+            this.label32.Size = new System.Drawing.Size(159, 50);
+            this.label32.TabIndex = 1;
+            // 
+            // panel21
+            // 
+            this.panel21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.panel21.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel21.Location = new System.Drawing.Point(0, 0);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(227, 50);
+            this.panel21.TabIndex = 5;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(0, 0);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(41, 13);
+            this.label31.TabIndex = 0;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Bahnschrift", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(14, 358);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(86, 30);
+            this.button2.TabIndex = 8;
+            this.button2.Text = "Confirm";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Bahnschrift", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(128, 358);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(86, 30);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Clear";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // Dashboard
             // 
@@ -1487,6 +1846,8 @@
             this.panel15.PerformLayout();
             this.tb_BookReturning.ResumeLayout(false);
             this.tb_BookReturning.PerformLayout();
+            this.panel20.ResumeLayout(false);
+            this.panel20.PerformLayout();
             this.tb_BorrowerList.ResumeLayout(false);
             this.tb_BorrowerList.PerformLayout();
             this.tb_Payment.ResumeLayout(false);
@@ -1503,7 +1864,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btn_Dashboard;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btn_Sidebar_Logout;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Button btn_Payment;
         private System.Windows.Forms.Panel panel7;
@@ -1523,12 +1884,9 @@
         private System.Windows.Forms.TabPage tb_Dashboard;
         private System.Windows.Forms.TabPage tb_BookList;
         private System.Windows.Forms.TabPage tb_BookBorrowing;
-        private System.Windows.Forms.TabPage tb_BookReturning;
         private System.Windows.Forms.TabPage tb_BorrowerList;
         private System.Windows.Forms.TabPage tb_Payment;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel_BookListed;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -1596,8 +1954,40 @@
         private System.Windows.Forms.Button btn_Member_Clear;
         private System.Windows.Forms.Button btn_Member_Confirm;
         private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.ComboBox cb_Member_Name;
-        private System.Windows.Forms.ComboBox cb_Member_BorrowerType;
         private System.Windows.Forms.Label label29;
+        public System.Windows.Forms.ComboBox cb_Member_Name;
+        public System.Windows.Forms.ComboBox cb_Member_BorrowerType;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.FlowLayoutPanel flp_BorrowerList_Student;
+        private System.Windows.Forms.FlowLayoutPanel flp_BorrowerList_Teacher;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TabPage tb_BookReturning;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Panel panel22;
+        public System.Windows.Forms.FlowLayoutPanel flp_BooksReturn;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Panel panel21;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TabPage tb_Reservation;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Panel panel20;
+        public System.Windows.Forms.Label lbl_BookReturn_ReturnerName;
+        public System.Windows.Forms.Label lbl_BookReturn_BookList;
+        public System.Windows.Forms.Label lbl_BookReturn_DueDate;
+        public System.Windows.Forms.Label lbl_BookReturn_DateBorrowed;
+        public System.Windows.Forms.Label lbl_BookReturn_ReturnerType;
+        private System.Windows.Forms.Button btn_BookReturn_Return;
+        public System.Windows.Forms.ComboBox cb_BookReturn_BorrowerType;
+        public System.Windows.Forms.ComboBox cb_BookReturn_Name;
     }
 }

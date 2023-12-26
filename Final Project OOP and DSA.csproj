@@ -196,12 +196,14 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BookBorrowingCode.cs" />
     <Compile Include="BookInformationDisplay.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="BookInformationDisplay.Designer.cs">
       <DependentUpon>BookInformationDisplay.cs</DependentUpon>
     </Compile>
+    <Compile Include="BookReturningCode.cs" />
     <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>

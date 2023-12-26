@@ -20,27 +20,6 @@ namespace Final_Project_OOP_and_DSA
         {
                 InitializeComponent();
         }    
-    
-        private Point lastPoint;
-
-        protected override void OnMouseDown(MouseEventArgs e)
-        {
-            base.OnMouseDown(e);
-            if (e.Button == MouseButtons.Left)
-            {
-                lastPoint = new Point(e.X, e.Y);
-            }
-        }
-
-        protected override void OnMouseMove(MouseEventArgs e)
-        {
-            base.OnMouseMove(e);
-            if (e.Button == MouseButtons.Left)
-            {
-                this.Left += e.X - lastPoint.X;
-                this.Top += e.Y - lastPoint.Y;
-            }
-        }
 
         private void Loading_Load(object sender, EventArgs e)
         {
