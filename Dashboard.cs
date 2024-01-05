@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Diagnostics;
@@ -26,6 +21,7 @@ namespace Final_Project_OOP_and_DSA
         public Dashboard()
         {
             InitializeComponent();
+            InitializeSample();
             InitializeBookListContent();
             InitializeDashboardContents();
             InitializeBookBorrowingContents();
@@ -37,6 +33,11 @@ namespace Final_Project_OOP_and_DSA
             panel_Sidebar_Sidebar.Size = new Size(175, 600);
             lbl_Member_BookListDisplay.Text += "\n";
             
+        }
+        private void InitializeSample()
+        {
+            Receipt rc = new Receipt();
+            richTextBox1.Text = rc.Content();
         }
         public void InitializeBorrowerListContent()
         {
@@ -305,7 +306,14 @@ namespace Final_Project_OOP_and_DSA
 
         private void button8_Click(object sender, EventArgs e)
         {
-            tmr_Sidebar_SidebarExitAnimation.Start();            
+            tmr_Sidebar_SidebarExitAnimation.Start();
+            btn_Dashboard.Enabled = false;
+            btn_BookList.Enabled = false;
+            btn_BookBorrowing.Enabled = false;
+            btn_BookReturning.Enabled = false;
+            btn_BorrowerList.Enabled = false;
+            btn_Payment.Enabled = false;
+            btn_Sidebar_Logout.Enabled = false;
         }
 
         private void tmr_Sidebar_SidebarExitAnimation_Tick(object sender, EventArgs e)
@@ -327,6 +335,13 @@ namespace Final_Project_OOP_and_DSA
         private void button8_Click_1(object sender, EventArgs e)
         {
             tmr_Sidebar_SidebarEntryAnimation.Start();
+            btn_Dashboard.Enabled = true;
+            btn_BookList.Enabled = true;
+            btn_BookBorrowing.Enabled = true;
+            btn_BookReturning.Enabled = true;
+            btn_BorrowerList.Enabled = true;
+            btn_Payment.Enabled = true;
+            btn_Sidebar_Logout.Enabled = true;
         }
 
         private void tmr_Sidebar_SidebarEntryAnimation_Tick(object sender, EventArgs e)
@@ -657,7 +672,23 @@ namespace Final_Project_OOP_and_DSA
 
         private void btn_BookReturn_Return_Click(object sender, EventArgs e)
         {
-            BookReturningCode.InitiateBookReturning();
+            if (BookReturningCode.InitiateBookReturning())
+            {
+                InitializeBookListContentByFilterWithCheckBox("SELECT * FROM Books WHERE book_status = 'Available'");
+            }
+            
+        }
+
+        private void panel20_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btn_Member_Clear_Click(object sender, EventArgs e)
+        {
+            cb_Member_Name.Items.Clear();
+            cb_BookReturn_BorrowerType.SelectedIndex = -1;
+            flp_Member_BookDisplay.Controls.Clear();
         }
     }
 }

@@ -14,6 +14,7 @@ namespace Final_Project_OOP_and_DSA
 {
     public partial class BookInformationDisplay : Form
     {
+        int timer = 5;
         public BookInformationDisplay()
         {
             InitializeComponent();
@@ -34,34 +35,13 @@ namespace Final_Project_OOP_and_DSA
             pb_BookDisplay_Image.Image = (Bitmap)Resources.ResourceManager.GetObject(contents[7]);
             this.Show();
         }
-        private void label6_Click(object sender, EventArgs e)
+        private void AutoClose_Tick(object sender, EventArgs e)
         {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbl_BookDisplay_BookTitleLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbl_BookDisplay_Author_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_BookDisplay_Information(object sender, EventArgs e)
-        {
-
+            timer--;
+            if (timer == 0)
+            {
+                this.Close();
+            }
         }
     }
 }

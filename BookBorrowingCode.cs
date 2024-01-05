@@ -11,6 +11,12 @@ namespace Final_Project_OOP_and_DSA
 {
     internal class BookBorrowingCode
     {
+        private static void Reset()
+        {
+            frm_Login.ds.cb_Member_BorrowerType.SelectedIndex = -1;
+            frm_Login.ds.cb_Member_BorrowerType.Enabled = true;
+            frm_Login.ds.cb_Member_Name.Items.Clear();
+        }
         public static void BookBorrowing(List<string> BooksBeingBorrowed)
         {
             string[] BookName = new string[5];
@@ -98,6 +104,7 @@ namespace Final_Project_OOP_and_DSA
         {
             try
             {
+                Debug.Write("BookBorrowing");
                 DatabaseConnection databaseConnection = new DatabaseConnection();
                 SqlConnection cn = databaseConnection.DatabaseConnect();
                 string sql = "";
@@ -123,14 +130,15 @@ namespace Final_Project_OOP_and_DSA
                 int Saved = cmd.ExecuteNonQuery();
                 if (Saved != 0)
                 {
-                    Debug.WriteLine("BookBorrowing: Saved");
+                    Debug.WriteLine("Saved");
                     MessageBox.Show("Borrowed Successfully!");
                 }
                 else
                 {
-                    Debug.WriteLine("BookBorrowing: Error");
+                    Debug.WriteLine("Error");
                 }
                 cn.Close();
+                Reset();
                 
             }
             catch (Exception ex)

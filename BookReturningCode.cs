@@ -18,39 +18,57 @@ namespace Final_Project_OOP_and_DSA
         private static string booksName = "";
         private static List<string> booksReturning = new List<string>();
         private static List<string> booksRemaining = new List<string>();
+        private static int diffDays = 0;
 
-        public static void Reset()
+        public static void Refresh()
         {   
             frm_Login.ds.flp_BooksReturn.Controls.Clear();
             frm_Login.ds.lbl_BookReturn_BookList.Text = "Book List: ";
             frm_Login.ds.lbl_BookReturn_DateBorrowed.Text = "Date Borrowed: ";
             frm_Login.ds.lbl_BookReturn_DueDate.Text = "Due Date: ";
-            //frm_Login.ds.lbl_BookReturn_ReturnerType.Text = "Returner Type: ";
+            frm_Login.ds.lbl_BookReturn_ReturnerType.Text = "Returner Type: ";
             frm_Login.ds.lbl_BookReturn_ReturnerName.Text = "Returner Name: ";
+        }
+        public static void Reset()
+        {
+            frm_Login.ds.flp_BooksReturn.Controls.Clear();
+            frm_Login.ds.lbl_BookReturn_BookList.Text = "Book List: ";
+            frm_Login.ds.lbl_BookReturn_DateBorrowed.Text = "Date Borrowed: ";
+            frm_Login.ds.lbl_BookReturn_DueDate.Text = "Due Date: ";
+            frm_Login.ds.lbl_BookReturn_ReturnerType.Text = "Returner Type: ";
+            frm_Login.ds.lbl_BookReturn_ReturnerName.Text = "Returner Name: ";
+            frm_Login.ds.cb_BookReturn_BorrowerType.SelectedIndex = -1;
+            frm_Login.ds.cb_BookReturn_Name.Items.Clear();
         }
         public static void ChangeContent(string name)
         {
-            Reset();    
+            Refresh();    
             DatabaseConnection databaseConnection = new DatabaseConnection();
             SqlConnection cn = databaseConnection.DatabaseConnect();
             List<object[]> results = databaseConnection.QueryDatabaseForReturnBooks(cn, $"SELECT * FROM BookBorrowing WHERE borrower_name = '{name}'");
             foreach (var item in results)
             { 
                 //Borrower Name
-                Debug.WriteLine(item[1]);
                 frm_Login.ds.lbl_BookReturn_ReturnerName.Text = "Borrower Name: " + item[1].ToString();
                 //BookList
                 string[] arr = item[2].ToString().Split(new string[] { "~" }, StringSplitOptions.None);
+                if (frm_Login.ds.cb_BookReturn_BorrowerType.Text == "Student")
+                {
+                    DateTime DueDate = (DateTime)item[4];
+                    DateTime DateNow = DateTime.Now;
+                    TimeSpan timeSpan = DateNow - DueDate;
+                    diffDays = timeSpan.Days;
+                }
+                
                 foreach(string x in arr)
                 {
                     frm_Login.ds.lbl_BookReturn_BookList.Text += "\n"+x;
                     booksName += x;
                     GetBooks(x);
                 }
-                Debug.WriteLine(item[3]);
                 //Date Borrower                               
                 frm_Login.ds.lbl_BookReturn_DateBorrowed.Text = "Date Borrowed: " + item[3];
-                Debug.WriteLine(item[4]);
+                
                 //Due
                 if (item[4].ToString() != "NULL")
                 {
@@ -139,6 +157,25 @@ namespace Final_Project_OOP_and_DSA
                 Debug.WriteLine(item);
             }
         }
+        
+        private static object GetBooksRemaining()
+        {
+            object result = "";
+            if (!(booksRemaining.Count > 0))
+            {
+                result = DBNull.Value;
+                Debug.WriteLine(result);
+            }
+            else
+            {
+                foreach (var item in booksRemaining)
+                {
+                    result += item + "~";
+                    Debug.WriteLine(result);
+                }
+            }
+            return result;
+        }
         private static void BookReturnForBooks(string bookName)
         {
             try
@@ -149,7 +186,7 @@ namespace Final_Project_OOP_and_DSA
                 SqlConnection cn = databaseConnection.DatabaseConnect();
                 string sql = "";
                 sql = "UPDATE Books SET book_status = 'Available' WHERE book_title = @name";
-                
+
                 cn.Open();
                 SqlCommand cmd = new SqlCommand(sql, cn);
                 cmd.Parameters.AddWithValue("@name", bookName);
@@ -170,20 +207,7 @@ namespace Final_Project_OOP_and_DSA
 
             }
         }
-        private static object GetBooksRemaining()
-        {
-            object result = "";
-            if(!(booksRemaining.Count > 0))
-            {
-                result = DBNull.Value;
-            }
-            foreach (var item in booksRemaining)
-            {
-                result += item + "~";
-            }
-            return result;
-        }
-        private static void BookReturnBookBorrowing()
+        private static bool BookReturnBookBorrowing()
         {
             try
             {
@@ -203,10 +227,12 @@ namespace Final_Project_OOP_and_DSA
                     if (Saved > 0)
                     {
                         Debug.WriteLine("Successful");
+                        return true;
                     }
                     else
                     {
                         Debug.WriteLine("Unsuccessful");
+                        return false;
                     }
                 }
                 else
@@ -220,62 +246,93 @@ namespace Final_Project_OOP_and_DSA
                     if (Saved > 0)
                     {
                         Debug.WriteLine("Successful");
+                        return true;
                     }
                     else
                     {
                         Debug.WriteLine("Unsuccessful");
+                        return false;
                     }
                 }
             }
             catch(Exception ex)
             {
-
+                return false;
             }
         }
-        private static void BookBorrowedChange()
+        private static bool BookBorrowedChange()
         {
             Debug.Write("BookBorrowChange: ");
+            DatabaseConnection databaseConnection = new DatabaseConnection();
+            SqlConnection cn = databaseConnection.DatabaseConnect();
+            string sql = "";
+            int saved = 0;
             try
             {
                 if(frm_Login.ds.cb_BookReturn_BorrowerType.Text == "Teacher")
                 {
-                    DatabaseConnection databaseConnection = new DatabaseConnection();
-                    SqlConnection cn = databaseConnection.DatabaseConnect();
-                    string sql = "";
-                    sql = "UPDATE Teacher SET teacher_book_borrowed = @books";
-                    cn.Open();
-                    SqlCommand cmd = new SqlCommand(sql, cn);
-                    cmd.Parameters.AddWithValue("@books", GetBooksRemaining());
-                    int Saved = cmd.ExecuteNonQuery();
-                    if(Saved > 0)
-                    {
-                        Debug.WriteLine("Successful");
-                    }
-                    else
-                    {
-                        Debug.WriteLine("Unsuccessful");
-                    }
+                    sql = "UPDATE Teacher SET teacher_book_borrowed = @books WHERE teacher_name = @name";
+                      
                 }
                 else if (frm_Login.ds.cb_BookReturn_BorrowerType.Text == "Student")
                 {
-
+                    sql = "UPDATE Student SET student_book_borrowed = @books WHERE student_name = @name";
+                }
+                cn.Open();
+                SqlCommand cmd = new SqlCommand(sql, cn);
+                cmd.Parameters.AddWithValue("@books", GetBooksRemaining());
+                cmd.Parameters.AddWithValue("@name", frm_Login.ds.cb_BookReturn_Name.Text);
+                Debug.WriteLine("@books" + GetBooksRemaining());
+                Debug.WriteLine("@name" + frm_Login.ds.cb_BookReturn_Name.Text);
+                saved = cmd.ExecuteNonQuery();
+                if (saved > 0)
+                {
+                    Debug.WriteLine("Successful");
+                    return true;
+                }
+                else
+                {
+                    Debug.WriteLine("Unsuccessful");
+                    return false;
                 }
             }
             catch(Exception ex)
             {
-
+                return false;
             }
+            return false;
         }
 
-        public static void InitiateBookReturning()
+        public static bool InitiateBookReturning()
         {
+            Debug.WriteLine(diffDays);
+            if (diffDays > 0) {
+                DialogResult res = MessageBox.Show("The book is past its due date. Do you want to settle the overdue fee?", "Confirmation", MessageBoxButtons.OKCancel);
+                if (res == DialogResult.OK)
+                {
+                    
+                }
+                else
+                {
+                    
+                }
+                MessageBox.Show("This function is still work in progress");
+                return false;
+            }
             if (booksReturning.Count > 0)
             {
                 booksReturning.ForEach(item => BookReturnForBooks(item));
-
             }
-            BookBorrowedChange();
-            BookReturnBookBorrowing();
+            if(BookBorrowedChange() && BookReturnBookBorrowing())
+            {
+                MessageBox.Show("Return Successful");
+            }
+            else
+            {
+                MessageBox.Show("Return Unsuccessful");
+            }
+            Reset();
+            return true;
         }
     }
 }
