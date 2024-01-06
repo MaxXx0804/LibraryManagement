@@ -711,6 +711,16 @@ namespace Final_Project_OOP_and_DSA
         {
 
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void close_Btn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
 

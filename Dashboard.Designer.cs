@@ -154,6 +154,22 @@
             this.panel23 = new System.Windows.Forms.Panel();
             this.label36 = new System.Windows.Forms.Label();
             this.panel25 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.label59 = new System.Windows.Forms.Label();
+            this.label58 = new System.Windows.Forms.Label();
+            this.label56 = new System.Windows.Forms.Label();
+            this.label57 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label55 = new System.Windows.Forms.Label();
+            this.label54 = new System.Windows.Forms.Label();
+            this.label53 = new System.Windows.Forms.Label();
+            this.label52 = new System.Windows.Forms.Label();
+            this.label51 = new System.Windows.Forms.Label();
+            this.label50 = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.panel28 = new System.Windows.Forms.Panel();
@@ -184,22 +200,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label46 = new System.Windows.Forms.Label();
-            this.label47 = new System.Windows.Forms.Label();
-            this.label48 = new System.Windows.Forms.Label();
-            this.label49 = new System.Windows.Forms.Label();
-            this.label50 = new System.Windows.Forms.Label();
-            this.label51 = new System.Windows.Forms.Label();
-            this.label52 = new System.Windows.Forms.Label();
-            this.label53 = new System.Windows.Forms.Label();
-            this.label54 = new System.Windows.Forms.Label();
-            this.label55 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.label56 = new System.Windows.Forms.Label();
-            this.label57 = new System.Windows.Forms.Label();
-            this.label58 = new System.Windows.Forms.Label();
-            this.label59 = new System.Windows.Forms.Label();
+            this.close_Btn = new System.Windows.Forms.Button();
             this.panel_Sidebar_Sidebar.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -245,13 +246,13 @@
             this.tb_Payment.SuspendLayout();
             this.panel23.SuspendLayout();
             this.panel25.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.panel28.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.panel24.SuspendLayout();
             this.panel27.SuspendLayout();
             this.panel26.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_Sidebar_Sidebar
@@ -1730,6 +1731,7 @@
             // 
             // panel23
             // 
+            this.panel23.Controls.Add(this.close_Btn);
             this.panel23.Controls.Add(this.label36);
             this.panel23.Controls.Add(this.panel25);
             this.panel23.Location = new System.Drawing.Point(3, 3);
@@ -1764,12 +1766,276 @@
             this.panel25.Size = new System.Drawing.Size(1040, 530);
             this.panel25.TabIndex = 6;
             // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Controls.Add(this.label59, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.label58, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.label56, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.label57, 1, 0);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(111, 404);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 2;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(357, 72);
+            this.tableLayoutPanel2.TabIndex = 11;
+            // 
+            // label59
+            // 
+            this.label59.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label59.AutoSize = true;
+            this.label59.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label59.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label59.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.label59.Location = new System.Drawing.Point(3, 36);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(172, 36);
+            this.label59.TabIndex = 12;
+            this.label59.Text = "Change";
+            this.label59.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label58
+            // 
+            this.label58.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label58.AutoSize = true;
+            this.label58.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label58.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label58.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.label58.Location = new System.Drawing.Point(181, 36);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(173, 36);
+            this.label58.TabIndex = 11;
+            this.label58.Text = "Label";
+            this.label58.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label56
+            // 
+            this.label56.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label56.AutoSize = true;
+            this.label56.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label56.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label56.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.label56.Location = new System.Drawing.Point(3, 0);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(172, 36);
+            this.label56.TabIndex = 2;
+            this.label56.Text = "Amount paid";
+            this.label56.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label57
+            // 
+            this.label57.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label57.AutoSize = true;
+            this.label57.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label57.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label57.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.label57.Location = new System.Drawing.Point(181, 0);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(173, 36);
+            this.label57.TabIndex = 3;
+            this.label57.Text = "Label";
+            this.label57.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.label55, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.label54, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.label53, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.label52, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.label51, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label50, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label49, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label48, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label47, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label46, 0, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(110, 206);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 5;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(360, 180);
+            this.tableLayoutPanel1.TabIndex = 10;
+            // 
+            // label55
+            // 
+            this.label55.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label55.AutoSize = true;
+            this.label55.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label55.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label55.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.label55.Location = new System.Drawing.Point(3, 144);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(174, 36);
+            this.label55.TabIndex = 10;
+            this.label55.Text = "TOTAL";
+            this.label55.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label54
+            // 
+            this.label54.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label54.AutoSize = true;
+            this.label54.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label54.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label54.Location = new System.Drawing.Point(183, 144);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(174, 36);
+            this.label54.TabIndex = 9;
+            this.label54.Text = "Label";
+            this.label54.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label53
+            // 
+            this.label53.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label53.AutoSize = true;
+            this.label53.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label53.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label53.Location = new System.Drawing.Point(183, 108);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(174, 36);
+            this.label53.TabIndex = 8;
+            this.label53.Text = "Label";
+            this.label53.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label52
+            // 
+            this.label52.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label52.AutoSize = true;
+            this.label52.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label52.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label52.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.label52.Location = new System.Drawing.Point(3, 108);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(174, 36);
+            this.label52.TabIndex = 7;
+            this.label52.Text = "Additional fees";
+            this.label52.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label51
+            // 
+            this.label51.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label51.AutoSize = true;
+            this.label51.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label51.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label51.Location = new System.Drawing.Point(183, 72);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(174, 36);
+            this.label51.TabIndex = 6;
+            this.label51.Text = "Label";
+            this.label51.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label50
+            // 
+            this.label50.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label50.AutoSize = true;
+            this.label50.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label50.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label50.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.label50.Location = new System.Drawing.Point(3, 72);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(174, 36);
+            this.label50.TabIndex = 5;
+            this.label50.Text = "Subtotal";
+            this.label50.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label49
+            // 
+            this.label49.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label49.AutoSize = true;
+            this.label49.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label49.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label49.Location = new System.Drawing.Point(183, 36);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(174, 36);
+            this.label49.TabIndex = 4;
+            this.label49.Text = "Label";
+            this.label49.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label48
+            // 
+            this.label48.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label48.AutoSize = true;
+            this.label48.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label48.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label48.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.label48.Location = new System.Drawing.Point(3, 36);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(174, 36);
+            this.label48.TabIndex = 3;
+            this.label48.Text = "Day/s delayed";
+            this.label48.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label47
+            // 
+            this.label47.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label47.AutoSize = true;
+            this.label47.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label47.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label47.Location = new System.Drawing.Point(183, 0);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(174, 36);
+            this.label47.TabIndex = 2;
+            this.label47.Text = "Label";
+            this.label47.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label46
+            // 
+            this.label46.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label46.AutoSize = true;
+            this.label46.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label46.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label46.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.label46.Location = new System.Drawing.Point(3, 0);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(174, 36);
+            this.label46.TabIndex = 1;
+            this.label46.Text = "Rate per day";
+            this.label46.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // label25
             // 
             this.label25.AutoSize = true;
             this.label25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(218)))), ((int)(((byte)(218)))));
             this.label25.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(29, 167);
+            this.label25.Location = new System.Drawing.Point(52, 175);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(84, 19);
             this.label25.TabIndex = 8;
@@ -1779,7 +2045,7 @@
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(596, 76);
+            this.label27.Location = new System.Drawing.Point(623, 76);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(223, 19);
             this.label27.TabIndex = 7;
@@ -1791,7 +2057,7 @@
             this.panel28.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel28.Controls.Add(this.label42);
             this.panel28.Controls.Add(this.pictureBox7);
-            this.panel28.Location = new System.Drawing.Point(86, 68);
+            this.panel28.Location = new System.Drawing.Point(114, 69);
             this.panel28.Name = "panel28";
             this.panel28.Size = new System.Drawing.Size(232, 75);
             this.panel28.TabIndex = 5;
@@ -1800,7 +2066,7 @@
             // 
             this.label42.AutoSize = true;
             this.label42.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label42.Location = new System.Drawing.Point(58, 26);
+            this.label42.Location = new System.Drawing.Point(59, 26);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(161, 19);
             this.label42.TabIndex = 6;
@@ -1809,7 +2075,7 @@
             // pictureBox7
             // 
             this.pictureBox7.Image = global::Final_Project_OOP_and_DSA.Properties.Resources.cash1;
-            this.pictureBox7.Location = new System.Drawing.Point(-150, -35);
+            this.pictureBox7.Location = new System.Drawing.Point(-150, -33);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(364, 140);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1821,7 +2087,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(218)))), ((int)(((byte)(218)))));
             this.label6.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(28, 23);
+            this.label6.Location = new System.Drawing.Point(344, 26);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(272, 25);
             this.label6.TabIndex = 0;
@@ -1842,7 +2108,7 @@
             this.panel24.Controls.Add(this.button4);
             this.panel24.Controls.Add(this.label35);
             this.panel24.Controls.Add(this.label30);
-            this.panel24.Location = new System.Drawing.Point(600, 110);
+            this.panel24.Location = new System.Drawing.Point(626, 110);
             this.panel24.Name = "panel24";
             this.panel24.Size = new System.Drawing.Size(309, 383);
             this.panel24.TabIndex = 2;
@@ -2075,269 +2341,19 @@
             // 
             this.printDialog1.UseEXDialog = true;
             // 
-            // tableLayoutPanel1
+            // close_Btn
             // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.label55, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.label54, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.label53, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.label52, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.label51, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label50, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label49, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label48, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label47, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label46, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(86, 206);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 5;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(360, 180);
-            this.tableLayoutPanel1.TabIndex = 10;
-            // 
-            // label46
-            // 
-            this.label46.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label46.AutoSize = true;
-            this.label46.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label46.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label46.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.label46.Location = new System.Drawing.Point(3, 0);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(174, 36);
-            this.label46.TabIndex = 1;
-            this.label46.Text = "Rate per day";
-            this.label46.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label47
-            // 
-            this.label47.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label47.AutoSize = true;
-            this.label47.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label47.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label47.Location = new System.Drawing.Point(183, 0);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(174, 36);
-            this.label47.TabIndex = 2;
-            this.label47.Text = "Label";
-            this.label47.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label48
-            // 
-            this.label48.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label48.AutoSize = true;
-            this.label48.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label48.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label48.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.label48.Location = new System.Drawing.Point(3, 36);
-            this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(174, 36);
-            this.label48.TabIndex = 3;
-            this.label48.Text = "Day/s delayed";
-            this.label48.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label49
-            // 
-            this.label49.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label49.AutoSize = true;
-            this.label49.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label49.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label49.Location = new System.Drawing.Point(183, 36);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(174, 36);
-            this.label49.TabIndex = 4;
-            this.label49.Text = "Label";
-            this.label49.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label50
-            // 
-            this.label50.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label50.AutoSize = true;
-            this.label50.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label50.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label50.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.label50.Location = new System.Drawing.Point(3, 72);
-            this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(174, 36);
-            this.label50.TabIndex = 5;
-            this.label50.Text = "Subtotal";
-            this.label50.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label51
-            // 
-            this.label51.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label51.AutoSize = true;
-            this.label51.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label51.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label51.Location = new System.Drawing.Point(183, 72);
-            this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(174, 36);
-            this.label51.TabIndex = 6;
-            this.label51.Text = "Label";
-            this.label51.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label52
-            // 
-            this.label52.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label52.AutoSize = true;
-            this.label52.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label52.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label52.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.label52.Location = new System.Drawing.Point(3, 108);
-            this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(174, 36);
-            this.label52.TabIndex = 7;
-            this.label52.Text = "Additional fees";
-            this.label52.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label53
-            // 
-            this.label53.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label53.AutoSize = true;
-            this.label53.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label53.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label53.Location = new System.Drawing.Point(183, 108);
-            this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(174, 36);
-            this.label53.TabIndex = 8;
-            this.label53.Text = "Label";
-            this.label53.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label54
-            // 
-            this.label54.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label54.AutoSize = true;
-            this.label54.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label54.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label54.Location = new System.Drawing.Point(183, 144);
-            this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(174, 36);
-            this.label54.TabIndex = 9;
-            this.label54.Text = "Label";
-            this.label54.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label55
-            // 
-            this.label55.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label55.AutoSize = true;
-            this.label55.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label55.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label55.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.label55.Location = new System.Drawing.Point(3, 144);
-            this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(174, 36);
-            this.label55.TabIndex = 10;
-            this.label55.Text = "TOTAL";
-            this.label55.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Controls.Add(this.label59, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.label58, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.label56, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label57, 1, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(86, 405);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 2;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(357, 72);
-            this.tableLayoutPanel2.TabIndex = 11;
-            // 
-            // label56
-            // 
-            this.label56.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label56.AutoSize = true;
-            this.label56.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label56.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label56.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.label56.Location = new System.Drawing.Point(3, 0);
-            this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(172, 36);
-            this.label56.TabIndex = 2;
-            this.label56.Text = "Amount paid";
-            this.label56.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label57
-            // 
-            this.label57.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label57.AutoSize = true;
-            this.label57.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label57.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label57.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.label57.Location = new System.Drawing.Point(181, 0);
-            this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(173, 36);
-            this.label57.TabIndex = 3;
-            this.label57.Text = "Label";
-            this.label57.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label58
-            // 
-            this.label58.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label58.AutoSize = true;
-            this.label58.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label58.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label58.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.label58.Location = new System.Drawing.Point(181, 36);
-            this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(173, 36);
-            this.label58.TabIndex = 11;
-            this.label58.Text = "Label";
-            this.label58.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label59
-            // 
-            this.label59.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label59.AutoSize = true;
-            this.label59.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label59.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label59.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.label59.Location = new System.Drawing.Point(3, 36);
-            this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(172, 36);
-            this.label59.TabIndex = 12;
-            this.label59.Text = "Change";
-            this.label59.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.close_Btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.close_Btn.FlatAppearance.BorderSize = 0;
+            this.close_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.close_Btn.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.close_Btn.Location = new System.Drawing.Point(1000, -1);
+            this.close_Btn.Name = "close_Btn";
+            this.close_Btn.Size = new System.Drawing.Size(49, 36);
+            this.close_Btn.TabIndex = 11;
+            this.close_Btn.Text = "x";
+            this.close_Btn.UseVisualStyleBackColor = true;
+            this.close_Btn.Click += new System.EventHandler(this.close_Btn_Click);
             // 
             // Dashboard
             // 
@@ -2413,6 +2429,10 @@
             this.panel23.PerformLayout();
             this.panel25.ResumeLayout(false);
             this.panel25.PerformLayout();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.panel28.ResumeLayout(false);
             this.panel28.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
@@ -2422,10 +2442,6 @@
             this.panel27.PerformLayout();
             this.panel26.ResumeLayout(false);
             this.panel26.PerformLayout();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2602,5 +2618,6 @@
         private System.Windows.Forms.Label label57;
         private System.Windows.Forms.Label label59;
         private System.Windows.Forms.Label label58;
+        private System.Windows.Forms.Button close_Btn;
     }
 }

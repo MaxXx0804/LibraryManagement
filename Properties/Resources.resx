@@ -139,8 +139,8 @@
   <data name="In_a_Grove" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\In a Grove.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Royal_Girls_and_Royal_Courts" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Royal Girls and Royal Courts.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cpo_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cpo_logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Member" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Member.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -160,11 +160,14 @@
   <data name="The_Demon_Spell" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\The Demon Spell.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Final Project Designs" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Final Project Designs.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Book Listed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Book Listed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="New Member" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\New Member.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cash1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cash1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -172,11 +175,8 @@
   <data name="Books Available" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Books Available.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cpo_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cpo_logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Top Line Design" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Top Line Design.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Berenice" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Berenice.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="My_Own_Affairs" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\My Own Affairs.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -184,17 +184,20 @@
   <data name="Memoir_of_Queen_Adelaide" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Memoir of Queen Adelaide.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Final Project Designs" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Final Project Designs.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Circle Logo Light" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Circle Logo Light.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Book Listed" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Book Listed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Royal_Girls_and_Royal_Courts" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Royal Girls and Royal Courts.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Login SideImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Login SideImage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Berenice" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Berenice.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Top Line Design" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Top Line Design.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Icon Black" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon Black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -202,7 +205,7 @@
   <data name="Pending Payment" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Pending Payment.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cash1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cash1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="reminder" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\reminder.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
