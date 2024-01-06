@@ -302,7 +302,48 @@ namespace Final_Project_OOP_and_DSA
             }
             return false;
         }
+        public static string GetStudentInformation(string name)
+        {
+            SqlDataReader dataReader;
+            string content = "";
+            try
+            {
+                DatabaseConnection databaseConnection = new DatabaseConnection();
+                SqlConnection cn = databaseConnection.DatabaseConnect();
+                string sql = "";
+                sql = "SELECT student_id FROM Student WHERE student_name = @name";
+                SqlCommand cmd = new SqlCommand (sql, cn);
+                cmd.Parameters.AddWithValue("@name", name);
+                cn.Open();
+                dataReader = cmd.ExecuteReader();
+                dataReader.Read();
+                content = dataReader.GetString(0);
+                cn.Close();
 
+            }
+            catch(Exception ex)
+            {
+
+            }
+            return content;
+        }
+        public static bool ByPassBookReturning()
+        {
+            if (booksReturning.Count > 0)
+            {
+                booksReturning.ForEach(item => BookReturnForBooks(item));
+            }
+            if (BookBorrowedChange() && BookReturnBookBorrowing())
+            {
+                MessageBox.Show("Return Successful");
+            }
+            else
+            {
+                MessageBox.Show("Return Unsuccessful");
+            }
+            Reset();
+            return true;
+        }
         public static bool InitiateBookReturning()
         {
             Debug.WriteLine(diffDays);
@@ -310,13 +351,14 @@ namespace Final_Project_OOP_and_DSA
                 DialogResult res = MessageBox.Show("The book is past its due date. Do you want to settle the overdue fee?", "Confirmation", MessageBoxButtons.OKCancel);
                 if (res == DialogResult.OK)
                 {
-                    
+                    frm_Login.ds.tc_Dashboard_TabControl.SelectedTab = frm_Login.ds.tb_Payment;
+                    frm_Login.ds.lbl_Payment_BorrowerName.Text = frm_Login.ds.lbl_BookReturn_ReturnerName.Text.Replace("Borrower Name: ", "");
+                    frm_Login.ds.lbl_Payment_StudentID.Text = GetStudentInformation(frm_Login.ds.lbl_BookReturn_ReturnerName.Text.Replace("Borrower Name: ", ""));
                 }
                 else
                 {
                     
                 }
-                MessageBox.Show("This function is still work in progress");
                 return false;
             }
             if (booksReturning.Count > 0)

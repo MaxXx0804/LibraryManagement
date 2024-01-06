@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Diagnostics;
 using Final_Project_OOP_and_DSA.Properties;
+using System.Windows.Forms.VisualStyles;
 
 namespace Final_Project_OOP_and_DSA
 {
@@ -21,7 +22,6 @@ namespace Final_Project_OOP_and_DSA
         public Dashboard()
         {
             InitializeComponent();
-            InitializeSample();
             InitializeBookListContent();
             InitializeDashboardContents();
             InitializeBookBorrowingContents();
@@ -33,11 +33,6 @@ namespace Final_Project_OOP_and_DSA
             panel_Sidebar_Sidebar.Size = new Size(175, 600);
             lbl_Member_BookListDisplay.Text += "\n";
             
-        }
-        private void InitializeSample()
-        {
-            Receipt rc = new Receipt();
-            richTextBox1.Text = rc.Content();
         }
         public void InitializeBorrowerListContent()
         {
@@ -150,7 +145,7 @@ namespace Final_Project_OOP_and_DSA
                     {
                         Text = res[0].ToString(),
                         Dock = DockStyle.Bottom,
-                        TextAlign = ContentAlignment.MiddleCenter,
+                        TextAlign = System.Drawing.ContentAlignment.MiddleCenter,
                         Size = new Size(0, 30),
                         ForeColor = labelForeColor,
                         Font = new Font("Bahnschrift", 7)
@@ -194,7 +189,7 @@ namespace Final_Project_OOP_and_DSA
                 {
                     Text = res[0].ToString(),
                     Dock = DockStyle.Bottom,
-                    TextAlign = ContentAlignment.MiddleCenter,
+                    TextAlign = System.Drawing.ContentAlignment.MiddleCenter,
                     Size = new Size(0, 30),
                     ForeColor = labelForeColor,
                     Font = new Font("Bahnschrift", 7)
@@ -236,7 +231,7 @@ namespace Final_Project_OOP_and_DSA
                     {
                         Text = res[0].ToString(),
                         Dock = DockStyle.Bottom,
-                        TextAlign = ContentAlignment.MiddleCenter,
+                        TextAlign = System.Drawing.ContentAlignment.MiddleCenter,
                         Size = new Size(0, 30),
                         ForeColor = labelForeColor,
                         Font = new Font("Bahnschrift", 7)
@@ -282,7 +277,7 @@ namespace Final_Project_OOP_and_DSA
                     {
                         Text = res[0].ToString(),
                         Dock = DockStyle.Bottom,
-                        TextAlign = ContentAlignment.MiddleCenter,
+                        TextAlign = System.Drawing.ContentAlignment.MiddleCenter,
                         Size = new Size(0, 30),
                         ForeColor = labelForeColor,
                         Font = new Font("Bahnschrift",7)
@@ -689,6 +684,44 @@ namespace Final_Project_OOP_and_DSA
             cb_Member_Name.Items.Clear();
             cb_BookReturn_BorrowerType.SelectedIndex = -1;
             flp_Member_BookDisplay.Controls.Clear();
+        }
+
+        private void txt_Payment_PastDue_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                int passDue = Convert.ToInt32(txt_Payment_PastDue.Text);
+                int amountToPay = 20 * passDue;
+                lbl_Payment_DaysDelayed.Text = passDue.ToString();
+                lbl_Payment_Subtotal.Text = $"P{amountToPay.ToString()}.00";
+                lbl_Payment_Amount.Text = $"P{amountToPay.ToString()}.00";
+                lbl_Payment_Total.Text = $"P{amountToPay.ToString()}.00";
+            }
+            catch(Exception ex)
+            {
+
+            }
+        }
+
+        private void btn_Payment_Pay_Click(object sender, EventArgs e)
+        {
+            if (BookReturningCode.ByPassBookReturning())
+            {
+                InitializeBookListContentByFilterWithCheckBox("SELECT * FROM Books WHERE book_status = 'Available'");
+                lbl_Payment_DaysDelayed.Text = "0";
+                lbl_Payment_Subtotal.Text = $"P0.00";
+                lbl_Payment_Amount.Text = $"P0.00";
+                lbl_Payment_Total.Text = $"P0.00";
+                lbl_Payment_BorrowerName.Text = "";
+                lbl_Payment_StudentID.Text = "";
+                lbl_Payment_Amount.Text = "P0.00";
+                txt_Payment_PastDue.Text = "0";
+            }
+        }
+
+        private void txt_Payment_PastDue_ControlRemoved(object sender, ControlEventArgs e)
+        {
+
         }
     }
 }

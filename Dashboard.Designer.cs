@@ -151,6 +151,41 @@
             this.label5 = new System.Windows.Forms.Label();
             this.flp_BorrowerList_Student = new System.Windows.Forms.FlowLayoutPanel();
             this.tb_Payment = new System.Windows.Forms.TabPage();
+            this.panel23 = new System.Windows.Forms.Panel();
+            this.label36 = new System.Windows.Forms.Label();
+            this.panel25 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label55 = new System.Windows.Forms.Label();
+            this.lbl_Payment_Total = new System.Windows.Forms.Label();
+            this.label53 = new System.Windows.Forms.Label();
+            this.label52 = new System.Windows.Forms.Label();
+            this.lbl_Payment_Subtotal = new System.Windows.Forms.Label();
+            this.label50 = new System.Windows.Forms.Label();
+            this.lbl_Payment_DaysDelayed = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.panel28 = new System.Windows.Forms.Panel();
+            this.label42 = new System.Windows.Forms.Label();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.panel24 = new System.Windows.Forms.Panel();
+            this.panel29 = new System.Windows.Forms.Panel();
+            this.lbl_Payment_Amount = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.panel27 = new System.Windows.Forms.Panel();
+            this.lbl_Payment_StudentID = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.panel26 = new System.Windows.Forms.Panel();
+            this.lbl_Payment_BorrowerName = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.txt_Payment_PastDue = new System.Windows.Forms.TextBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.btn_Payment_Pay = new System.Windows.Forms.Button();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
             this.tb_Reservation = new System.Windows.Forms.TabPage();
             this.tmr_Update = new System.Windows.Forms.Timer(this.components);
             this.label33 = new System.Windows.Forms.Label();
@@ -159,21 +194,8 @@
             this.label31 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.panel23 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.panel24 = new System.Windows.Forms.Panel();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label42 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.panel_Sidebar_Sidebar.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -218,7 +240,14 @@
             this.tb_BorrowerList.SuspendLayout();
             this.tb_Payment.SuspendLayout();
             this.panel23.SuspendLayout();
+            this.panel25.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.panel28.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.panel24.SuspendLayout();
+            this.panel29.SuspendLayout();
+            this.panel27.SuspendLayout();
+            this.panel26.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_Sidebar_Sidebar
@@ -558,7 +587,7 @@
             this.tb_Dashboard.Location = new System.Drawing.Point(4, 22);
             this.tb_Dashboard.Name = "tb_Dashboard";
             this.tb_Dashboard.Padding = new System.Windows.Forms.Padding(3);
-            this.tb_Dashboard.Size = new System.Drawing.Size(1092, 574);
+            this.tb_Dashboard.Size = new System.Drawing.Size(1052, 594);
             this.tb_Dashboard.TabIndex = 0;
             this.tb_Dashboard.Text = "Dashboard";
             this.tb_Dashboard.UseVisualStyleBackColor = true;
@@ -846,7 +875,7 @@
             this.tb_BookList.Location = new System.Drawing.Point(4, 22);
             this.tb_BookList.Name = "tb_BookList";
             this.tb_BookList.Padding = new System.Windows.Forms.Padding(3);
-            this.tb_BookList.Size = new System.Drawing.Size(1092, 574);
+            this.tb_BookList.Size = new System.Drawing.Size(1052, 594);
             this.tb_BookList.TabIndex = 1;
             this.tb_BookList.Text = "Book List";
             this.tb_BookList.UseVisualStyleBackColor = true;
@@ -1082,7 +1111,7 @@
             this.tb_BookBorrowing.Controls.Add(this.tc_Member_New);
             this.tb_BookBorrowing.Location = new System.Drawing.Point(4, 22);
             this.tb_BookBorrowing.Name = "tb_BookBorrowing";
-            this.tb_BookBorrowing.Size = new System.Drawing.Size(1092, 574);
+            this.tb_BookBorrowing.Size = new System.Drawing.Size(1052, 594);
             this.tb_BookBorrowing.TabIndex = 2;
             this.tb_BookBorrowing.Text = "Book Borrowing";
             this.tb_BookBorrowing.UseVisualStyleBackColor = true;
@@ -1095,7 +1124,7 @@
             this.tc_Member_New.Location = new System.Drawing.Point(0, 0);
             this.tc_Member_New.Name = "tc_Member_New";
             this.tc_Member_New.SelectedIndex = 0;
-            this.tc_Member_New.Size = new System.Drawing.Size(1092, 574);
+            this.tc_Member_New.Size = new System.Drawing.Size(1052, 594);
             this.tc_Member_New.TabIndex = 0;
             // 
             // tb_Choice
@@ -1107,7 +1136,7 @@
             this.tb_Choice.Location = new System.Drawing.Point(4, 22);
             this.tb_Choice.Name = "tb_Choice";
             this.tb_Choice.Padding = new System.Windows.Forms.Padding(3);
-            this.tb_Choice.Size = new System.Drawing.Size(1084, 548);
+            this.tb_Choice.Size = new System.Drawing.Size(1044, 568);
             this.tb_Choice.TabIndex = 0;
             this.tb_Choice.Text = "Choice";
             this.tb_Choice.UseVisualStyleBackColor = true;
@@ -1188,7 +1217,7 @@
             this.tb_Member.Location = new System.Drawing.Point(4, 22);
             this.tb_Member.Name = "tb_Member";
             this.tb_Member.Padding = new System.Windows.Forms.Padding(3);
-            this.tb_Member.Size = new System.Drawing.Size(1084, 548);
+            this.tb_Member.Size = new System.Drawing.Size(1044, 568);
             this.tb_Member.TabIndex = 1;
             this.tb_Member.Text = "Member";
             this.tb_Member.UseVisualStyleBackColor = true;
@@ -1421,7 +1450,7 @@
             this.tb_BookReturning.Controls.Add(this.flp_BooksReturn);
             this.tb_BookReturning.Location = new System.Drawing.Point(4, 22);
             this.tb_BookReturning.Name = "tb_BookReturning";
-            this.tb_BookReturning.Size = new System.Drawing.Size(1092, 574);
+            this.tb_BookReturning.Size = new System.Drawing.Size(1052, 594);
             this.tb_BookReturning.TabIndex = 3;
             this.tb_BookReturning.Text = "Book Returning";
             this.tb_BookReturning.UseVisualStyleBackColor = true;
@@ -1592,7 +1621,7 @@
             this.tb_BorrowerList.Controls.Add(this.flp_BorrowerList_Student);
             this.tb_BorrowerList.Location = new System.Drawing.Point(4, 22);
             this.tb_BorrowerList.Name = "tb_BorrowerList";
-            this.tb_BorrowerList.Size = new System.Drawing.Size(1092, 574);
+            this.tb_BorrowerList.Size = new System.Drawing.Size(1052, 594);
             this.tb_BorrowerList.TabIndex = 4;
             this.tb_BorrowerList.Text = "Borrower List";
             this.tb_BorrowerList.UseVisualStyleBackColor = true;
@@ -1695,11 +1724,469 @@
             this.tb_Payment.Text = "Payment";
             this.tb_Payment.UseVisualStyleBackColor = true;
             // 
+            // panel23
+            // 
+            this.panel23.Controls.Add(this.label36);
+            this.panel23.Controls.Add(this.panel25);
+            this.panel23.Location = new System.Drawing.Point(3, 3);
+            this.panel23.Name = "panel23";
+            this.panel23.Size = new System.Drawing.Size(1046, 588);
+            this.panel23.TabIndex = 1;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.BackColor = System.Drawing.Color.Transparent;
+            this.label36.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.Location = new System.Drawing.Point(4, 10);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(335, 25);
+            this.label36.TabIndex = 9;
+            this.label36.Text = "M E I N K R A F T E R S - Payment";
+            // 
+            // panel25
+            // 
+            this.panel25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(218)))), ((int)(((byte)(218)))));
+            this.panel25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel25.Controls.Add(this.tableLayoutPanel1);
+            this.panel25.Controls.Add(this.label25);
+            this.panel25.Controls.Add(this.label27);
+            this.panel25.Controls.Add(this.panel28);
+            this.panel25.Controls.Add(this.label6);
+            this.panel25.Controls.Add(this.panel24);
+            this.panel25.Location = new System.Drawing.Point(3, 43);
+            this.panel25.Name = "panel25";
+            this.panel25.Size = new System.Drawing.Size(1040, 530);
+            this.panel25.TabIndex = 6;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.label55, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.lbl_Payment_Total, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.label53, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.label52, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.lbl_Payment_Subtotal, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label50, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.lbl_Payment_DaysDelayed, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label48, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label47, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label46, 0, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(86, 206);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 5;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(360, 180);
+            this.tableLayoutPanel1.TabIndex = 10;
+            // 
+            // label55
+            // 
+            this.label55.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label55.AutoSize = true;
+            this.label55.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label55.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label55.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.label55.Location = new System.Drawing.Point(3, 144);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(174, 36);
+            this.label55.TabIndex = 10;
+            this.label55.Text = "TOTAL";
+            this.label55.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbl_Payment_Total
+            // 
+            this.lbl_Payment_Total.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_Payment_Total.AutoSize = true;
+            this.lbl_Payment_Total.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbl_Payment_Total.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Payment_Total.Location = new System.Drawing.Point(183, 144);
+            this.lbl_Payment_Total.Name = "lbl_Payment_Total";
+            this.lbl_Payment_Total.Size = new System.Drawing.Size(174, 36);
+            this.lbl_Payment_Total.TabIndex = 9;
+            this.lbl_Payment_Total.Text = "Label";
+            this.lbl_Payment_Total.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label53
+            // 
+            this.label53.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label53.AutoSize = true;
+            this.label53.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label53.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label53.Location = new System.Drawing.Point(183, 108);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(174, 36);
+            this.label53.TabIndex = 8;
+            this.label53.Text = "P0.00";
+            this.label53.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label52
+            // 
+            this.label52.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label52.AutoSize = true;
+            this.label52.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label52.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label52.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.label52.Location = new System.Drawing.Point(3, 108);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(174, 36);
+            this.label52.TabIndex = 7;
+            this.label52.Text = "Additional fees";
+            this.label52.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbl_Payment_Subtotal
+            // 
+            this.lbl_Payment_Subtotal.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_Payment_Subtotal.AutoSize = true;
+            this.lbl_Payment_Subtotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbl_Payment_Subtotal.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Payment_Subtotal.Location = new System.Drawing.Point(183, 72);
+            this.lbl_Payment_Subtotal.Name = "lbl_Payment_Subtotal";
+            this.lbl_Payment_Subtotal.Size = new System.Drawing.Size(174, 36);
+            this.lbl_Payment_Subtotal.TabIndex = 6;
+            this.lbl_Payment_Subtotal.Text = "Label";
+            this.lbl_Payment_Subtotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label50
+            // 
+            this.label50.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label50.AutoSize = true;
+            this.label50.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label50.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label50.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.label50.Location = new System.Drawing.Point(3, 72);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(174, 36);
+            this.label50.TabIndex = 5;
+            this.label50.Text = "Subtotal";
+            this.label50.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbl_Payment_DaysDelayed
+            // 
+            this.lbl_Payment_DaysDelayed.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_Payment_DaysDelayed.AutoSize = true;
+            this.lbl_Payment_DaysDelayed.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbl_Payment_DaysDelayed.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Payment_DaysDelayed.Location = new System.Drawing.Point(183, 36);
+            this.lbl_Payment_DaysDelayed.Name = "lbl_Payment_DaysDelayed";
+            this.lbl_Payment_DaysDelayed.Size = new System.Drawing.Size(174, 36);
+            this.lbl_Payment_DaysDelayed.TabIndex = 4;
+            this.lbl_Payment_DaysDelayed.Text = "Label";
+            this.lbl_Payment_DaysDelayed.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label48
+            // 
+            this.label48.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label48.AutoSize = true;
+            this.label48.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label48.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label48.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.label48.Location = new System.Drawing.Point(3, 36);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(174, 36);
+            this.label48.TabIndex = 3;
+            this.label48.Text = "Day/s delayed";
+            this.label48.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label47
+            // 
+            this.label47.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label47.AutoSize = true;
+            this.label47.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label47.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label47.Location = new System.Drawing.Point(183, 0);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(174, 36);
+            this.label47.TabIndex = 2;
+            this.label47.Text = "P20.00";
+            this.label47.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label46
+            // 
+            this.label46.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label46.AutoSize = true;
+            this.label46.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label46.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label46.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.label46.Location = new System.Drawing.Point(3, 0);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(174, 36);
+            this.label46.TabIndex = 1;
+            this.label46.Text = "Rate per day";
+            this.label46.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(218)))), ((int)(((byte)(218)))));
+            this.label25.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(29, 167);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(84, 19);
+            this.label25.TabIndex = 8;
+            this.label25.Text = "Payments";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Location = new System.Drawing.Point(596, 76);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(223, 19);
+            this.label27.TabIndex = 7;
+            this.label27.Text = "Check the necessary details";
+            // 
+            // panel28
+            // 
+            this.panel28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.panel28.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel28.Controls.Add(this.label42);
+            this.panel28.Controls.Add(this.pictureBox7);
+            this.panel28.Location = new System.Drawing.Point(86, 68);
+            this.panel28.Name = "panel28";
+            this.panel28.Size = new System.Drawing.Size(232, 75);
+            this.panel28.TabIndex = 5;
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label42.Location = new System.Drawing.Point(58, 26);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(161, 19);
+            this.label42.TabIndex = 6;
+            this.label42.Text = "Cash Payment Only";
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Location = new System.Drawing.Point(-150, -35);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(364, 140);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 0;
+            this.pictureBox7.TabStop = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(218)))), ((int)(((byte)(218)))));
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(28, 23);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(272, 25);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Fees Settlement Summary";
+            // 
+            // panel24
+            // 
+            this.panel24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.panel24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel24.Controls.Add(this.panel29);
+            this.panel24.Controls.Add(this.label43);
+            this.panel24.Controls.Add(this.panel27);
+            this.panel24.Controls.Add(this.button3);
+            this.panel24.Controls.Add(this.panel26);
+            this.panel24.Controls.Add(this.label34);
+            this.panel24.Controls.Add(this.txt_Payment_PastDue);
+            this.panel24.Controls.Add(this.button5);
+            this.panel24.Controls.Add(this.btn_Payment_Pay);
+            this.panel24.Controls.Add(this.label35);
+            this.panel24.Controls.Add(this.label30);
+            this.panel24.Location = new System.Drawing.Point(600, 110);
+            this.panel24.Name = "panel24";
+            this.panel24.Size = new System.Drawing.Size(309, 383);
+            this.panel24.TabIndex = 2;
+            // 
+            // panel29
+            // 
+            this.panel29.BackColor = System.Drawing.Color.White;
+            this.panel29.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel29.Controls.Add(this.lbl_Payment_Amount);
+            this.panel29.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel29.Location = new System.Drawing.Point(8, 235);
+            this.panel29.Name = "panel29";
+            this.panel29.Size = new System.Drawing.Size(290, 33);
+            this.panel29.TabIndex = 20;
+            // 
+            // lbl_Payment_Amount
+            // 
+            this.lbl_Payment_Amount.AutoSize = true;
+            this.lbl_Payment_Amount.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_Payment_Amount.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Payment_Amount.Location = new System.Drawing.Point(3, 5);
+            this.lbl_Payment_Amount.Name = "lbl_Payment_Amount";
+            this.lbl_Payment_Amount.Size = new System.Drawing.Size(49, 20);
+            this.lbl_Payment_Amount.TabIndex = 22;
+            this.lbl_Payment_Amount.Text = "Label";
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label43.Location = new System.Drawing.Point(5, 212);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(146, 20);
+            this.label43.TabIndex = 19;
+            this.label43.Text = "Amount to be paid";
+            // 
+            // panel27
+            // 
+            this.panel27.BackColor = System.Drawing.Color.White;
+            this.panel27.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel27.Controls.Add(this.lbl_Payment_StudentID);
+            this.panel27.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel27.Location = new System.Drawing.Point(9, 105);
+            this.panel27.Name = "panel27";
+            this.panel27.Size = new System.Drawing.Size(290, 33);
+            this.panel27.TabIndex = 15;
+            // 
+            // lbl_Payment_StudentID
+            // 
+            this.lbl_Payment_StudentID.AutoSize = true;
+            this.lbl_Payment_StudentID.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_Payment_StudentID.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Payment_StudentID.Location = new System.Drawing.Point(3, 5);
+            this.lbl_Payment_StudentID.Name = "lbl_Payment_StudentID";
+            this.lbl_Payment_StudentID.Size = new System.Drawing.Size(49, 20);
+            this.lbl_Payment_StudentID.TabIndex = 22;
+            this.lbl_Payment_StudentID.Text = "Label";
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Silver;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(160, 330);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(140, 35);
+            this.button3.TabIndex = 16;
+            this.button3.Text = "Clear Field";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // panel26
+            // 
+            this.panel26.BackColor = System.Drawing.Color.White;
+            this.panel26.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel26.Controls.Add(this.lbl_Payment_BorrowerName);
+            this.panel26.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel26.Location = new System.Drawing.Point(8, 39);
+            this.panel26.Name = "panel26";
+            this.panel26.Size = new System.Drawing.Size(291, 33);
+            this.panel26.TabIndex = 14;
+            // 
+            // lbl_Payment_BorrowerName
+            // 
+            this.lbl_Payment_BorrowerName.AutoSize = true;
+            this.lbl_Payment_BorrowerName.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_Payment_BorrowerName.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Payment_BorrowerName.Location = new System.Drawing.Point(3, 5);
+            this.lbl_Payment_BorrowerName.Name = "lbl_Payment_BorrowerName";
+            this.lbl_Payment_BorrowerName.Size = new System.Drawing.Size(49, 20);
+            this.lbl_Payment_BorrowerName.TabIndex = 21;
+            this.lbl_Payment_BorrowerName.Text = "Label";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.Location = new System.Drawing.Point(4, 150);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(116, 20);
+            this.label34.TabIndex = 13;
+            this.label34.Text = "Day/s delayed";
+            // 
+            // txt_Payment_PastDue
+            // 
+            this.txt_Payment_PastDue.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Payment_PastDue.Location = new System.Drawing.Point(9, 175);
+            this.txt_Payment_PastDue.Name = "txt_Payment_PastDue";
+            this.txt_Payment_PastDue.Size = new System.Drawing.Size(152, 27);
+            this.txt_Payment_PastDue.TabIndex = 12;
+            this.txt_Payment_PastDue.TextChanged += new System.EventHandler(this.txt_Payment_PastDue_TextChanged);
+            this.txt_Payment_PastDue.ControlRemoved += new System.Windows.Forms.ControlEventHandler(this.txt_Payment_PastDue_ControlRemoved);
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Location = new System.Drawing.Point(10, 331);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(140, 35);
+            this.button5.TabIndex = 11;
+            this.button5.Text = "Cancel";
+            this.button5.UseVisualStyleBackColor = false;
+            // 
+            // btn_Payment_Pay
+            // 
+            this.btn_Payment_Pay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
+            this.btn_Payment_Pay.FlatAppearance.BorderSize = 0;
+            this.btn_Payment_Pay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Payment_Pay.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Payment_Pay.ForeColor = System.Drawing.Color.White;
+            this.btn_Payment_Pay.Location = new System.Drawing.Point(10, 283);
+            this.btn_Payment_Pay.Name = "btn_Payment_Pay";
+            this.btn_Payment_Pay.Size = new System.Drawing.Size(290, 35);
+            this.btn_Payment_Pay.TabIndex = 10;
+            this.btn_Payment_Pay.Text = "Pay Now";
+            this.btn_Payment_Pay.UseVisualStyleBackColor = false;
+            this.btn_Payment_Pay.Click += new System.EventHandler(this.btn_Payment_Pay_Click);
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.Location = new System.Drawing.Point(4, 82);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(92, 20);
+            this.label35.TabIndex = 6;
+            this.label35.Text = "Student ID: ";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Location = new System.Drawing.Point(4, 15);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(133, 20);
+            this.label30.TabIndex = 4;
+            this.label30.Text = "Borrower Name: ";
+            // 
             // tb_Reservation
             // 
             this.tb_Reservation.Location = new System.Drawing.Point(4, 22);
             this.tb_Reservation.Name = "tb_Reservation";
-            this.tb_Reservation.Size = new System.Drawing.Size(1092, 574);
+            this.tb_Reservation.Size = new System.Drawing.Size(1052, 594);
             this.tb_Reservation.TabIndex = 6;
             this.tb_Reservation.Text = "Reservation";
             this.tb_Reservation.UseVisualStyleBackColor = true;
@@ -1776,137 +2263,9 @@
             this.button1.Text = "Clear";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // panel23
-            // 
-            this.panel23.Controls.Add(this.richTextBox1);
-            this.panel23.Controls.Add(this.label27);
-            this.panel23.Controls.Add(this.panel24);
-            this.panel23.Controls.Add(this.label6);
-            this.panel23.Location = new System.Drawing.Point(3, 3);
-            this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(1046, 588);
-            this.panel23.TabIndex = 0;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(22, 27);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(139, 13);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Fees Settlement Summary";
-            // 
-            // panel24
-            // 
-            this.panel24.Controls.Add(this.textBox1);
-            this.panel24.Controls.Add(this.button5);
-            this.panel24.Controls.Add(this.button4);
-            this.panel24.Controls.Add(this.label42);
-            this.panel24.Controls.Add(this.label36);
-            this.panel24.Controls.Add(this.label35);
-            this.panel24.Controls.Add(this.label34);
-            this.panel24.Controls.Add(this.label30);
-            this.panel24.Location = new System.Drawing.Point(672, 156);
-            this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(164, 294);
-            this.panel24.TabIndex = 2;
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(669, 139);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(147, 13);
-            this.label27.TabIndex = 3;
-            this.label27.Text = "Check the necessary details";
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(3, 13);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(88, 13);
-            this.label30.TabIndex = 4;
-            this.label30.Text = "Borrower Name";
-            // 
-            // label34
-            // 
-            this.label34.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.Location = new System.Drawing.Point(3, 39);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(158, 30);
-            this.label34.TabIndex = 5;
-            this.label34.Text = "Name";
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.Location = new System.Drawing.Point(3, 69);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(59, 13);
-            this.label35.TabIndex = 6;
-            this.label35.Text = "Student ID";
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.Location = new System.Drawing.Point(17, 99);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(17, 13);
-            this.label36.TabIndex = 7;
-            this.label36.Text = "ID";
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label42.Location = new System.Drawing.Point(3, 129);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(77, 13);
-            this.label42.TabIndex = 8;
-            this.label42.Text = "Day/s Delayed";
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(6, 268);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(156, 23);
-            this.button4.TabIndex = 10;
-            this.button4.Text = "Pay Now";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(6, 239);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(156, 23);
-            this.button5.TabIndex = 11;
-            this.button5.Text = "Cancel";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(6, 147);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(85, 20);
-            this.textBox1.TabIndex = 12;
-            // 
             // printDialog1
             // 
             this.printDialog1.UseEXDialog = true;
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(60, 139);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(330, 227);
-            this.richTextBox1.TabIndex = 4;
-            this.richTextBox1.Text = "";
             // 
             // Dashboard
             // 
@@ -1980,8 +2339,21 @@
             this.tb_Payment.ResumeLayout(false);
             this.panel23.ResumeLayout(false);
             this.panel23.PerformLayout();
+            this.panel25.ResumeLayout(false);
+            this.panel25.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
+            this.panel28.ResumeLayout(false);
+            this.panel28.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.panel24.ResumeLayout(false);
             this.panel24.PerformLayout();
+            this.panel29.ResumeLayout(false);
+            this.panel29.PerformLayout();
+            this.panel27.ResumeLayout(false);
+            this.panel27.PerformLayout();
+            this.panel26.ResumeLayout(false);
+            this.panel26.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2010,12 +2382,10 @@
         private System.Windows.Forms.Timer tmr_Sidebar_SidebarExitAnimation;
         private System.Windows.Forms.Button btn_Sidebar;
         private System.Windows.Forms.Timer tmr_Sidebar_SidebarEntryAnimation;
-        private System.Windows.Forms.TabControl tc_Dashboard_TabControl;
         private System.Windows.Forms.TabPage tb_Dashboard;
         private System.Windows.Forms.TabPage tb_BookList;
         private System.Windows.Forms.TabPage tb_BookBorrowing;
         private System.Windows.Forms.TabPage tb_BorrowerList;
-        private System.Windows.Forms.TabPage tb_Payment;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel_BookListed;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -2117,20 +2487,44 @@
         private System.Windows.Forms.Button btn_BookReturn_Return;
         public System.Windows.Forms.ComboBox cb_BookReturn_BorrowerType;
         public System.Windows.Forms.ComboBox cb_BookReturn_Name;
-        private System.Windows.Forms.Panel panel23;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Panel panel24;
-        private System.Windows.Forms.Label label42;
-        private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.PrintDialog printDialog1;
         private System.Drawing.Printing.PrintDocument printDocument1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Panel panel23;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Panel panel25;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.Label lbl_Payment_Total;
+        private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.Label lbl_Payment_Subtotal;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.Label lbl_Payment_DaysDelayed;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Panel panel28;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Panel panel24;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Panel panel27;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Panel panel26;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.TextBox txt_Payment_PastDue;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btn_Payment_Pay;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Panel panel29;
+        private System.Windows.Forms.Label lbl_Payment_Amount;
+        public System.Windows.Forms.TabControl tc_Dashboard_TabControl;
+        public System.Windows.Forms.TabPage tb_Payment;
+        public System.Windows.Forms.Label lbl_Payment_StudentID;
+        public System.Windows.Forms.Label lbl_Payment_BorrowerName;
     }
 }
