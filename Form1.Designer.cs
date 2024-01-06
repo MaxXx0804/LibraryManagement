@@ -83,7 +83,7 @@
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(281, 47);
+            this.button1.Location = new System.Drawing.Point(284, 47);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(99, 31);
             this.button1.TabIndex = 3;
@@ -96,7 +96,7 @@
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(391, 47);
+            this.button2.Location = new System.Drawing.Point(394, 47);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(99, 31);
             this.button2.TabIndex = 4;
@@ -141,7 +141,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(100, 121);
+            this.label3.Location = new System.Drawing.Point(96, 121);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(324, 16);
             this.label3.TabIndex = 7;
@@ -151,7 +151,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(97, 134);
+            this.label4.Location = new System.Drawing.Point(93, 134);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(170, 16);
             this.label4.TabIndex = 8;
