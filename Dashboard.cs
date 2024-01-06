@@ -37,8 +37,8 @@ namespace Final_Project_OOP_and_DSA
         private void InitializeSample()
         {
             Receipt rc = new Receipt();
-            richTextBox1.Text = rc.Content();
         }
+
         public void InitializeBorrowerListContent()
         {
             DatabaseConnection databaseConnection = new DatabaseConnection();
@@ -689,6 +689,27 @@ namespace Final_Project_OOP_and_DSA
             cb_Member_Name.Items.Clear();
             cb_BookReturn_BorrowerType.SelectedIndex = -1;
             flp_Member_BookDisplay.Controls.Clear();
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+      
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
