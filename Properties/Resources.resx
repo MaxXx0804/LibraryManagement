@@ -118,47 +118,8 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Book Listed" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Book Listed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Circle Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Circle Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="The_Worst_Journey_in_the_World" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\The Worst Journey in the World.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Pending Payment" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Pending Payment.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Icon Black" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icon Black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Final Project Designs" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Final Project Designs.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Loading Screen Image" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Loading Screen Image.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="The_Yellow_Wallpaper" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\The Yellow Wallpaper.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="In_a_Grove" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\In a Grove.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Memoir_of_Queen_Adelaide" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Memoir of Queen Adelaide.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Sidebar Exit Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Sidebar Exit Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="The_Demon_Spell" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\The Demon Spell.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Login SideImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Login SideImage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Books Lent" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Books Lent.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -166,11 +127,59 @@
   <data name="Dracula" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Dracula.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Member" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Member.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="The_Golden_Bough" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\The Golden Bough.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Registered User" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Registered User.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Circle Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Circle Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="In_a_Grove" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\In a Grove.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Berenice" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Berenice.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Member" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Member.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Loading Screen Image" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Loading Screen Image.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="The_Yellow_Wallpaper" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\The Yellow Wallpaper.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="The_Worst_Journey_in_the_World" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\The Worst Journey in the World.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="The_Demon_Spell" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\The Demon Spell.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Final Project Designs" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Final Project Designs.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="New Member" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\New Member.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="New Member Background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\New Member Background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Books Available" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Books Available.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Book Listed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Book Listed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="My_Own_Affairs" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\My Own Affairs.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Memoir_of_Queen_Adelaide" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Memoir of Queen Adelaide.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Circle Logo Light" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Circle Logo Light.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -178,25 +187,19 @@
   <data name="Royal_Girls_and_Royal_Courts" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Royal Girls and Royal Courts.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Login SideImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Login SideImage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Top Line Design" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Top Line Design.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="My_Own_Affairs" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\My Own Affairs.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Icon Black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon Black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="The_Golden_Bough" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\The Golden Bough.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Pending Payment" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pending Payment.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Books Available" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Books Available.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Berenice" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Berenice.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="New Member" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\New Member.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="New Member Background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\New Member Background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cash1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cash1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

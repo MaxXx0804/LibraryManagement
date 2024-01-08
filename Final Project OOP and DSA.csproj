@@ -203,6 +203,7 @@
     <Compile Include="BookInformationDisplay.Designer.cs">
       <DependentUpon>BookInformationDisplay.cs</DependentUpon>
     </Compile>
+    <Compile Include="BookReserved.cs" />
     <Compile Include="BookReturningCode.cs" />
     <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>
@@ -388,6 +389,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\New Member Background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cash1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\Microsoft.Data.SqlClient.SNI.5.1.1\build\net462\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('packages\Microsoft.Data.SqlClient.SNI.5.1.1\build\net462\Microsoft.Data.SqlClient.SNI.targets')" />

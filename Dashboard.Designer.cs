@@ -177,7 +177,6 @@
             this.label43 = new System.Windows.Forms.Label();
             this.panel27 = new System.Windows.Forms.Panel();
             this.lbl_Payment_StudentID = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
             this.panel26 = new System.Windows.Forms.Panel();
             this.lbl_Payment_BorrowerName = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
@@ -187,6 +186,36 @@
             this.label35 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.tb_Reservation = new System.Windows.Forms.TabPage();
+            this.dtp_DateReserved = new System.Windows.Forms.DateTimePicker();
+            this.label44 = new System.Windows.Forms.Label();
+            this.cb_Reserve_BorrowerType = new System.Windows.Forms.ComboBox();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
+            this.cb_Reserve_Name = new System.Windows.Forms.ComboBox();
+            this.panel30 = new System.Windows.Forms.Panel();
+            this.label60 = new System.Windows.Forms.Label();
+            this.label57 = new System.Windows.Forms.Label();
+            this.label59 = new System.Windows.Forms.Label();
+            this.btn_ViewReservations = new System.Windows.Forms.Button();
+            this.label54 = new System.Windows.Forms.Label();
+            this.btn_Reserve_Reserve = new System.Windows.Forms.Button();
+            this.lbl_Reserve_BorrowerType = new System.Windows.Forms.Label();
+            this.lbl_Reserve_DateReserved = new System.Windows.Forms.Label();
+            this.lbl_Reserve_BookList = new System.Windows.Forms.Label();
+            this.lbl_Reserve_Name = new System.Windows.Forms.Label();
+            this.panel31 = new System.Windows.Forms.Panel();
+            this.flp_Reserve = new System.Windows.Forms.FlowLayoutPanel();
+            this.tb_ViewReservation = new System.Windows.Forms.TabPage();
+            this.flp_ViewReservation = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel32 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label61 = new System.Windows.Forms.Label();
+            this.label58 = new System.Windows.Forms.Label();
+            this.label56 = new System.Windows.Forms.Label();
+            this.label51 = new System.Windows.Forms.Label();
+            this.panel33 = new System.Windows.Forms.Panel();
+            this.btn_ViewReservation_Return = new System.Windows.Forms.Button();
             this.tmr_Update = new System.Windows.Forms.Timer(this.components);
             this.label33 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
@@ -194,8 +223,6 @@
             this.label31 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.printDialog1 = new System.Windows.Forms.PrintDialog();
-            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.panel_Sidebar_Sidebar.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -248,6 +275,11 @@
             this.panel29.SuspendLayout();
             this.panel27.SuspendLayout();
             this.panel26.SuspendLayout();
+            this.tb_Reservation.SuspendLayout();
+            this.panel30.SuspendLayout();
+            this.tb_ViewReservation.SuspendLayout();
+            this.flp_ViewReservation.SuspendLayout();
+            this.panel32.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_Sidebar_Sidebar
@@ -356,7 +388,7 @@
             this.btn_Payment.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
             this.btn_Payment.Size = new System.Drawing.Size(177, 39);
             this.btn_Payment.TabIndex = 0;
-            this.btn_Payment.Text = "Payment";
+            this.btn_Payment.Text = "Reservation";
             this.btn_Payment.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Payment.UseVisualStyleBackColor = false;
             this.btn_Payment.Click += new System.EventHandler(this.btn_Payment_Click);
@@ -573,6 +605,7 @@
             this.tc_Dashboard_TabControl.Controls.Add(this.tb_BorrowerList);
             this.tc_Dashboard_TabControl.Controls.Add(this.tb_Payment);
             this.tc_Dashboard_TabControl.Controls.Add(this.tb_Reservation);
+            this.tc_Dashboard_TabControl.Controls.Add(this.tb_ViewReservation);
             this.tc_Dashboard_TabControl.Location = new System.Drawing.Point(35, 0);
             this.tc_Dashboard_TabControl.Name = "tc_Dashboard_TabControl";
             this.tc_Dashboard_TabControl.SelectedIndex = 0;
@@ -600,7 +633,7 @@
             this.lbl_TopLineDesign.Location = new System.Drawing.Point(2, 42);
             this.lbl_TopLineDesign.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_TopLineDesign.Name = "lbl_TopLineDesign";
-            this.lbl_TopLineDesign.Size = new System.Drawing.Size(959, 4);
+            this.lbl_TopLineDesign.Size = new System.Drawing.Size(1040, 4);
             this.lbl_TopLineDesign.TabIndex = 8;
             // 
             // flowLayoutPanel1
@@ -610,10 +643,10 @@
             this.flowLayoutPanel1.Controls.Add(this.panel2);
             this.flowLayoutPanel1.Controls.Add(this.panel11);
             this.flowLayoutPanel1.Controls.Add(this.panel12);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(25, 98);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(193, 102);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(429, 318);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(590, 417);
             this.flowLayoutPanel1.TabIndex = 7;
             // 
             // panel_BookListed
@@ -624,7 +657,7 @@
             this.panel_BookListed.Controls.Add(this.pictureBox2);
             this.panel_BookListed.Location = new System.Drawing.Point(3, 3);
             this.panel_BookListed.Name = "panel_BookListed";
-            this.panel_BookListed.Size = new System.Drawing.Size(136, 150);
+            this.panel_BookListed.Size = new System.Drawing.Size(186, 195);
             this.panel_BookListed.TabIndex = 1;
             // 
             // label7
@@ -632,9 +665,9 @@
             this.label7.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label7.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(0, 119);
+            this.label7.Location = new System.Drawing.Point(0, 164);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(136, 31);
+            this.label7.Size = new System.Drawing.Size(186, 31);
             this.label7.TabIndex = 2;
             this.label7.Text = "Book Listed";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -644,9 +677,9 @@
             this.lbl_BookListed_Quantity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_BookListed_Quantity.Font = new System.Drawing.Font("Bahnschrift", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_BookListed_Quantity.ForeColor = System.Drawing.Color.White;
-            this.lbl_BookListed_Quantity.Location = new System.Drawing.Point(0, 95);
+            this.lbl_BookListed_Quantity.Location = new System.Drawing.Point(0, 117);
             this.lbl_BookListed_Quantity.Name = "lbl_BookListed_Quantity";
-            this.lbl_BookListed_Quantity.Size = new System.Drawing.Size(136, 31);
+            this.lbl_BookListed_Quantity.Size = new System.Drawing.Size(186, 31);
             this.lbl_BookListed_Quantity.TabIndex = 1;
             this.lbl_BookListed_Quantity.Text = "15";
             this.lbl_BookListed_Quantity.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -659,7 +692,7 @@
             this.pictureBox2.Image = global::Final_Project_OOP_and_DSA.Properties.Resources.Book_Listed;
             this.pictureBox2.Location = new System.Drawing.Point(50, 19);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(36, 42);
+            this.pictureBox2.Size = new System.Drawing.Size(86, 87);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
@@ -670,9 +703,9 @@
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.lbl_RegisteredUser_Quantity);
             this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Location = new System.Drawing.Point(145, 3);
+            this.panel1.Location = new System.Drawing.Point(195, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(136, 150);
+            this.panel1.Size = new System.Drawing.Size(186, 195);
             this.panel1.TabIndex = 3;
             // 
             // label8
@@ -680,9 +713,9 @@
             this.label8.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label8.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(0, 119);
+            this.label8.Location = new System.Drawing.Point(0, 164);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(136, 31);
+            this.label8.Size = new System.Drawing.Size(186, 31);
             this.label8.TabIndex = 2;
             this.label8.Text = "Registered User";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -692,9 +725,9 @@
             this.lbl_RegisteredUser_Quantity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_RegisteredUser_Quantity.Font = new System.Drawing.Font("Bahnschrift", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_RegisteredUser_Quantity.ForeColor = System.Drawing.Color.White;
-            this.lbl_RegisteredUser_Quantity.Location = new System.Drawing.Point(0, 95);
+            this.lbl_RegisteredUser_Quantity.Location = new System.Drawing.Point(0, 117);
             this.lbl_RegisteredUser_Quantity.Name = "lbl_RegisteredUser_Quantity";
-            this.lbl_RegisteredUser_Quantity.Size = new System.Drawing.Size(136, 31);
+            this.lbl_RegisteredUser_Quantity.Size = new System.Drawing.Size(186, 31);
             this.lbl_RegisteredUser_Quantity.TabIndex = 1;
             this.lbl_RegisteredUser_Quantity.Text = "13";
             this.lbl_RegisteredUser_Quantity.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -707,7 +740,7 @@
             this.pictureBox3.Image = global::Final_Project_OOP_and_DSA.Properties.Resources.Registered_User;
             this.pictureBox3.Location = new System.Drawing.Point(50, 26);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(36, 33);
+            this.pictureBox3.Size = new System.Drawing.Size(86, 78);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
@@ -718,9 +751,9 @@
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.lbl_PendingPayment_Quantity);
             this.panel2.Controls.Add(this.pictureBox4);
-            this.panel2.Location = new System.Drawing.Point(287, 3);
+            this.panel2.Location = new System.Drawing.Point(387, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(136, 150);
+            this.panel2.Size = new System.Drawing.Size(186, 195);
             this.panel2.TabIndex = 4;
             // 
             // label10
@@ -728,9 +761,9 @@
             this.label10.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label10.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(0, 119);
+            this.label10.Location = new System.Drawing.Point(0, 164);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(136, 31);
+            this.label10.Size = new System.Drawing.Size(186, 31);
             this.label10.TabIndex = 2;
             this.label10.Text = "Pending Payment";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -740,9 +773,9 @@
             this.lbl_PendingPayment_Quantity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_PendingPayment_Quantity.Font = new System.Drawing.Font("Bahnschrift", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_PendingPayment_Quantity.ForeColor = System.Drawing.Color.White;
-            this.lbl_PendingPayment_Quantity.Location = new System.Drawing.Point(0, 95);
+            this.lbl_PendingPayment_Quantity.Location = new System.Drawing.Point(0, 117);
             this.lbl_PendingPayment_Quantity.Name = "lbl_PendingPayment_Quantity";
-            this.lbl_PendingPayment_Quantity.Size = new System.Drawing.Size(136, 31);
+            this.lbl_PendingPayment_Quantity.Size = new System.Drawing.Size(186, 31);
             this.lbl_PendingPayment_Quantity.TabIndex = 1;
             this.lbl_PendingPayment_Quantity.Text = "0";
             this.lbl_PendingPayment_Quantity.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -755,7 +788,7 @@
             this.pictureBox4.Image = global::Final_Project_OOP_and_DSA.Properties.Resources.Pending_Payment;
             this.pictureBox4.Location = new System.Drawing.Point(50, 30);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(36, 29);
+            this.pictureBox4.Size = new System.Drawing.Size(86, 74);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 0;
             this.pictureBox4.TabStop = false;
@@ -766,9 +799,9 @@
             this.panel11.Controls.Add(this.label12);
             this.panel11.Controls.Add(this.lbl_BooksAvailable_Quantity);
             this.panel11.Controls.Add(this.pictureBox5);
-            this.panel11.Location = new System.Drawing.Point(3, 159);
+            this.panel11.Location = new System.Drawing.Point(3, 204);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(136, 150);
+            this.panel11.Size = new System.Drawing.Size(186, 195);
             this.panel11.TabIndex = 5;
             // 
             // label12
@@ -776,9 +809,9 @@
             this.label12.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label12.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(0, 119);
+            this.label12.Location = new System.Drawing.Point(0, 164);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(136, 31);
+            this.label12.Size = new System.Drawing.Size(186, 31);
             this.label12.TabIndex = 2;
             this.label12.Text = "Books Available";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -788,9 +821,9 @@
             this.lbl_BooksAvailable_Quantity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_BooksAvailable_Quantity.Font = new System.Drawing.Font("Bahnschrift", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_BooksAvailable_Quantity.ForeColor = System.Drawing.Color.White;
-            this.lbl_BooksAvailable_Quantity.Location = new System.Drawing.Point(0, 95);
+            this.lbl_BooksAvailable_Quantity.Location = new System.Drawing.Point(0, 117);
             this.lbl_BooksAvailable_Quantity.Name = "lbl_BooksAvailable_Quantity";
-            this.lbl_BooksAvailable_Quantity.Size = new System.Drawing.Size(136, 25);
+            this.lbl_BooksAvailable_Quantity.Size = new System.Drawing.Size(186, 25);
             this.lbl_BooksAvailable_Quantity.TabIndex = 1;
             this.lbl_BooksAvailable_Quantity.Text = "15";
             this.lbl_BooksAvailable_Quantity.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -803,7 +836,7 @@
             this.pictureBox5.Image = global::Final_Project_OOP_and_DSA.Properties.Resources.Books_Available;
             this.pictureBox5.Location = new System.Drawing.Point(50, 30);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(36, 29);
+            this.pictureBox5.Size = new System.Drawing.Size(86, 74);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 0;
             this.pictureBox5.TabStop = false;
@@ -814,9 +847,9 @@
             this.panel12.Controls.Add(this.label14);
             this.panel12.Controls.Add(this.lbl_BooksLent_Quantity);
             this.panel12.Controls.Add(this.pictureBox6);
-            this.panel12.Location = new System.Drawing.Point(145, 159);
+            this.panel12.Location = new System.Drawing.Point(195, 204);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(136, 150);
+            this.panel12.Size = new System.Drawing.Size(186, 195);
             this.panel12.TabIndex = 6;
             // 
             // label14
@@ -824,9 +857,9 @@
             this.label14.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label14.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(0, 116);
+            this.label14.Location = new System.Drawing.Point(0, 161);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(136, 34);
+            this.label14.Size = new System.Drawing.Size(186, 34);
             this.label14.TabIndex = 2;
             this.label14.Text = "Books Lent";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -836,9 +869,9 @@
             this.lbl_BooksLent_Quantity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_BooksLent_Quantity.Font = new System.Drawing.Font("Bahnschrift", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_BooksLent_Quantity.ForeColor = System.Drawing.Color.White;
-            this.lbl_BooksLent_Quantity.Location = new System.Drawing.Point(0, 95);
+            this.lbl_BooksLent_Quantity.Location = new System.Drawing.Point(0, 117);
             this.lbl_BooksLent_Quantity.Name = "lbl_BooksLent_Quantity";
-            this.lbl_BooksLent_Quantity.Size = new System.Drawing.Size(136, 25);
+            this.lbl_BooksLent_Quantity.Size = new System.Drawing.Size(186, 25);
             this.lbl_BooksLent_Quantity.TabIndex = 1;
             this.lbl_BooksLent_Quantity.Text = "0";
             this.lbl_BooksLent_Quantity.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -851,7 +884,7 @@
             this.pictureBox6.Image = global::Final_Project_OOP_and_DSA.Properties.Resources.Books_Lent;
             this.pictureBox6.Location = new System.Drawing.Point(50, 30);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(36, 29);
+            this.pictureBox6.Size = new System.Drawing.Size(86, 74);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 0;
             this.pictureBox6.TabStop = false;
@@ -1985,6 +2018,7 @@
             // 
             // pictureBox7
             // 
+            this.pictureBox7.Image = global::Final_Project_OOP_and_DSA.Properties.Resources.cash1;
             this.pictureBox7.Location = new System.Drawing.Point(-150, -35);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(364, 140);
@@ -2010,7 +2044,6 @@
             this.panel24.Controls.Add(this.panel29);
             this.panel24.Controls.Add(this.label43);
             this.panel24.Controls.Add(this.panel27);
-            this.panel24.Controls.Add(this.button3);
             this.panel24.Controls.Add(this.panel26);
             this.panel24.Controls.Add(this.label34);
             this.panel24.Controls.Add(this.txt_Payment_PastDue);
@@ -2077,20 +2110,6 @@
             this.lbl_Payment_StudentID.TabIndex = 22;
             this.lbl_Payment_StudentID.Text = "Label";
             // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Silver;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(160, 330);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(140, 35);
-            this.button3.TabIndex = 16;
-            this.button3.Text = "Clear Field";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
             // panel26
             // 
             this.panel26.BackColor = System.Drawing.Color.White;
@@ -2125,6 +2144,7 @@
             // 
             // txt_Payment_PastDue
             // 
+            this.txt_Payment_PastDue.Enabled = false;
             this.txt_Payment_PastDue.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Payment_PastDue.Location = new System.Drawing.Point(9, 175);
             this.txt_Payment_PastDue.Name = "txt_Payment_PastDue";
@@ -2142,7 +2162,7 @@
             this.button5.ForeColor = System.Drawing.Color.White;
             this.button5.Location = new System.Drawing.Point(10, 331);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(140, 35);
+            this.button5.Size = new System.Drawing.Size(290, 35);
             this.button5.TabIndex = 11;
             this.button5.Text = "Cancel";
             this.button5.UseVisualStyleBackColor = false;
@@ -2184,12 +2204,340 @@
             // 
             // tb_Reservation
             // 
+            this.tb_Reservation.Controls.Add(this.dtp_DateReserved);
+            this.tb_Reservation.Controls.Add(this.label44);
+            this.tb_Reservation.Controls.Add(this.cb_Reserve_BorrowerType);
+            this.tb_Reservation.Controls.Add(this.label45);
+            this.tb_Reservation.Controls.Add(this.label49);
+            this.tb_Reservation.Controls.Add(this.cb_Reserve_Name);
+            this.tb_Reservation.Controls.Add(this.panel30);
+            this.tb_Reservation.Controls.Add(this.panel31);
+            this.tb_Reservation.Controls.Add(this.flp_Reserve);
             this.tb_Reservation.Location = new System.Drawing.Point(4, 22);
             this.tb_Reservation.Name = "tb_Reservation";
             this.tb_Reservation.Size = new System.Drawing.Size(1052, 594);
             this.tb_Reservation.TabIndex = 6;
             this.tb_Reservation.Text = "Reservation";
             this.tb_Reservation.UseVisualStyleBackColor = true;
+            // 
+            // dtp_DateReserved
+            // 
+            this.dtp_DateReserved.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtp_DateReserved.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtp_DateReserved.Location = new System.Drawing.Point(694, 100);
+            this.dtp_DateReserved.Name = "dtp_DateReserved";
+            this.dtp_DateReserved.Size = new System.Drawing.Size(92, 21);
+            this.dtp_DateReserved.TabIndex = 35;
+            this.dtp_DateReserved.ValueChanged += new System.EventHandler(this.dtp_DateReserved_ValueChanged);
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label44.ForeColor = System.Drawing.Color.Black;
+            this.label44.Location = new System.Drawing.Point(24, 59);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(179, 23);
+            this.label44.TabIndex = 33;
+            this.label44.Text = "Book Reservation";
+            // 
+            // cb_Reserve_BorrowerType
+            // 
+            this.cb_Reserve_BorrowerType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_Reserve_BorrowerType.Font = new System.Drawing.Font("Bahnschrift", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_Reserve_BorrowerType.FormattingEnabled = true;
+            this.cb_Reserve_BorrowerType.Items.AddRange(new object[] {
+            "Student",
+            "Teacher"});
+            this.cb_Reserve_BorrowerType.Location = new System.Drawing.Point(399, 100);
+            this.cb_Reserve_BorrowerType.Margin = new System.Windows.Forms.Padding(2);
+            this.cb_Reserve_BorrowerType.Name = "cb_Reserve_BorrowerType";
+            this.cb_Reserve_BorrowerType.Size = new System.Drawing.Size(212, 24);
+            this.cb_Reserve_BorrowerType.TabIndex = 32;
+            this.cb_Reserve_BorrowerType.SelectedIndexChanged += new System.EventHandler(this.cb_Reserve_BorrowerType_SelectedIndexChanged);
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Font = new System.Drawing.Font("Bahnschrift", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label45.Location = new System.Drawing.Point(396, 100);
+            this.label45.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(0, 17);
+            this.label45.TabIndex = 31;
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Font = new System.Drawing.Font("Bahnschrift", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label49.Location = new System.Drawing.Point(25, 100);
+            this.label49.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(0, 17);
+            this.label49.TabIndex = 30;
+            // 
+            // cb_Reserve_Name
+            // 
+            this.cb_Reserve_Name.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_Reserve_Name.Font = new System.Drawing.Font("Bahnschrift", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_Reserve_Name.FormattingEnabled = true;
+            this.cb_Reserve_Name.Location = new System.Drawing.Point(73, 98);
+            this.cb_Reserve_Name.Margin = new System.Windows.Forms.Padding(2);
+            this.cb_Reserve_Name.Name = "cb_Reserve_Name";
+            this.cb_Reserve_Name.Size = new System.Drawing.Size(212, 24);
+            this.cb_Reserve_Name.TabIndex = 29;
+            this.cb_Reserve_Name.SelectedIndexChanged += new System.EventHandler(this.cb_Reserve_Name_SelectedIndexChanged);
+            // 
+            // panel30
+            // 
+            this.panel30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.panel30.Controls.Add(this.label60);
+            this.panel30.Controls.Add(this.label57);
+            this.panel30.Controls.Add(this.label59);
+            this.panel30.Controls.Add(this.btn_ViewReservations);
+            this.panel30.Controls.Add(this.label54);
+            this.panel30.Controls.Add(this.btn_Reserve_Reserve);
+            this.panel30.Controls.Add(this.lbl_Reserve_BorrowerType);
+            this.panel30.Controls.Add(this.lbl_Reserve_DateReserved);
+            this.panel30.Controls.Add(this.lbl_Reserve_BookList);
+            this.panel30.Controls.Add(this.lbl_Reserve_Name);
+            this.panel30.Location = new System.Drawing.Point(801, 134);
+            this.panel30.Name = "panel30";
+            this.panel30.Size = new System.Drawing.Size(227, 401);
+            this.panel30.TabIndex = 28;
+            // 
+            // label60
+            // 
+            this.label60.AutoSize = true;
+            this.label60.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label60.Location = new System.Drawing.Point(3, 81);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(83, 13);
+            this.label60.TabIndex = 11;
+            this.label60.Text = "Borrower Type:";
+            // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label57.Location = new System.Drawing.Point(3, 37);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(93, 13);
+            this.label57.TabIndex = 10;
+            this.label57.Text = "Borrower Name: ";
+            // 
+            // label59
+            // 
+            this.label59.AutoSize = true;
+            this.label59.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label59.Location = new System.Drawing.Point(3, 124);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(86, 13);
+            this.label59.TabIndex = 9;
+            this.label59.Text = "Date Reserved: ";
+            // 
+            // btn_ViewReservations
+            // 
+            this.btn_ViewReservations.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ViewReservations.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ViewReservations.Location = new System.Drawing.Point(51, 359);
+            this.btn_ViewReservations.Name = "btn_ViewReservations";
+            this.btn_ViewReservations.Size = new System.Drawing.Size(134, 28);
+            this.btn_ViewReservations.TabIndex = 8;
+            this.btn_ViewReservations.Text = "View Reservations";
+            this.btn_ViewReservations.UseVisualStyleBackColor = true;
+            this.btn_ViewReservations.Click += new System.EventHandler(this.btn_ViewReservations_Click);
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label54.Location = new System.Drawing.Point(3, 237);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(86, 13);
+            this.label54.TabIndex = 7;
+            this.label54.Text = "Date Reserved: ";
+            // 
+            // btn_Reserve_Reserve
+            // 
+            this.btn_Reserve_Reserve.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Reserve_Reserve.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Reserve_Reserve.Location = new System.Drawing.Point(51, 325);
+            this.btn_Reserve_Reserve.Name = "btn_Reserve_Reserve";
+            this.btn_Reserve_Reserve.Size = new System.Drawing.Size(134, 28);
+            this.btn_Reserve_Reserve.TabIndex = 6;
+            this.btn_Reserve_Reserve.Text = "Reserve";
+            this.btn_Reserve_Reserve.UseVisualStyleBackColor = true;
+            this.btn_Reserve_Reserve.Click += new System.EventHandler(this.btn_Reserve_Reserve_Click);
+            // 
+            // lbl_Reserve_BorrowerType
+            // 
+            this.lbl_Reserve_BorrowerType.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Reserve_BorrowerType.Location = new System.Drawing.Point(92, 81);
+            this.lbl_Reserve_BorrowerType.Name = "lbl_Reserve_BorrowerType";
+            this.lbl_Reserve_BorrowerType.Size = new System.Drawing.Size(122, 43);
+            this.lbl_Reserve_BorrowerType.TabIndex = 5;
+            // 
+            // lbl_Reserve_DateReserved
+            // 
+            this.lbl_Reserve_DateReserved.AutoSize = true;
+            this.lbl_Reserve_DateReserved.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Reserve_DateReserved.Location = new System.Drawing.Point(85, 237);
+            this.lbl_Reserve_DateReserved.Name = "lbl_Reserve_DateReserved";
+            this.lbl_Reserve_DateReserved.Size = new System.Drawing.Size(0, 13);
+            this.lbl_Reserve_DateReserved.TabIndex = 4;
+            // 
+            // lbl_Reserve_BookList
+            // 
+            this.lbl_Reserve_BookList.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Reserve_BookList.Location = new System.Drawing.Point(85, 124);
+            this.lbl_Reserve_BookList.Name = "lbl_Reserve_BookList";
+            this.lbl_Reserve_BookList.Size = new System.Drawing.Size(129, 88);
+            this.lbl_Reserve_BookList.TabIndex = 1;
+            // 
+            // lbl_Reserve_Name
+            // 
+            this.lbl_Reserve_Name.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Reserve_Name.Location = new System.Drawing.Point(92, 37);
+            this.lbl_Reserve_Name.Name = "lbl_Reserve_Name";
+            this.lbl_Reserve_Name.Size = new System.Drawing.Size(122, 44);
+            this.lbl_Reserve_Name.TabIndex = 0;
+            // 
+            // panel31
+            // 
+            this.panel31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.panel31.Location = new System.Drawing.Point(25, 134);
+            this.panel31.Name = "panel31";
+            this.panel31.Size = new System.Drawing.Size(761, 50);
+            this.panel31.TabIndex = 27;
+            // 
+            // flp_Reserve
+            // 
+            this.flp_Reserve.AutoScroll = true;
+            this.flp_Reserve.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.flp_Reserve.Enabled = false;
+            this.flp_Reserve.Location = new System.Drawing.Point(25, 185);
+            this.flp_Reserve.Name = "flp_Reserve";
+            this.flp_Reserve.Size = new System.Drawing.Size(761, 350);
+            this.flp_Reserve.TabIndex = 26;
+            // 
+            // tb_ViewReservation
+            // 
+            this.tb_ViewReservation.Controls.Add(this.flp_ViewReservation);
+            this.tb_ViewReservation.Controls.Add(this.btn_ViewReservation_Return);
+            this.tb_ViewReservation.Location = new System.Drawing.Point(4, 22);
+            this.tb_ViewReservation.Name = "tb_ViewReservation";
+            this.tb_ViewReservation.Size = new System.Drawing.Size(1052, 594);
+            this.tb_ViewReservation.TabIndex = 7;
+            this.tb_ViewReservation.Text = "View Reservations";
+            this.tb_ViewReservation.UseVisualStyleBackColor = true;
+            // 
+            // flp_ViewReservation
+            // 
+            this.flp_ViewReservation.Controls.Add(this.panel32);
+            this.flp_ViewReservation.Location = new System.Drawing.Point(2, 3);
+            this.flp_ViewReservation.Name = "flp_ViewReservation";
+            this.flp_ViewReservation.Size = new System.Drawing.Size(907, 588);
+            this.flp_ViewReservation.TabIndex = 8;
+            // 
+            // panel32
+            // 
+            this.panel32.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel32.Controls.Add(this.button4);
+            this.panel32.Controls.Add(this.button3);
+            this.panel32.Controls.Add(this.label61);
+            this.panel32.Controls.Add(this.label58);
+            this.panel32.Controls.Add(this.label56);
+            this.panel32.Controls.Add(this.label51);
+            this.panel32.Controls.Add(this.panel33);
+            this.panel32.Location = new System.Drawing.Point(3, 3);
+            this.panel32.Name = "panel32";
+            this.panel32.Size = new System.Drawing.Size(200, 250);
+            this.panel32.TabIndex = 0;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(102, 215);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(95, 30);
+            this.button4.TabIndex = 9;
+            this.button4.Text = "Cancel";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(2, 215);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(95, 30);
+            this.button3.TabIndex = 8;
+            this.button3.Text = "Borrow";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // label61
+            // 
+            this.label61.AutoSize = true;
+            this.label61.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label61.Location = new System.Drawing.Point(3, 190);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(83, 13);
+            this.label61.TabIndex = 5;
+            this.label61.Text = "Date Reserved:";
+            // 
+            // label58
+            // 
+            this.label58.AutoSize = true;
+            this.label58.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label58.Location = new System.Drawing.Point(3, 120);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(95, 13);
+            this.label58.TabIndex = 4;
+            this.label58.Text = "Book/s Reserved:";
+            // 
+            // label56
+            // 
+            this.label56.AutoSize = true;
+            this.label56.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label56.Location = new System.Drawing.Point(3, 80);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(83, 13);
+            this.label56.TabIndex = 3;
+            this.label56.Text = "Borrower Type:";
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label51.Location = new System.Drawing.Point(3, 50);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(38, 13);
+            this.label51.TabIndex = 2;
+            this.label51.Text = "Name:";
+            // 
+            // panel33
+            // 
+            this.panel33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.panel33.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel33.Location = new System.Drawing.Point(0, 0);
+            this.panel33.Name = "panel33";
+            this.panel33.Size = new System.Drawing.Size(198, 30);
+            this.panel33.TabIndex = 1;
+            // 
+            // btn_ViewReservation_Return
+            // 
+            this.btn_ViewReservation_Return.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ViewReservation_Return.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ViewReservation_Return.Location = new System.Drawing.Point(915, 3);
+            this.btn_ViewReservation_Return.Name = "btn_ViewReservation_Return";
+            this.btn_ViewReservation_Return.Size = new System.Drawing.Size(134, 28);
+            this.btn_ViewReservation_Return.TabIndex = 7;
+            this.btn_ViewReservation_Return.Text = "Return";
+            this.btn_ViewReservation_Return.UseVisualStyleBackColor = true;
+            this.btn_ViewReservation_Return.Click += new System.EventHandler(this.btn_ViewReservation_Return_Click);
             // 
             // tmr_Update
             // 
@@ -2262,10 +2610,6 @@
             this.button1.TabIndex = 14;
             this.button1.Text = "Clear";
             this.button1.UseVisualStyleBackColor = false;
-            // 
-            // printDialog1
-            // 
-            this.printDialog1.UseEXDialog = true;
             // 
             // Dashboard
             // 
@@ -2354,6 +2698,14 @@
             this.panel27.PerformLayout();
             this.panel26.ResumeLayout(false);
             this.panel26.PerformLayout();
+            this.tb_Reservation.ResumeLayout(false);
+            this.tb_Reservation.PerformLayout();
+            this.panel30.ResumeLayout(false);
+            this.panel30.PerformLayout();
+            this.tb_ViewReservation.ResumeLayout(false);
+            this.flp_ViewReservation.ResumeLayout(false);
+            this.panel32.ResumeLayout(false);
+            this.panel32.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2487,8 +2839,6 @@
         private System.Windows.Forms.Button btn_BookReturn_Return;
         public System.Windows.Forms.ComboBox cb_BookReturn_BorrowerType;
         public System.Windows.Forms.ComboBox cb_BookReturn_Name;
-        private System.Windows.Forms.PrintDialog printDialog1;
-        private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.Panel panel23;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Panel panel25;
@@ -2512,10 +2862,8 @@
         private System.Windows.Forms.Panel panel24;
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.Panel panel27;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Panel panel26;
         private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.TextBox txt_Payment_PastDue;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button btn_Payment_Pay;
         private System.Windows.Forms.Label label35;
@@ -2526,5 +2874,36 @@
         public System.Windows.Forms.TabPage tb_Payment;
         public System.Windows.Forms.Label lbl_Payment_StudentID;
         public System.Windows.Forms.Label lbl_Payment_BorrowerName;
+        public System.Windows.Forms.TextBox txt_Payment_PastDue;
+        private System.Windows.Forms.Label label44;
+        public System.Windows.Forms.ComboBox cb_Reserve_BorrowerType;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.Label label49;
+        public System.Windows.Forms.ComboBox cb_Reserve_Name;
+        private System.Windows.Forms.Panel panel30;
+        private System.Windows.Forms.Button btn_Reserve_Reserve;
+        public System.Windows.Forms.Label lbl_Reserve_BorrowerType;
+        public System.Windows.Forms.Label lbl_Reserve_DateReserved;
+        public System.Windows.Forms.Label lbl_Reserve_BookList;
+        public System.Windows.Forms.Label lbl_Reserve_Name;
+        private System.Windows.Forms.Panel panel31;
+        public System.Windows.Forms.FlowLayoutPanel flp_Reserve;
+        public System.Windows.Forms.Label label54;
+        private System.Windows.Forms.Button btn_ViewReservations;
+        private System.Windows.Forms.TabPage tb_ViewReservation;
+        public System.Windows.Forms.Label label59;
+        public System.Windows.Forms.Label label60;
+        public System.Windows.Forms.Label label57;
+        public System.Windows.Forms.DateTimePicker dtp_DateReserved;
+        private System.Windows.Forms.Button btn_ViewReservation_Return;
+        private System.Windows.Forms.Panel panel32;
+        private System.Windows.Forms.Panel panel33;
+        private System.Windows.Forms.Label label61;
+        private System.Windows.Forms.Label label58;
+        private System.Windows.Forms.Label label56;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
+        public System.Windows.Forms.FlowLayoutPanel flp_ViewReservation;
     }
 }

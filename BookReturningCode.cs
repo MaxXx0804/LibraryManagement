@@ -20,6 +20,7 @@ namespace Final_Project_OOP_and_DSA
         private static List<string> booksRemaining = new List<string>();
         private static int diffDays = 0;
 
+        
         public static void Refresh()
         {   
             frm_Login.ds.flp_BooksReturn.Controls.Clear();
@@ -354,6 +355,7 @@ namespace Final_Project_OOP_and_DSA
                     frm_Login.ds.tc_Dashboard_TabControl.SelectedTab = frm_Login.ds.tb_Payment;
                     frm_Login.ds.lbl_Payment_BorrowerName.Text = frm_Login.ds.lbl_BookReturn_ReturnerName.Text.Replace("Borrower Name: ", "");
                     frm_Login.ds.lbl_Payment_StudentID.Text = GetStudentInformation(frm_Login.ds.lbl_BookReturn_ReturnerName.Text.Replace("Borrower Name: ", ""));
+                    frm_Login.ds.txt_Payment_PastDue.Text = diffDays.ToString();
                 }
                 else
                 {

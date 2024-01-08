@@ -15,24 +15,36 @@ namespace Final_Project_OOP_and_DSA
         private int currentPosition = 0;
         private int memberNumberOfBooksCanBeSelected = 0;
         private int memberCurrentBookNumberSelected = 0;
+
+        private int reserveNumberOfBooksCanBeSelected = 0;
+        private int reserveCurrentBookNumberSelected = 0;
+
+        private List<string> BooksBeingReserve = new List<string>();
         private List<string> BooksBeingBorrowed = new List<string>();
 
         private Color panelBackground = Color.Transparent;
         private Color labelForeColor = Color.Black;
         public Dashboard()
         {
+            
             InitializeComponent();
             InitializeBookListContent();
             InitializeDashboardContents();
             InitializeBookBorrowingContents();
             InitializeBorrowerListContent();
-            //InitializeReturnBooksContent();
+            InitializeBookReserveContents();
+            CHANGEDEFAULTSETTINGS();
 
+            
+            
+        }
+        public void CHANGEDEFAULTSETTINGS()
+        {
+            dtp_DateReserved.MinDate = DateTime.Now.Date.AddDays(1); 
+            dtp_DateReserved.MaxDate = DateTime.Now.AddDays(7);
             tc_Dashboard_TabControl.Location = new Point(35, -20);
-            //panel_Sidebar_Sidebar.Location = new Point(0, 0);
             panel_Sidebar_Sidebar.Size = new Size(175, 600);
             lbl_Member_BookListDisplay.Text += "\n";
-            
         }
         public void InitializeBorrowerListContent()
         {
@@ -100,21 +112,50 @@ namespace Final_Project_OOP_and_DSA
                 flp_BorrowerList_Teacher.Controls.Add(flp);
             }
         }
+        public void InitializeViewReservationContent()
+        {
+
+        }
         public void InitializeDashboardContents()
         {
-            DatabaseConnection databaseConnection = new DatabaseConnection();
-            SqlConnection cn = databaseConnection.DatabaseConnect();
-            
-            List<string[]> resultBooks = databaseConnection.QueryDatabaseDashboardInformation(cn, "SELECT * FROM Books");
-            List<string[]> studentTotal = databaseConnection.QueryDatabaseDashboardInformation(cn, "SELECT * FROM Student");
-            List<string[]> teacherTotal = databaseConnection.QueryDatabaseDashboardInformation(cn, "SELECT * FROM Teacher");
-            List<string[]> resultBooksAvailable = databaseConnection.QueryDatabaseDashboardInformation(cn, "SELECT * FROM Books WHERE book_status = 'Available'");
-            List<string[]> resultBooksBorrowed = databaseConnection.QueryDatabaseDashboardInformation(cn, "SELECT * FROM Books WHERE book_status = 'Borrowed'");
+            try
+            {
+                DatabaseConnection databaseConnection = new DatabaseConnection();
+                SqlConnection cn = databaseConnection.DatabaseConnect();
 
-            lbl_BookListed_Quantity.Text = resultBooks.Count.ToString();
-            lbl_RegisteredUser_Quantity.Text = (studentTotal.Count + teacherTotal.Count).ToString();
-            lbl_BooksAvailable_Quantity.Text = resultBooksAvailable.Count.ToString();
-            lbl_BooksLent_Quantity.Text = resultBooksBorrowed.Count.ToString();
+                int numberOfPayment = 0;
+
+                List<string[]> resultBooks = databaseConnection.QueryDatabaseDashboardInformation(cn, "SELECT * FROM Books");
+                List<string[]> studentTotal = databaseConnection.QueryDatabaseDashboardInformation(cn, "SELECT * FROM Student");
+                List<string[]> teacherTotal = databaseConnection.QueryDatabaseDashboardInformation(cn, "SELECT * FROM Teacher");
+                List<string[]> resultBooksAvailable = databaseConnection.QueryDatabaseDashboardInformation(cn, "SELECT * FROM Books WHERE book_status = 'Available'");
+                List<string[]> resultBooksBorrowed = databaseConnection.QueryDatabaseDashboardInformation(cn, "SELECT * FROM Books WHERE book_status = 'Borrowed'");
+                List<object[]> resultBooksPayment = databaseConnection.QueryDatabaseForReturnBooks(cn, "SELECT * FROM BookBorrowing");
+
+                foreach (var item in resultBooksPayment)
+                {
+                    if (item != null)
+                    {
+                        DateTime DueDate = (DateTime)item[4];
+                        Debug.WriteLine(item[0]);
+                        DateTime DateNow = DateTime.Now;
+                        TimeSpan timeSpan = DateNow - DueDate;
+                        if (timeSpan.Days > 0)
+                        {
+                            numberOfPayment++;
+                        }
+                    }
+                };
+                lbl_BookListed_Quantity.Text = resultBooks.Count.ToString();
+                lbl_RegisteredUser_Quantity.Text = (studentTotal.Count + teacherTotal.Count).ToString();
+                lbl_BooksAvailable_Quantity.Text = resultBooksAvailable.Count.ToString();
+                lbl_BooksLent_Quantity.Text = resultBooksBorrowed.Count.ToString();
+                lbl_PendingPayment_Quantity.Text = numberOfPayment.ToString();
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+            }
         }
         public void InitializeBookBorrowingContents()
         {
@@ -206,6 +247,10 @@ namespace Final_Project_OOP_and_DSA
                 flp_BookList.Controls.Add(panel);
             }
         }
+        public void InitializeBookReserveContents()
+        {
+            InitializeBookListContentByFilterWithCheckBoxForBookReserve("SELECT * FROM Books WHERE book_status = 'Available'");
+        }
         public void InitializeBookListContentByFilter(string filter)
         {
             flp_BookList.Controls.Clear();
@@ -258,7 +303,7 @@ namespace Final_Project_OOP_and_DSA
             DatabaseConnection databaseConnection = new DatabaseConnection();
             SqlConnection cn = databaseConnection.DatabaseConnect();
             List<string[]> results = databaseConnection.QueryDatabaseDashboardInformation(cn, filter);
-            
+            Debug.WriteLine("InitializeBookListContentByFilterWithCheckBox");
             try
             {
 
@@ -298,7 +343,54 @@ namespace Final_Project_OOP_and_DSA
                 Debug.WriteLine(ex.Message);
             }
         }
+        public void InitializeBookListContentByFilterWithCheckBoxForBookReserve(string filter)
+        {
+            flp_Reserve.Controls.Clear();
+            DatabaseConnection databaseConnection = new DatabaseConnection();
+            SqlConnection cn = databaseConnection.DatabaseConnect();
+            List<string[]> results = databaseConnection.QueryDatabaseDashboardInformation(cn, filter);
 
+            try
+            {
+
+                for (int i = 0; i < results.Count; i++)
+                {
+                    object[] res = results[i];
+
+                    PictureBox pictureBox = new PictureBox();
+                    pictureBox.Dock = DockStyle.Fill;
+                    pictureBox.Image = (Bitmap)Resources.ResourceManager.GetObject(res[7].ToString());
+                    pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+                    pictureBox.Name = res[7].ToString();
+                    pictureBox.BringToFront();
+
+                    CheckBox cb = new CheckBox
+                    {
+                        Text = res[0].ToString(),
+                        Dock = DockStyle.Bottom,
+                        TextAlign = System.Drawing.ContentAlignment.MiddleCenter,
+                        Size = new Size(0, 30),
+                        ForeColor = labelForeColor,
+                        Font = new Font("Bahnschrift", 7)
+                    };
+                    cb.CheckedChanged += new EventHandler(reserveCheckBoxLimitChecker);
+                    Panel panel = new Panel()
+                    {
+                        Size = new Size(125, 175),
+                        BackColor = panelBackground,
+                    };
+                    panel.Controls.Add(pictureBox);
+                    panel.Controls.Add(cb);
+                    flp_Reserve.Controls.Add(panel);
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+            }
+        }
+        //SIDEBAR FUNCTIONS
+        #region
         private void button8_Click(object sender, EventArgs e)
         {
             tmr_Sidebar_SidebarExitAnimation.Start();
@@ -338,7 +430,7 @@ namespace Final_Project_OOP_and_DSA
             btn_Payment.Enabled = true;
             btn_Sidebar_Logout.Enabled = true;
         }
-
+        
         private void tmr_Sidebar_SidebarEntryAnimation_Tick(object sender, EventArgs e)
         {
             if (currentPosition < 0)
@@ -354,7 +446,9 @@ namespace Final_Project_OOP_and_DSA
                 panel_Logo_LogoHandler.Size = new Size(175, 50);
             }
         }
-
+        #endregion
+        //CHANGE TAB BUTTONS
+        #region
         private void button1_Click(object sender, EventArgs e)
         {
             tc_Dashboard_TabControl.SelectedTab = tb_Dashboard;
@@ -382,10 +476,11 @@ namespace Final_Project_OOP_and_DSA
 
         private void btn_Payment_Click(object sender, EventArgs e)
         {
-            tc_Dashboard_TabControl.SelectedTab = tb_Payment;
+            tc_Dashboard_TabControl.SelectedTab = tb_Reservation;
         }
-
-
+        #endregion
+        //CHANGE FILTER IN BOOKLIST
+        #region
         private void btn_Filter_Available_Click(object sender, EventArgs e)
         {
             InitializeBookListContentByFilter("Available");
@@ -415,16 +510,14 @@ namespace Final_Project_OOP_and_DSA
         {
             InitializeBookListContentByFilter("Academic");
         }
-
-        private void tb_BookList_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btn_Filter_All_Click(object sender, EventArgs e)
         {
             InitializeBookListContent();
         }
+        #endregion
+
+
+
         private void btn_BookDisplay_Information(object sender, EventArgs e)
         {
             try
@@ -439,20 +532,7 @@ namespace Final_Project_OOP_and_DSA
             }catch (Exception ex) { }
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox9_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void btn_ChangeTab(object sender, EventArgs e)
         {
@@ -470,42 +550,17 @@ namespace Final_Project_OOP_and_DSA
             }
         }
 
-        private void panel_NewMember_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        
 
         private void tmr_Update_Tick(object sender, EventArgs e)
         {
             InitializeDashboardContents();
         }
 
-        private void label26_Click(object sender, EventArgs e)
-        {
+       
+        //CHECKS IF THE USER EXCEEDS THE BOOK LIMIT
+        #region
 
-        }
-
-        private void label24_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label29_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        //PREVENT USER FROM CHANGING THE BORROWER TYPE WHEN THERE ARE SELECTED CHECKBOX
         private void memberCheckBoxLimitChecker(object sender, EventArgs e)
         {
             try
@@ -545,6 +600,49 @@ namespace Final_Project_OOP_and_DSA
             }
 
         }
+        private void reserveCheckBoxLimitChecker(object sender, EventArgs e)
+        {
+            try
+            {
+                CheckBox snd = (CheckBox)sender;
+                if (reserveCurrentBookNumberSelected >= reserveNumberOfBooksCanBeSelected && snd.Checked)
+                {
+                    snd.Checked = false;
+                    MessageBox.Show("Exceeded the number of books that can be borrowed");
+                }
+                else if (!snd.Checked)
+                {
+                    int end = snd.Text.Length;
+                    int start = lbl_Reserve_BookList.Text.IndexOf(snd.Text);
+
+                    lbl_Reserve_BookList.Text = lbl_Reserve_BookList.Text.Remove(start, end + 1);
+                    BooksBeingReserve.Remove(snd.Text);
+                    reserveCurrentBookNumberSelected--;
+                }
+                else if (reserveCurrentBookNumberSelected < reserveNumberOfBooksCanBeSelected)
+                {
+                    lbl_Reserve_BookList.Text += snd.Text + "\n";
+                    BooksBeingReserve.Add(snd.Text);
+                    reserveCurrentBookNumberSelected++;
+                }
+                if (reserveCurrentBookNumberSelected > 0)
+                {
+                    cb_Reserve_BorrowerType.Enabled = false;
+                }
+                else if (reserveCurrentBookNumberSelected == 0)
+                {
+                    cb_Reserve_BorrowerType.Enabled = true;
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+
+        }
+        #endregion
+        //PUSH USERS ONTO CB_MEMBER_BORROWERTYPE WHILE CHECKING IF THE USER HAS BOOKS BORROWED
+        #region
         private void cb_Member_BorrowerType_SelectedIndexChanged(object sender, EventArgs e)
         {
             DatabaseConnection databaseConnection = new DatabaseConnection();
@@ -587,32 +685,9 @@ namespace Final_Project_OOP_and_DSA
             }
             
         }
-
-        private void cb_Member_Name_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            lbl_Member_Name.Text = "Borrower Name: " + cb_Member_Name.Text;
-        }
-
-        private void btn_Member_Confirm_Click(object sender, EventArgs e)
-        {
-            BookBorrowingCode.BookBorrowing(BooksBeingBorrowed);
-            InitializeBookListContentByFilterWithCheckBox("SELECT * FROM Books WHERE book_status = 'Available'");
-            memberCurrentBookNumberSelected = 0;
-        }
-        
-        private void tb_Dashboard_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cb_BookReturn_Name_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            BookReturningCode.ChangeContent(cb_BookReturn_Name.Text);
-        }
-
         private void cb_BookReturn_BorrowerType_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
             DatabaseConnection databaseConnection = new DatabaseConnection();
             SqlConnection cn = databaseConnection.DatabaseConnect();
             List<string[]> studentName = databaseConnection.QueryDatabaseDashboardInformationBook(cn, "SELECT student_name, student_book_borrowed FROM Student");
@@ -627,7 +702,7 @@ namespace Final_Project_OOP_and_DSA
             }
             if (cb_BookReturn_BorrowerType.Text == "Student")
             {
-                
+
                 cb_BookReturn_Name.Items.Clear();
                 lbl_BookReturn_ReturnerType.Text = "Borrower Type: Student";
                 memberNumberOfBooksCanBeSelected = 2;
@@ -653,9 +728,70 @@ namespace Final_Project_OOP_and_DSA
                 }
             }
         }
-        private void btn_CloseApplications(object sender, EventArgs e)
+        private void cb_Reserve_BorrowerType_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Application.Exit();
+            lbl_Reserve_BorrowerType.Text = cb_Reserve_BorrowerType.Text;
+            DatabaseConnection databaseConnection = new DatabaseConnection();
+            SqlConnection cn = databaseConnection.DatabaseConnect();
+            List<string[]> studentName = databaseConnection.QueryDatabaseDashboardInformationBook(cn, "SELECT student_name, student_book_borrowed FROM Student");
+            List<string[]> teacherName = databaseConnection.QueryDatabaseDashboardInformationBook(cn, "SELECT teacher_name, teacher_book_borrowed FROM Teacher");
+            if (cb_Reserve_BorrowerType.Text == "Student" || cb_Reserve_BorrowerType.Text == "Teacher")
+            {
+                flp_Reserve.Enabled = true;
+            }
+            else
+            {
+                flp_Reserve.Enabled = false;
+            }
+            if (cb_Reserve_BorrowerType.Text == "Student")
+            {
+                cb_Reserve_Name.Items.Clear();
+                reserveNumberOfBooksCanBeSelected = 2;
+
+                foreach (string[] x in studentName)
+                {
+                    if (x[1] == null || x[1] == "")
+                    {
+                        cb_Reserve_Name.Items.Add(x[0]);
+                    }
+                }
+            }
+            else if (cb_Reserve_BorrowerType.Text == "Teacher")
+            {
+                cb_Reserve_Name.Items.Clear();
+                reserveNumberOfBooksCanBeSelected = 5;
+                foreach (string[] x in teacherName)
+                {
+                    if (x[1] == null || x[1] == "")
+                    {
+                        cb_Reserve_Name.Items.Add(x[0]);
+                    }
+                }
+            }
+        }
+        #endregion
+        private void cb_Member_Name_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            lbl_Member_Name.Text = "Borrower Name: " + cb_Member_Name.Text;
+        }
+
+        private void btn_Member_Confirm_Click(object sender, EventArgs e)
+        {
+            BookBorrowingCode.BookBorrowing(BooksBeingBorrowed);
+            InitializeBookListContentByFilterWithCheckBox("SELECT * FROM Books WHERE book_status = 'Available'");
+            memberCurrentBookNumberSelected = 0;
+        }
+        private void btn_Reserve_Reserve_Click(object sender, EventArgs e)
+        {
+            BookReserved.BookReserve(BooksBeingReserve);
+            InitializeBookListContentByFilterWithCheckBoxForBookReserve("SELECT * FROM Books WHERE book_status = 'Available'");
+            reserveCurrentBookNumberSelected = 0;
+        }
+
+
+        private void cb_BookReturn_Name_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            BookReturningCode.ChangeContent(cb_BookReturn_Name.Text);
         }
 
         private void btn_Sidebar_Logout_Click(object sender, EventArgs e)
@@ -674,10 +810,7 @@ namespace Final_Project_OOP_and_DSA
             
         }
 
-        private void panel20_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        
 
         private void btn_Member_Clear_Click(object sender, EventArgs e)
         {
@@ -699,7 +832,7 @@ namespace Final_Project_OOP_and_DSA
             }
             catch(Exception ex)
             {
-
+                Debug.WriteLine(ex.Message);
             }
         }
 
@@ -719,9 +852,89 @@ namespace Final_Project_OOP_and_DSA
             }
         }
 
+       
+
+        
+
+        private void dtp_DateReserved_ValueChanged(object sender, EventArgs e)
+        {
+            lbl_Reserve_DateReserved.Text = dtp_DateReserved.Text;
+        }
         private void txt_Payment_PastDue_ControlRemoved(object sender, ControlEventArgs e)
         {
 
+        }
+        private void label26_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void tb_BookList_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label24_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label29_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void panel20_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+        private void tb_Dashboard_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void panel_NewMember_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        
+
+        private void cb_Reserve_Name_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            lbl_Reserve_Name.Text = cb_Reserve_Name.Text;
+        }
+
+        private void btn_ViewReservations_Click(object sender, EventArgs e)
+        {
+            tc_Dashboard_TabControl.SelectedTab = tb_ViewReservation;
+            BookReserved.Start();
+        }
+
+        private void btn_ViewReservation_Return_Click(object sender, EventArgs e)
+        {
+            tc_Dashboard_TabControl.SelectedTab = tb_Reservation;
         }
     }
 }
