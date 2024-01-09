@@ -1521,7 +1521,7 @@
             this.cb_BookReturn_BorrowerType.Items.AddRange(new object[] {
             "Student",
             "Teacher"});
-            this.cb_BookReturn_BorrowerType.Location = new System.Drawing.Point(477, 86);
+            this.cb_BookReturn_BorrowerType.Location = new System.Drawing.Point(425, 93);
             this.cb_BookReturn_BorrowerType.Margin = new System.Windows.Forms.Padding(2);
             this.cb_BookReturn_BorrowerType.Name = "cb_BookReturn_BorrowerType";
             this.cb_BookReturn_BorrowerType.Size = new System.Drawing.Size(212, 24);
@@ -1553,7 +1553,7 @@
             this.cb_BookReturn_Name.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_BookReturn_Name.Font = new System.Drawing.Font("Bahnschrift", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_BookReturn_Name.FormattingEnabled = true;
-            this.cb_BookReturn_Name.Location = new System.Drawing.Point(76, 87);
+            this.cb_BookReturn_Name.Location = new System.Drawing.Point(73, 93);
             this.cb_BookReturn_Name.Margin = new System.Windows.Forms.Padding(2);
             this.cb_BookReturn_Name.Name = "cb_BookReturn_Name";
             this.cb_BookReturn_Name.Size = new System.Drawing.Size(212, 24);
@@ -1563,13 +1563,14 @@
             // panel20
             // 
             this.panel20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.panel20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel20.Controls.Add(this.btn_BookReturn_Return);
             this.panel20.Controls.Add(this.lbl_BookReturn_ReturnerType);
             this.panel20.Controls.Add(this.lbl_BookReturn_DueDate);
             this.panel20.Controls.Add(this.lbl_BookReturn_DateBorrowed);
             this.panel20.Controls.Add(this.lbl_BookReturn_BookList);
             this.panel20.Controls.Add(this.lbl_BookReturn_ReturnerName);
-            this.panel20.Location = new System.Drawing.Point(784, 129);
+            this.panel20.Location = new System.Drawing.Point(784, 146);
             this.panel20.Name = "panel20";
             this.panel20.Size = new System.Drawing.Size(227, 401);
             this.panel20.TabIndex = 20;
@@ -1642,7 +1643,7 @@
             this.panel22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.panel22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel22.Controls.Add(this.label75);
-            this.panel22.Location = new System.Drawing.Point(17, 129);
+            this.panel22.Location = new System.Drawing.Point(17, 146);
             this.panel22.Name = "panel22";
             this.panel22.Size = new System.Drawing.Size(761, 50);
             this.panel22.TabIndex = 19;
@@ -1653,7 +1654,7 @@
             this.flp_BooksReturn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.flp_BooksReturn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flp_BooksReturn.Enabled = false;
-            this.flp_BooksReturn.Location = new System.Drawing.Point(17, 180);
+            this.flp_BooksReturn.Location = new System.Drawing.Point(17, 197);
             this.flp_BooksReturn.Name = "flp_BooksReturn";
             this.flp_BooksReturn.Size = new System.Drawing.Size(761, 350);
             this.flp_BooksReturn.TabIndex = 18;
@@ -2249,7 +2250,7 @@
             // 
             this.dtp_DateReserved.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtp_DateReserved.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtp_DateReserved.Location = new System.Drawing.Point(683, 92);
+            this.dtp_DateReserved.Location = new System.Drawing.Point(683, 93);
             this.dtp_DateReserved.Name = "dtp_DateReserved";
             this.dtp_DateReserved.Size = new System.Drawing.Size(92, 21);
             this.dtp_DateReserved.TabIndex = 35;
@@ -2328,7 +2329,7 @@
             this.panel30.Controls.Add(this.lbl_Reserve_DateReserved);
             this.panel30.Controls.Add(this.lbl_Reserve_BookList);
             this.panel30.Controls.Add(this.lbl_Reserve_Name);
-            this.panel30.Location = new System.Drawing.Point(806, 134);
+            this.panel30.Location = new System.Drawing.Point(784, 146);
             this.panel30.Name = "panel30";
             this.panel30.Size = new System.Drawing.Size(227, 401);
             this.panel30.TabIndex = 28;
@@ -2435,7 +2436,7 @@
             this.panel31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.panel31.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel31.Controls.Add(this.label70);
-            this.panel31.Location = new System.Drawing.Point(15, 134);
+            this.panel31.Location = new System.Drawing.Point(17, 146);
             this.panel31.Name = "panel31";
             this.panel31.Size = new System.Drawing.Size(761, 50);
             this.panel31.TabIndex = 27;
@@ -2446,7 +2447,7 @@
             this.flp_Reserve.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.flp_Reserve.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flp_Reserve.Enabled = false;
-            this.flp_Reserve.Location = new System.Drawing.Point(15, 185);
+            this.flp_Reserve.Location = new System.Drawing.Point(17, 197);
             this.flp_Reserve.Name = "flp_Reserve";
             this.flp_Reserve.Size = new System.Drawing.Size(761, 350);
             this.flp_Reserve.TabIndex = 26;
@@ -2795,7 +2796,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(17, 90);
+            this.label13.Location = new System.Drawing.Point(14, 97);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(54, 16);
             this.label13.TabIndex = 37;
@@ -2806,7 +2807,7 @@
             this.label72.AutoSize = true;
             this.label72.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label72.ForeColor = System.Drawing.Color.Black;
-            this.label72.Location = new System.Drawing.Point(369, 89);
+            this.label72.Location = new System.Drawing.Point(317, 97);
             this.label72.Name = "label72";
             this.label72.Size = new System.Drawing.Size(103, 16);
             this.label72.TabIndex = 38;
@@ -2817,7 +2818,7 @@
             this.label74.AutoSize = true;
             this.label74.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label74.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(80)))), ((int)(((byte)(88)))));
-            this.label74.Location = new System.Drawing.Point(73, 68);
+            this.label74.Location = new System.Drawing.Point(70, 73);
             this.label74.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label74.Name = "label74";
             this.label74.Size = new System.Drawing.Size(318, 16);
@@ -2829,7 +2830,7 @@
             this.label73.AutoSize = true;
             this.label73.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label73.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(80)))), ((int)(((byte)(88)))));
-            this.label73.Location = new System.Drawing.Point(474, 68);
+            this.label73.Location = new System.Drawing.Point(422, 73);
             this.label73.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label73.Name = "label73";
             this.label73.Size = new System.Drawing.Size(123, 16);
@@ -2841,7 +2842,7 @@
             this.panel36.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.panel36.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel36.Controls.Add(this.label76);
-            this.panel36.Location = new System.Drawing.Point(784, 129);
+            this.panel36.Location = new System.Drawing.Point(784, 146);
             this.panel36.Name = "panel36";
             this.panel36.Size = new System.Drawing.Size(227, 50);
             this.panel36.TabIndex = 43;
