@@ -47,7 +47,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Final_Project_OOP_and_DSA.Properties.Resources.Icon_Black;
-            this.pictureBox2.Location = new System.Drawing.Point(546, 52);
+            this.pictureBox2.Location = new System.Drawing.Point(539, 61);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(115, 98);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -95,20 +95,20 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(437, 321);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 18);
+            this.label4.Size = new System.Drawing.Size(74, 17);
             this.label4.TabIndex = 7;
             this.label4.Text = "USERNAME";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(437, 394);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(69, 18);
+            this.label5.Size = new System.Drawing.Size(79, 17);
             this.label5.TabIndex = 8;
             this.label5.Text = "PASSWORD";
             // 
@@ -118,11 +118,11 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(550, 500);
+            this.button1.Location = new System.Drawing.Point(535, 477);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 30);
+            this.button1.Size = new System.Drawing.Size(128, 36);
             this.button1.TabIndex = 9;
             this.button1.Text = "Log In";
             this.button1.UseVisualStyleBackColor = false;
@@ -152,10 +152,10 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Franklin Gothic Demi", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(492, 205);
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(477, 220);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(214, 25);
+            this.label6.Size = new System.Drawing.Size(246, 23);
             this.label6.TabIndex = 12;
             this.label6.Text = "A C C O U N T  L O G I N";
             // 
