@@ -133,6 +133,36 @@ namespace Final_Project_OOP_and_DSA.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Computer_Aided_Translation_Technology {
+            get {
+                object obj = ResourceManager.GetObject("Computer-Aided_Translation_Technology", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Computer_Associate {
+            get {
+                object obj = ResourceManager.GetObject("Computer_Associate", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Computer_Storage_Fundamentals {
+            get {
+                object obj = ResourceManager.GetObject("Computer_Storage_Fundamentals", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Dracula {
             get {
                 object obj = ResourceManager.GetObject("Dracula", resourceCulture);
@@ -176,6 +206,16 @@ namespace Final_Project_OOP_and_DSA.Properties {
         internal static System.Drawing.Bitmap In_a_Grove {
             get {
                 object obj = ResourceManager.GetObject("In_a_Grove", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Learn_Computer_Forensics {
+            get {
+                object obj = ResourceManager.GetObject("Learn_Computer_Forensics", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -286,6 +326,16 @@ namespace Final_Project_OOP_and_DSA.Properties {
         internal static System.Drawing.Bitmap Sidebar_Exit_Logo {
             get {
                 object obj = ResourceManager.GetObject("Sidebar Exit Logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Supervising_Electronic_Computer_Operator {
+            get {
+                object obj = ResourceManager.GetObject("Supervising_Electronic_Computer_Operator", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

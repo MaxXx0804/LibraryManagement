@@ -37,8 +37,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_Login_Username = new System.Windows.Forms.TextBox();
+            this.txt_Login_Password = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -128,26 +128,26 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
+            // txt_Login_Username
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(440, 351);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(320, 14);
-            this.textBox1.TabIndex = 10;
+            this.txt_Login_Username.BackColor = System.Drawing.SystemColors.Control;
+            this.txt_Login_Username.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_Login_Username.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Login_Username.Location = new System.Drawing.Point(440, 351);
+            this.txt_Login_Username.Name = "txt_Login_Username";
+            this.txt_Login_Username.Size = new System.Drawing.Size(320, 14);
+            this.txt_Login_Username.TabIndex = 10;
             // 
-            // textBox2
+            // txt_Login_Password
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(440, 424);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(320, 14);
-            this.textBox2.TabIndex = 11;
-            this.textBox2.UseSystemPasswordChar = true;
+            this.txt_Login_Password.BackColor = System.Drawing.SystemColors.Control;
+            this.txt_Login_Password.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_Login_Password.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Login_Password.Location = new System.Drawing.Point(440, 424);
+            this.txt_Login_Password.Name = "txt_Login_Password";
+            this.txt_Login_Password.Size = new System.Drawing.Size(320, 14);
+            this.txt_Login_Password.TabIndex = 11;
+            this.txt_Login_Password.UseSystemPasswordChar = true;
             // 
             // label6
             // 
@@ -165,8 +165,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 600);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txt_Login_Password);
+            this.Controls.Add(this.txt_Login_Username);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -197,8 +197,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_Login_Username;
+        private System.Windows.Forms.TextBox txt_Login_Password;
         private System.Windows.Forms.Label label6;
     }
 }
