@@ -213,7 +213,8 @@ namespace Final_Project_OOP_and_DSA
                     var borrowNow = MessageBox.Show("Borrow this book now?", "Borrow", MessageBoxButtons.YesNo);
                     if(borrowNow == DialogResult.Yes)
                     {
-                        
+                        BorrowBooks(dr);
+                        RemoveFromDatabase(dr);
                     }
                 }
                 else if(timespan > 0)
@@ -237,6 +238,122 @@ namespace Final_Project_OOP_and_DSA
                 Debug.WriteLine(ex.Message);
             }
 
+        }
+        public static void RemoveFromDatabase(DataRow dr)
+        {
+            try
+            {
+                DatabaseConnection databaseConnection = new DatabaseConnection();
+                SqlConnection cn = databaseConnection.DatabaseConnect();
+                string sql = "";
+                cn.Open();
+                sql = "DELETE FROM Reservation WHERE borrower_name = @name";
+                SqlCommand cmd = new SqlCommand(sql, cn);
+                cmd.Parameters.AddWithValue("@name", dr["borrower_name"]);
+                int saved = cmd.ExecuteNonQuery();
+                if(saved > 0)
+                {
+                    Debug.WriteLine("RemoveFromDatabase: Successful");
+                }
+                else
+                {
+                    Debug.WriteLine("RemoveFromDatabase: Error");
+                }
+                cn.Close();
+
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+        public static void BorrowBooks(DataRow dr)
+        {
+            DatabaseConnection databaseConnection = new DatabaseConnection();
+            SqlConnection cn = databaseConnection.DatabaseConnect();
+            string sql = "";
+            sql = "UPDATE Books SET book_status = 'Borrowed' WHERE book_title = @title";
+            cn.Open();
+            string[] arr = dr["book_title"].ToString().Split(new string[] { "~" }, StringSplitOptions.None);
+            foreach (var item in arr) {
+                SqlCommand cmd = new SqlCommand(sql, cn);
+                cmd.Parameters.AddWithValue("@title", item);
+                int saved = cmd.ExecuteNonQuery();
+                if (saved > 0)
+                {
+                    Debug.WriteLine("BorrowBooks: Successful");
+                }
+                else
+                {
+                    Debug.WriteLine("BorrowBooks: Error");
+                }
+            }
+            BorrowBooksUserChange(dr);
+            cn.Close();
+        }
+        public static void BorrowBooksUserChange(DataRow dr)
+        {
+            DatabaseConnection databaseConnection = new DatabaseConnection();
+            SqlConnection cn = databaseConnection.DatabaseConnect();
+            string sql = "";
+            
+            if (dr["borrower_type"].ToString() == "Student")
+            {
+                sql = "UPDATE Student SET student_book_borrowed = @books WHERE student_name = @name";
+            }
+            else
+            {
+                sql = "UPDATE Student SET teacher_book_borrowed = @books WHERE teacher_name = @name";
+            }
+            cn.Open();
+            SqlCommand cmd = new SqlCommand(sql, cn);
+            cmd.Parameters.AddWithValue("@books", dr["book_title"].ToString());
+            cmd.Parameters.AddWithValue("@name", dr["borrower_name"].ToString());
+            int saved = cmd.ExecuteNonQuery();
+            if(saved > 0)
+            {
+                Debug.WriteLine("BorrowBooksUserChange: Successful");
+                BorrowBookBookBorrowing(dr);
+            }
+            else
+            {
+                Debug.WriteLine("BorrowBooksUserChange: Error");
+            }
+        }
+        public static void BorrowBookBookBorrowing(DataRow dr)
+        {
+            DatabaseConnection databaseConnection = new DatabaseConnection();
+            SqlConnection cn = databaseConnection.DatabaseConnect();
+            string sql = "";
+            SqlCommand cmd;
+            cn.Open();
+            if (dr["borrower_type"].ToString() == "Student")
+            {
+                sql = "INSERT INTO BookBorrowing (borrower_name, books_borrowed, date_borrowed, due_date) VALUES (@name, @books, @dateborrowed, @due)";
+                cmd = new SqlCommand(sql, cn);
+                cmd.Parameters.AddWithValue("@name", dr["borrower_name"].ToString());
+                cmd.Parameters.AddWithValue("@books", dr["book_title"].ToString());
+                cmd.Parameters.AddWithValue("@dateborrowed", DateTime.Now.Date);
+                cmd.Parameters.AddWithValue("@due", DateTime.Now.Date.AddDays(3));
+            }
+            else
+            {
+                sql = "INSERT INTO BookBorrowing (borrower_name, books_borrowed, date_borrowed) VALUES (@name, @books, @dateborrowed)";
+                cmd = new SqlCommand(sql, cn);
+                cmd.Parameters.AddWithValue("@name", dr["borrower_name"].ToString());
+                cmd.Parameters.AddWithValue("@books", dr["book_title"].ToString());
+                cmd.Parameters.AddWithValue("@dateborrowed", DateTime.Now.Date);
+            }
+            int saved = cmd.ExecuteNonQuery();
+            if(saved > 0)
+            {
+                Debug.WriteLine("BorrowBookBookBorrowing: Successful");
+            }
+            else
+            {
+                Debug.WriteLine("BorrowBookBookBorrowing: Error");
+            }
+            cn.Close();
         }
         public static void ReturnBooksExpiredDate(Button btn, DataRow dr)
         {

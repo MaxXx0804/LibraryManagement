@@ -16,6 +16,8 @@ namespace Final_Project_OOP_and_DSA
         private int memberNumberOfBooksCanBeSelected = 0;
         private int memberCurrentBookNumberSelected = 0;
 
+        private bool reserveInsideLocation = false;
+
         private int reserveNumberOfBooksCanBeSelected = 0;
         private int reserveCurrentBookNumberSelected = 0;
 
@@ -35,7 +37,7 @@ namespace Final_Project_OOP_and_DSA
         }
         public Dashboard()
         {
-            
+
             InitializeComponent();
             InitializeBookListContent();
             InitializeDashboardContents();
@@ -44,12 +46,12 @@ namespace Final_Project_OOP_and_DSA
             InitializeBookReserveContents();
             CHANGEDEFAULTSETTINGS();
 
-            
-            
+
+
         }
         public void CHANGEDEFAULTSETTINGS()
         {
-            dtp_DateReserved.MinDate = DateTime.Now.Date.AddDays(1); 
+            dtp_DateReserved.MinDate = DateTime.Now.Date.AddDays(1);
             dtp_DateReserved.MaxDate = DateTime.Now.AddDays(7);
             tc_Dashboard_TabControl.Location = new Point(35, -20);
             panel_Sidebar_Sidebar.Size = new Size(175, 600);
@@ -71,7 +73,7 @@ namespace Final_Project_OOP_and_DSA
                     FlowDirection = FlowDirection.TopDown,
                     BorderStyle = BorderStyle.FixedSingle,
                 };
-                for(int i = 0; i < 4; i++)
+                for (int i = 0; i < 4; i++)
                 {
                     if (x[i] != null)
                     {
@@ -84,7 +86,7 @@ namespace Final_Project_OOP_and_DSA
                             Text = x[i],
                             AutoSize = true,
                             Font = new Font("Tahoma", 10)
-                            
+
                         };
                         panel.Controls.Add(lbl);
                         flp.Controls.Add(panel);
@@ -104,7 +106,7 @@ namespace Final_Project_OOP_and_DSA
                 {
                     if (x[i] != null)
                     {
-                        
+
                         Panel panel = new Panel()
                         {
                             Size = new Size(250, 30)
@@ -167,15 +169,15 @@ namespace Final_Project_OOP_and_DSA
         public void InitializeBookBorrowingContents()
         {
 
-            InitializeBookListContentByFilterWithCheckBox("SELECT * FROM Books WHERE book_status = 'Available'");
-            
+            InitializeBookListContentByFilterWithCheckBox("SELECT * FROM Books WHERE book_status = 'Available' AND NOT book_category = 'Academic'");
+
         }
         public void InitializeReturnBooksContent()
         {
             flp_BooksReturn.Controls.Clear();
             DatabaseConnection databaseConnection = new DatabaseConnection();
             SqlConnection cn = databaseConnection.DatabaseConnect();
-            List<string[]> results = databaseConnection.QueryDatabaseDashboardInformation(cn,"SELECT * FROM Books WHERE book_status = 'Borrowed'");
+            List<string[]> results = databaseConnection.QueryDatabaseDashboardInformation(cn, "SELECT * FROM Books WHERE book_status = 'Borrowed' AND NOT book_category = 'Academic'");
             try
             {
 
@@ -214,7 +216,7 @@ namespace Final_Project_OOP_and_DSA
             {
                 Debug.WriteLine(ex.Message);
             }
-            
+
         }
         public void InitializeBookListContent()
         {
@@ -257,7 +259,7 @@ namespace Final_Project_OOP_and_DSA
         }
         public void InitializeBookReserveContents()
         {
-            InitializeBookListContentByFilterWithCheckBoxForBookReserve("SELECT * FROM Books WHERE book_status = 'Available'");
+            InitializeBookListContentByFilterWithCheckBoxForBookReserve("SELECT * FROM Books WHERE book_status = 'Available' AND NOT book_category = 'Academic'");
         }
         public void InitializeBookListContentByFilter(string filter)
         {
@@ -299,7 +301,7 @@ namespace Final_Project_OOP_and_DSA
                     panel.Controls.Add(lbl);
                     flp_BookList.Controls.Add(panel);
                 }
-            }catch(Exception ex)
+            } catch (Exception ex)
             {
                 Debug.WriteLine(ex.Message);
             }
@@ -332,7 +334,7 @@ namespace Final_Project_OOP_and_DSA
                         TextAlign = System.Drawing.ContentAlignment.MiddleCenter,
                         Size = new Size(0, 30),
                         ForeColor = labelForeColor,
-                        Font = new Font("Bahnschrift",7)
+                        Font = new Font("Bahnschrift", 7)
                     };
                     cb.CheckedChanged += new EventHandler(memberCheckBoxLimitChecker);
                     Panel panel = new Panel()
@@ -412,9 +414,9 @@ namespace Final_Project_OOP_and_DSA
 
         private void tmr_Sidebar_SidebarExitAnimation_Tick(object sender, EventArgs e)
         {
-            if(currentPosition > limit)
+            if (currentPosition > limit)
             {
-                currentPosition-=10;
+                currentPosition -= 10;
                 panel_Sidebar_Sidebar.Location = new Point(currentPosition, 0);
             }
             else
@@ -437,7 +439,7 @@ namespace Final_Project_OOP_and_DSA
             btn_Payment.Enabled = true;
             btn_Sidebar_Logout.Enabled = true;
         }
-        
+
         private void tmr_Sidebar_SidebarEntryAnimation_Tick(object sender, EventArgs e)
         {
             if (currentPosition < 0)
@@ -536,15 +538,15 @@ namespace Final_Project_OOP_and_DSA
                 string[] contents = results[0];
                 BookInformationDisplay bookInformationDisplay = new BookInformationDisplay(results);
                 bookInformationDisplay.Show();
-            }catch (Exception ex) { }
+            } catch (Exception ex) { }
         }
 
-       
+
 
         private void btn_ChangeTab(object sender, EventArgs e)
         {
             Panel panel = (Panel)sender;
-            if(panel.Name == "panel_NewMember")
+            if (panel.Name == "panel_NewMember")
             {
                 NewMemberForm nmb = new NewMemberForm();
                 nmb.Show();
@@ -557,14 +559,14 @@ namespace Final_Project_OOP_and_DSA
             }
         }
 
-        
+
 
         private void tmr_Update_Tick(object sender, EventArgs e)
         {
             InitializeDashboardContents();
         }
 
-       
+
         //CHECKS IF THE USER EXCEEDS THE BOOK LIMIT
         #region
 
@@ -593,15 +595,15 @@ namespace Final_Project_OOP_and_DSA
                     BooksBeingBorrowed.Add(snd.Text);
                     memberCurrentBookNumberSelected++;
                 }
-                if(memberCurrentBookNumberSelected > 0)
+                if (memberCurrentBookNumberSelected > 0)
                 {
                     cb_Member_BorrowerType.Enabled = false;
                 }
-                else if(memberCurrentBookNumberSelected == 0)
+                else if (memberCurrentBookNumberSelected == 0)
                 {
                     cb_Member_BorrowerType.Enabled = true;
                 }
-            }catch(Exception ex)
+            } catch (Exception ex)
             {
 
             }
@@ -664,7 +666,7 @@ namespace Final_Project_OOP_and_DSA
             {
                 flp_Member_BookDisplay.Enabled = false;
             }
-            if(cb_Member_BorrowerType.Text == "Student")
+            if (cb_Member_BorrowerType.Text == "Student")
             {
                 cb_Member_Name.Items.Clear();
                 memberNumberOfBooksCanBeSelected = 2;
@@ -676,8 +678,8 @@ namespace Final_Project_OOP_and_DSA
                         cb_Member_Name.Items.Add(x[0]);
                     }
                 }
-            } 
-            else if(cb_Member_BorrowerType.Text == "Teacher")
+            }
+            else if (cb_Member_BorrowerType.Text == "Teacher")
             {
                 cb_Member_Name.Items.Clear();
                 lbl_Member_BorrowerType.Text = "Borrower Type: Teacher";
@@ -690,7 +692,7 @@ namespace Final_Project_OOP_and_DSA
                     }
                 }
             }
-            
+
         }
         private void cb_BookReturn_BorrowerType_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -785,16 +787,34 @@ namespace Final_Project_OOP_and_DSA
         private void btn_Member_Confirm_Click(object sender, EventArgs e)
         {
             BookBorrowingCode.BookBorrowing(BooksBeingBorrowed);
-            InitializeBookListContentByFilterWithCheckBox("SELECT * FROM Books WHERE book_status = 'Available'");
+            InitializeBookListContentByFilterWithCheckBox("SELECT * FROM Books WHERE book_status = 'Available' AND NOT book_category = 'Academic'");
             memberCurrentBookNumberSelected = 0;
             ResetAll();
         }
         private void btn_Reserve_Reserve_Click(object sender, EventArgs e)
-        {
-            BookReserved.BookReserve(BooksBeingReserve);
-            InitializeBookListContentByFilterWithCheckBoxForBookReserve("SELECT * FROM Books WHERE book_status = 'Available'");
-            reserveCurrentBookNumberSelected = 0;
-            ResetAll();
+        {//ACADEMIC == INSIDE
+            //ACADEMIC != OUTSIDE
+            
+            if (cb_Reserve_Academic.Checked) {
+                if (reserveInsideLocation)
+                {
+                    BookReserved.BookReserve(BooksBeingReserve);
+                    InitializeBookListContentByFilterWithCheckBoxForBookReserve("SELECT * FROM Books WHERE book_status = 'Available' AND NOT book_category = 'Academic'");
+                    reserveCurrentBookNumberSelected = 0;
+                    ResetAll();
+                }
+                else
+                {
+                    MessageBox.Show("Academic Books can not be borrowed outside the library");
+                }
+            }
+            else 
+            {
+                BookReserved.BookReserve(BooksBeingReserve);
+                InitializeBookListContentByFilterWithCheckBoxForBookReserve("SELECT * FROM Books WHERE book_status = 'Available' AND NOT book_category = 'Academic'");
+                reserveCurrentBookNumberSelected = 0;
+                ResetAll();
+            }
         }
 
 
@@ -814,7 +834,7 @@ namespace Final_Project_OOP_and_DSA
         {
             if (BookReturningCode.InitiateBookReturning())
             {
-                InitializeBookListContentByFilterWithCheckBox("SELECT * FROM Books WHERE book_status = 'Available'");
+                InitializeBookListContentByFilterWithCheckBox("SELECT * FROM Books WHERE book_status = 'Available' AND NOT book_category = 'Academic'");
                 ResetAll();
             }
             
@@ -850,7 +870,7 @@ namespace Final_Project_OOP_and_DSA
         {
             if (BookReturningCode.ByPassBookReturning())
             {
-                InitializeBookListContentByFilterWithCheckBox("SELECT * FROM Books WHERE book_status = 'Available'");
+                InitializeBookListContentByFilterWithCheckBox("SELECT * FROM Books WHERE book_status = 'Available' AND NOT book_category = 'Academic'");
                 lbl_Payment_DaysDelayed.Text = "0";
                 lbl_Payment_Subtotal.Text = $"P0.00";
                 lbl_Payment_Amount.Text = $"P0.00";
@@ -953,6 +973,37 @@ namespace Final_Project_OOP_and_DSA
         {
             tc_Dashboard_TabControl.SelectedTab = tb_ViewReservation;
             BookReserved.Start();
+        }
+
+
+        private void cb_Reserve_Academic_CheckedChanged(object sender, EventArgs e)
+        {
+            reserveCurrentBookNumberSelected = 0;
+            if (cb_Reserve_Academic.Checked)
+            {
+                InitializeBookListContentByFilterWithCheckBoxForBookReserve("SELECT * FROM Books WHERE book_status = 'Available' AND book_category = 'Academic'");
+            }
+            else
+            {
+                InitializeBookListContentByFilterWithCheckBoxForBookReserve("SELECT * FROM Books WHERE book_status = 'Available' AND NOT book_category = 'Academic'");
+            }
+        }
+
+        private void cb_Reserve_Inside_CheckedChanged(object sender, EventArgs e)
+        {
+            reserveInsideLocation = cb_Reserve_Inside.Checked;
+        }
+
+        private void cb_BookBorrowing_Academic_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cb_BookBorrowing_Academic.Checked)
+            {
+                InitializeBookListContentByFilterWithCheckBox("SELECT * FROM Books WHERE book_category = 'Academic' AND book_status = 'Available'");
+            }
+            else
+            {
+                InitializeBookListContentByFilterWithCheckBox("SELECT * FROM Books WHERE NOT book_category = 'Academic' AND book_status = 'Available'");
+            }
         }
     }
 }
