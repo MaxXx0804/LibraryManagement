@@ -216,17 +216,18 @@ namespace Final_Project_OOP_and_DSA
 
                 SqlCommand cmd;
                 SqlDataReader dataReader;
-                String sql;
+                string sql;
                 object[] output;
                 sql = sqlQuery;
                 cmd = new SqlCommand(sql, cn);
                 dataReader = cmd.ExecuteReader();
                 while (dataReader.Read())
                 {
-                    output = new object[5];
-                    output[1] = dataReader.GetString(1);
-                    output[2] = dataReader.GetString(2);
-                    output[3] = dataReader.GetDateTime(3);
+                    output = new object[4];
+                    output[0] = dataReader.GetString(1);
+                    output[1] = dataReader.GetString(2);
+                    output[2] = dataReader.GetDateTime(3);
+                    output[3] = dataReader.GetString(4);
                     results.Add(output);
                 }
 
@@ -237,7 +238,6 @@ namespace Final_Project_OOP_and_DSA
                 Debug.WriteLine(ex);
             }
             cn.Close();
-            //else if(filter == "BooksAvailable")
             return results;
         }
     }

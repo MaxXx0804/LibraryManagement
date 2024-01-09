@@ -24,6 +24,15 @@ namespace Final_Project_OOP_and_DSA
 
         private Color panelBackground = Color.Transparent;
         private Color labelForeColor = Color.Black;
+        public void ResetAll()
+        {
+            InitializeBookListContent();
+            InitializeDashboardContents();
+            InitializeBookBorrowingContents();
+            InitializeBorrowerListContent();
+            InitializeBookReserveContents();
+            CHANGEDEFAULTSETTINGS();
+        }
         public Dashboard()
         {
             
@@ -48,6 +57,8 @@ namespace Final_Project_OOP_and_DSA
         }
         public void InitializeBorrowerListContent()
         {
+            flp_BorrowerList_Teacher.Controls.Clear();
+            flp_BorrowerList_Student.Controls.Clear();
             DatabaseConnection databaseConnection = new DatabaseConnection();
             SqlConnection cn = databaseConnection.DatabaseConnect();
             List<string[]> studentTotal = databaseConnection.QueryDatabaseDashboardInformation(cn, "SELECT * FROM Student");
@@ -112,10 +123,6 @@ namespace Final_Project_OOP_and_DSA
                 flp_BorrowerList_Teacher.Controls.Add(flp);
             }
         }
-        public void InitializeViewReservationContent()
-        {
-
-        }
         public void InitializeDashboardContents()
         {
             try
@@ -159,6 +166,7 @@ namespace Final_Project_OOP_and_DSA
         }
         public void InitializeBookBorrowingContents()
         {
+
             InitializeBookListContentByFilterWithCheckBox("SELECT * FROM Books WHERE book_status = 'Available'");
             
         }
@@ -303,7 +311,6 @@ namespace Final_Project_OOP_and_DSA
             DatabaseConnection databaseConnection = new DatabaseConnection();
             SqlConnection cn = databaseConnection.DatabaseConnect();
             List<string[]> results = databaseConnection.QueryDatabaseDashboardInformation(cn, filter);
-            Debug.WriteLine("InitializeBookListContentByFilterWithCheckBox");
             try
             {
 
@@ -780,12 +787,14 @@ namespace Final_Project_OOP_and_DSA
             BookBorrowingCode.BookBorrowing(BooksBeingBorrowed);
             InitializeBookListContentByFilterWithCheckBox("SELECT * FROM Books WHERE book_status = 'Available'");
             memberCurrentBookNumberSelected = 0;
+            ResetAll();
         }
         private void btn_Reserve_Reserve_Click(object sender, EventArgs e)
         {
             BookReserved.BookReserve(BooksBeingReserve);
             InitializeBookListContentByFilterWithCheckBoxForBookReserve("SELECT * FROM Books WHERE book_status = 'Available'");
             reserveCurrentBookNumberSelected = 0;
+            ResetAll();
         }
 
 
@@ -806,6 +815,7 @@ namespace Final_Project_OOP_and_DSA
             if (BookReturningCode.InitiateBookReturning())
             {
                 InitializeBookListContentByFilterWithCheckBox("SELECT * FROM Books WHERE book_status = 'Available'");
+                ResetAll();
             }
             
         }
@@ -930,11 +940,19 @@ namespace Final_Project_OOP_and_DSA
         {
             tc_Dashboard_TabControl.SelectedTab = tb_ViewReservation;
             BookReserved.Start();
+            Debug.WriteLine("Working");
         }
 
         private void btn_ViewReservation_Return_Click(object sender, EventArgs e)
         {
             tc_Dashboard_TabControl.SelectedTab = tb_Reservation;
+            Debug.WriteLine("Working");
+        }
+
+        private void btn_ViewReservation_Click(object sender, EventArgs e)
+        {
+            tc_Dashboard_TabControl.SelectedTab = tb_ViewReservation;
+            BookReserved.Start();
         }
     }
 }

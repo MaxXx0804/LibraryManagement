@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.Drawing;
+using System.Data;
 
 namespace Final_Project_OOP_and_DSA
 {
@@ -18,6 +19,7 @@ namespace Final_Project_OOP_and_DSA
             frm_Login.ds.cb_Reserve_BorrowerType.Enabled = true;
             frm_Login.ds.cb_Reserve_Name.Items.Clear();
             frm_Login.ds.flp_Reserve.Controls.Clear();
+            frm_Login.ds.lbl_Reserve_BookList.Text = string.Empty;
         }
         class ViewReservationContainers
         {
@@ -89,18 +91,21 @@ namespace Final_Project_OOP_and_DSA
 
             public ViewReservationContainers(string username, string userborrowertype, string userbooksreserved, string userdatereserved)
             {
-                
+
                 name = username;
                 borrowertype = userborrowertype;
                 booksreserved = userbooksreserved;
                 datereserved = userdatereserved;
-                
 
-                lbl_name.Text = "Name: " + borrowertype;
-                
-                
-                
-                //borrow.Name = name;
+
+                lbl_name.Text = "Name: " + name;
+
+
+
+                borrow.Name = name;
+                cancel.Name = name;
+                borrow.Click += new EventHandler(BorrowOnClick);
+                cancel.Click += new EventHandler(CancelOnClick);
                 main_container.Controls.Add(top_panel);
                 main_container.Controls.Add(lbl_name);
                 lbl_borrowertype.Text = "Borrower Type: " + borrowertype;
@@ -117,40 +122,237 @@ namespace Final_Project_OOP_and_DSA
         }
         public static void Start()
         {
-
+            frm_Login.ds.flp_ViewReservation.Controls.Clear();
             DatabaseConnection databaseConnection = new DatabaseConnection();
             SqlConnection cn = databaseConnection.DatabaseConnect();
             string contents = "";
             List<object[]> results = databaseConnection.QueryDatabaseForReserveBooks(cn, $"SELECT * FROM Reservation");
             foreach (var item in results)
             {
-                //Borrower Name
-                //BookList
 
-                string[] arr = item[1].ToString().Split(new string[] { "~" }, StringSplitOptions.None);
-                
+                string[] arr = item[0].ToString().Split(new string[] { "~" }, StringSplitOptions.None);
+
 
                 foreach (string x in arr)
                 {
-                     contents += "\n" + x;
-                    
+                    contents += "\n" + x;
                 }
-                new ViewReservationContainers(item[2].ToString(), "Student", contents, item[3].ToString());
+                new ViewReservationContainers(item[1].ToString(), item[3].ToString(), contents, item[2].ToString());
+                contents = "";
+                //Array.Clear(arr,0,arr.Length);
 
             }
 
         }
+        public static void CancelOnClick(object sender, EventArgs e)
+        {
+            try
+            {
+                Button btn = (Button)sender;
+                DatabaseConnection databaseConnection = new DatabaseConnection();
+                SqlConnection cn = databaseConnection.DatabaseConnect();
+                string sql = "SELECT * FROM Reservation WHERE borrower_name = @name";
+                cn.Open();
+                DataSet ds = new DataSet();
+                SqlCommand cmd = new SqlCommand(sql, cn);
+                cmd.Parameters.AddWithValue("@name", btn.Name);
 
+                DataRow dr;
+                using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                {
+
+                    da.Fill(ds);
+                    dr = ds.Tables[0].Rows[0];
+                    Debug.WriteLine(dr.ToString());
+                }
+
+                DateTime dn = DateTime.Now.Date;
+                TimeSpan ts = (DateTime)dr["date_reserve"] - dn;
+                int timespan = ts.Days;
+                var confirmation = MessageBox.Show("Do you want to cancel this reservation? This can't be undone.","Reservation", MessageBoxButtons.YesNo);
+                if (confirmation == DialogResult.Yes) 
+                {
+                    ReturnBooksExpiredDate(btn, dr);
+                    Start();
+                }
+
+                cn.Close();
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+            }
+        }
+        public static void BorrowOnClick(object sender, EventArgs e)
+        {
+            try
+            {
+                Button btn = (Button)sender;
+                DatabaseConnection databaseConnection = new DatabaseConnection();
+                SqlConnection cn = databaseConnection.DatabaseConnect();
+                string sql = "SELECT * FROM Reservation WHERE borrower_name = @name";
+                cn.Open();
+                DataSet ds = new DataSet();
+                SqlCommand cmd = new SqlCommand(sql, cn);
+                cmd.Parameters.AddWithValue("@name", btn.Name);
+
+                DataRow dr;
+                using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                {
+
+                    da.Fill(ds);
+                    dr = ds.Tables[0].Rows[0];
+                    Debug.WriteLine(dr.ToString());
+                }
+
+                DateTime dn = DateTime.Now.Date;
+                TimeSpan ts = (DateTime)dr["date_reserve"] - dn;
+                int timespan = ts.Days;
+                if (timespan == 0)
+                {
+                    var borrowNow = MessageBox.Show("Borrow this book now?", "Borrow", MessageBoxButtons.YesNo);
+                    if(borrowNow == DialogResult.Yes)
+                    {
+                        
+                    }
+                }
+                else if(timespan > 0)
+                {
+                    MessageBox.Show("You can't borrow a book that is not reserved today");
+                }
+                else if(timespan < 0)
+                {
+                    MessageBox.Show("Book is passed the reserved date");
+                    var returnNow = MessageBox.Show("Do you want to cancel this reservation now?", "Reservation", MessageBoxButtons.YesNo);
+                    if (returnNow == DialogResult.Yes)
+                    {
+                        ReturnBooksExpiredDate(btn, dr);
+                    }
+                }
+
+                cn.Close();
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+            }
+
+        }
+        public static void ReturnBooksExpiredDate(Button btn, DataRow dr)
+        {
+            try
+            {
+                Debug.Write("ReturnBooksExpiredDate: ");
+                DatabaseConnection databaseConnection = new DatabaseConnection();
+                SqlConnection cn = databaseConnection.DatabaseConnect();
+                string sql = "";
+                sql = "DELETE FROM Reservation WHERE borrower_name = @name";
+                cn.Open();
+                SqlCommand cmd = new SqlCommand(sql, cn);
+                cmd.Parameters.AddWithValue("@name", btn.Name);
+                int saved = cmd.ExecuteNonQuery();
+                cn.Close();
+                if (saved > 0)
+                {
+                    Debug.WriteLine("Successful");
+                }
+                else
+                {
+                    Debug.WriteLine("Error");
+                }
+                ChangeUserStatus(dr);
+                
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+        public static void ChangeUserStatus(DataRow dr)
+        {
+            Debug.Write("ChangeUserStatus: ");
+            try
+            {
+                DatabaseConnection databaseConnection = new DatabaseConnection();
+                SqlConnection cn = databaseConnection.DatabaseConnect();
+                string sql = "";
+                if (dr["borrower_type"].ToString() == "Student")
+                {
+                    sql = "UPDATE Student SET student_book_borrowed = @booksborrowed WHERE student_name = @name";   
+                }
+                else
+                {
+                    sql = "UPDATE Teacher SET teacher_book_borrowed = @booksborrowed WHERE teacher_name = @name";
+                }
+                cn.Open();
+                SqlCommand cmd = new SqlCommand(sql, cn);
+                cmd.Parameters.AddWithValue("@booksborrowed", DBNull.Value);
+                cmd.Parameters.AddWithValue("@name", dr["borrower_name"].ToString());
+                int saved = cmd.ExecuteNonQuery();
+                cn.Close();
+                if (saved > 0)
+                {
+                    Debug.WriteLine("Successful");
+                    string[] arr = dr["book_title"].ToString().Split(new string[] { "~" }, StringSplitOptions.None);
+                    foreach (var item in arr)
+                    {
+                        ChangeBookStatus(item);
+                    }
+                    
+                }
+                else
+                {
+                    Debug.WriteLine("Error");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.ToString());
+            }
+        }
+        public static void ChangeBookStatus(string bookname)
+        {
+            try
+            {
+                Debug.Write("ChangeBookStatus");
+                DatabaseConnection databaseConnection = new DatabaseConnection();
+                SqlConnection cn = databaseConnection.DatabaseConnect();
+                string sql = "";
+                sql = "UPDATE Books SET book_status = @status WHERE book_title = @bookname";
+                cn.Open();
+                SqlCommand cmd = new SqlCommand(sql, cn);
+                cmd.Parameters.AddWithValue("@status", "Available");
+                cmd.Parameters.AddWithValue("@bookname", bookname);
+                int saved = cmd.ExecuteNonQuery();
+                cn.Close();
+                if(saved > 0)
+                {
+                    Debug.WriteLine("Successful: " + bookname);
+                }
+                else
+                {
+                    Debug.WriteLine("Error");
+                }
+                frm_Login.ds.ResetAll();
+                Start();
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
         public static void BookReserve(List<string> BooksBeingBorrowed)
         {
-            string[] BookName = new string[5];
+            string[] BookName = new string[BooksBeingBorrowed.Count];
             int i = 0;
             foreach (string x in BooksBeingBorrowed)
             {
                 BookName[i] = x;
                 i++;
             }
-            string BooksToBeSentToDatabase = string.Join("~", BookName);
+            string BooksToBeSentToDatabase = string.Empty;
+            BooksToBeSentToDatabase = string.Join("~", BookName);
             try
             {
                 DatabaseConnection databaseConnection = new DatabaseConnection();
@@ -163,15 +365,16 @@ namespace Final_Project_OOP_and_DSA
 
                 if (frm_Login.ds.cb_Reserve_BorrowerType.Text == "Student")
                 {
-                    sql = $"UPDATE Student SET student_book_borrowed = @books WHERE student_name = '{frm_Login.ds.cb_Reserve_Name.Text}'";
+                    sql = $"UPDATE Student SET student_book_borrowed = @books WHERE student_name = @name";
                 }
                 else if (frm_Login.ds.cb_Reserve_BorrowerType.Text == "Teacher")
                 {
-                    sql = $"UPDATE Teacher SET teacher_book_borrowed = @books WHERE teacher_name = '{frm_Login.ds.cb_Reserve_Name.Text}'";
+                    sql = $"UPDATE Teacher SET teacher_book_borrowed = @books WHERE teacher_name = @name";
                 };
                 cn.Open();
                 SqlCommand cmd = new SqlCommand(sql, cn);
                 cmd.Parameters.AddWithValue("@books", "RESERVED");
+                cmd.Parameters.AddWithValue("@name", frm_Login.ds.cb_Reserve_Name.Text);
                 int Saved = cmd.ExecuteNonQuery();
                 if (Saved != 0)
                 {
@@ -218,6 +421,7 @@ namespace Final_Project_OOP_and_DSA
                     }
                     cn.Close();
                 }
+                
             }
             catch (Exception ex)
             {
@@ -234,13 +438,14 @@ namespace Final_Project_OOP_and_DSA
                 string sql = "";
                 cn.Open();
                 SqlCommand cmd;
-                sql = "INSERT INTO Reservation (book_title, borrower_name, date_reserve) VALUES (@books, @name, @datereserved)";
+                sql = "INSERT INTO Reservation (book_title, borrower_name, date_reserve, borrower_type) VALUES (@books, @name, @datereserved, @borrowertype)";
                 cmd = new SqlCommand(sql, cn);
                 cmd.Parameters.AddWithValue("@name", frm_Login.ds.cb_Reserve_Name.Text);
                 cmd.Parameters.AddWithValue("@books", books);
                 cmd.Parameters.AddWithValue("@datereserved", frm_Login.ds.dtp_DateReserved.Value);
-                
-                
+                cmd.Parameters.AddWithValue("@borrowertype", frm_Login.ds.cb_Reserve_BorrowerType.Text);
+
+
                 int Saved = cmd.ExecuteNonQuery();
                 if (Saved != 0)
                 {
