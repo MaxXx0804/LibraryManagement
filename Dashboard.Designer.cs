@@ -54,7 +54,6 @@
             this.tmr_Sidebar_SidebarEntryAnimation = new System.Windows.Forms.Timer(this.components);
             this.tc_Dashboard_TabControl = new System.Windows.Forms.TabControl();
             this.tb_Dashboard = new System.Windows.Forms.TabPage();
-            this.lbl_TopLineDesign = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel_BookListed = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
@@ -242,6 +241,8 @@
             this.label75 = new System.Windows.Forms.Label();
             this.label76 = new System.Windows.Forms.Label();
             this.label77 = new System.Windows.Forms.Label();
+            this.panel37 = new System.Windows.Forms.Panel();
+            this.label78 = new System.Windows.Forms.Label();
             this.panel_Sidebar_Sidebar.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -304,6 +305,7 @@
             this.panel34.SuspendLayout();
             this.panel35.SuspendLayout();
             this.panel36.SuspendLayout();
+            this.panel37.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_Sidebar_Sidebar
@@ -638,9 +640,9 @@
             // 
             // tb_Dashboard
             // 
-            this.tb_Dashboard.Controls.Add(this.lbl_TopLineDesign);
             this.tb_Dashboard.Controls.Add(this.flowLayoutPanel1);
             this.tb_Dashboard.Controls.Add(this.label1);
+            this.tb_Dashboard.Controls.Add(this.panel37);
             this.tb_Dashboard.Location = new System.Drawing.Point(4, 22);
             this.tb_Dashboard.Name = "tb_Dashboard";
             this.tb_Dashboard.Padding = new System.Windows.Forms.Padding(3);
@@ -650,18 +652,9 @@
             this.tb_Dashboard.UseVisualStyleBackColor = true;
             this.tb_Dashboard.Click += new System.EventHandler(this.tb_Dashboard_Click);
             // 
-            // lbl_TopLineDesign
-            // 
-            this.lbl_TopLineDesign.BackColor = System.Drawing.Color.Black;
-            this.lbl_TopLineDesign.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbl_TopLineDesign.Location = new System.Drawing.Point(2, 42);
-            this.lbl_TopLineDesign.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_TopLineDesign.Name = "lbl_TopLineDesign";
-            this.lbl_TopLineDesign.Size = new System.Drawing.Size(1040, 4);
-            this.lbl_TopLineDesign.TabIndex = 8;
-            // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(218)))), ((int)(((byte)(218)))));
             this.flowLayoutPanel1.Controls.Add(this.panel_BookListed);
             this.flowLayoutPanel1.Controls.Add(this.panel1);
             this.flowLayoutPanel1.Controls.Add(this.panel2);
@@ -687,7 +680,7 @@
             // label7
             // 
             this.label7.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label7.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(0, 164);
             this.label7.Name = "label7";
@@ -699,9 +692,9 @@
             // lbl_BookListed_Quantity
             // 
             this.lbl_BookListed_Quantity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_BookListed_Quantity.Font = new System.Drawing.Font("Bahnschrift", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_BookListed_Quantity.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_BookListed_Quantity.ForeColor = System.Drawing.Color.White;
-            this.lbl_BookListed_Quantity.Location = new System.Drawing.Point(0, 117);
+            this.lbl_BookListed_Quantity.Location = new System.Drawing.Point(-2, 131);
             this.lbl_BookListed_Quantity.Name = "lbl_BookListed_Quantity";
             this.lbl_BookListed_Quantity.Size = new System.Drawing.Size(186, 31);
             this.lbl_BookListed_Quantity.TabIndex = 1;
@@ -714,7 +707,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Image = global::Final_Project_OOP_and_DSA.Properties.Resources.Book_Listed;
-            this.pictureBox2.Location = new System.Drawing.Point(50, 19);
+            this.pictureBox2.Location = new System.Drawing.Point(50, 26);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(86, 87);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -735,7 +728,7 @@
             // label8
             // 
             this.label8.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label8.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(0, 164);
             this.label8.Name = "label8";
@@ -747,9 +740,9 @@
             // lbl_RegisteredUser_Quantity
             // 
             this.lbl_RegisteredUser_Quantity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_RegisteredUser_Quantity.Font = new System.Drawing.Font("Bahnschrift", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_RegisteredUser_Quantity.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_RegisteredUser_Quantity.ForeColor = System.Drawing.Color.White;
-            this.lbl_RegisteredUser_Quantity.Location = new System.Drawing.Point(0, 117);
+            this.lbl_RegisteredUser_Quantity.Location = new System.Drawing.Point(0, 131);
             this.lbl_RegisteredUser_Quantity.Name = "lbl_RegisteredUser_Quantity";
             this.lbl_RegisteredUser_Quantity.Size = new System.Drawing.Size(186, 31);
             this.lbl_RegisteredUser_Quantity.TabIndex = 1;
@@ -762,7 +755,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox3.Image = global::Final_Project_OOP_and_DSA.Properties.Resources.Registered_User;
-            this.pictureBox3.Location = new System.Drawing.Point(50, 26);
+            this.pictureBox3.Location = new System.Drawing.Point(50, 35);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(86, 78);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -783,7 +776,7 @@
             // label10
             // 
             this.label10.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label10.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(0, 164);
             this.label10.Name = "label10";
@@ -795,9 +788,9 @@
             // lbl_PendingPayment_Quantity
             // 
             this.lbl_PendingPayment_Quantity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_PendingPayment_Quantity.Font = new System.Drawing.Font("Bahnschrift", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_PendingPayment_Quantity.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_PendingPayment_Quantity.ForeColor = System.Drawing.Color.White;
-            this.lbl_PendingPayment_Quantity.Location = new System.Drawing.Point(0, 117);
+            this.lbl_PendingPayment_Quantity.Location = new System.Drawing.Point(2, 131);
             this.lbl_PendingPayment_Quantity.Name = "lbl_PendingPayment_Quantity";
             this.lbl_PendingPayment_Quantity.Size = new System.Drawing.Size(186, 31);
             this.lbl_PendingPayment_Quantity.TabIndex = 1;
@@ -810,7 +803,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox4.Image = global::Final_Project_OOP_and_DSA.Properties.Resources.Pending_Payment;
-            this.pictureBox4.Location = new System.Drawing.Point(50, 30);
+            this.pictureBox4.Location = new System.Drawing.Point(56, 39);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(86, 74);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -831,7 +824,7 @@
             // label12
             // 
             this.label12.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label12.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.White;
             this.label12.Location = new System.Drawing.Point(0, 164);
             this.label12.Name = "label12";
@@ -843,9 +836,9 @@
             // lbl_BooksAvailable_Quantity
             // 
             this.lbl_BooksAvailable_Quantity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_BooksAvailable_Quantity.Font = new System.Drawing.Font("Bahnschrift", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_BooksAvailable_Quantity.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_BooksAvailable_Quantity.ForeColor = System.Drawing.Color.White;
-            this.lbl_BooksAvailable_Quantity.Location = new System.Drawing.Point(0, 117);
+            this.lbl_BooksAvailable_Quantity.Location = new System.Drawing.Point(-1, 126);
             this.lbl_BooksAvailable_Quantity.Name = "lbl_BooksAvailable_Quantity";
             this.lbl_BooksAvailable_Quantity.Size = new System.Drawing.Size(186, 25);
             this.lbl_BooksAvailable_Quantity.TabIndex = 1;
@@ -879,7 +872,7 @@
             // label14
             // 
             this.label14.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label14.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.White;
             this.label14.Location = new System.Drawing.Point(0, 161);
             this.label14.Name = "label14";
@@ -891,9 +884,9 @@
             // lbl_BooksLent_Quantity
             // 
             this.lbl_BooksLent_Quantity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_BooksLent_Quantity.Font = new System.Drawing.Font("Bahnschrift", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_BooksLent_Quantity.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_BooksLent_Quantity.ForeColor = System.Drawing.Color.White;
-            this.lbl_BooksLent_Quantity.Location = new System.Drawing.Point(0, 117);
+            this.lbl_BooksLent_Quantity.Location = new System.Drawing.Point(0, 126);
             this.lbl_BooksLent_Quantity.Name = "lbl_BooksLent_Quantity";
             this.lbl_BooksLent_Quantity.Size = new System.Drawing.Size(186, 25);
             this.lbl_BooksLent_Quantity.TabIndex = 1;
@@ -917,14 +910,15 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(21, 61);
+            this.label1.Location = new System.Drawing.Point(4, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(181, 23);
+            this.label1.Size = new System.Drawing.Size(133, 23);
             this.label1.TabIndex = 0;
-            this.label1.Text = "D A S H B O A R D";
+            this.label1.Text = "DASHBOARD";
             // 
             // tb_BookList
             // 
+            this.tb_BookList.BackColor = System.Drawing.Color.White;
             this.tb_BookList.Controls.Add(this.panel17);
             this.tb_BookList.Controls.Add(this.panel13);
             this.tb_BookList.Controls.Add(this.flp_BookList);
@@ -935,15 +929,15 @@
             this.tb_BookList.Size = new System.Drawing.Size(1052, 594);
             this.tb_BookList.TabIndex = 1;
             this.tb_BookList.Text = "Book List";
-            this.tb_BookList.UseVisualStyleBackColor = true;
             this.tb_BookList.Click += new System.EventHandler(this.tb_BookList_Click);
             // 
             // panel17
             // 
             this.panel17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.panel17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel17.Controls.Add(this.label20);
             this.panel17.Controls.Add(this.label21);
-            this.panel17.Location = new System.Drawing.Point(13, 94);
+            this.panel17.Location = new System.Drawing.Point(12, 108);
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(761, 50);
             this.panel17.TabIndex = 4;
@@ -957,9 +951,9 @@
             this.label20.Location = new System.Drawing.Point(0, 0);
             this.label20.Name = "label20";
             this.label20.Padding = new System.Windows.Forms.Padding(13);
-            this.label20.Size = new System.Drawing.Size(181, 50);
+            this.label20.Size = new System.Drawing.Size(120, 50);
             this.label20.TabIndex = 1;
-            this.label20.Text = "Available Books";
+            this.label20.Text = "Book List";
             // 
             // label21
             // 
@@ -973,6 +967,7 @@
             // panel13
             // 
             this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.panel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel13.Controls.Add(this.btn_Filter_All);
             this.panel13.Controls.Add(this.label23);
             this.panel13.Controls.Add(this.btn_Filter_Academic);
@@ -984,7 +979,7 @@
             this.panel13.Controls.Add(this.btn_Filter_Borrowed);
             this.panel13.Controls.Add(this.btn_Filter_Available);
             this.panel13.Controls.Add(this.panel14);
-            this.panel13.Location = new System.Drawing.Point(820, 91);
+            this.panel13.Location = new System.Drawing.Point(819, 105);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(207, 404);
             this.panel13.TabIndex = 5;
@@ -994,8 +989,8 @@
             // 
             this.btn_Filter_All.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btn_Filter_All.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Filter_All.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Filter_All.Location = new System.Drawing.Point(43, 59);
+            this.btn_Filter_All.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Filter_All.Location = new System.Drawing.Point(43, 63);
             this.btn_Filter_All.Name = "btn_Filter_All";
             this.btn_Filter_All.Size = new System.Drawing.Size(125, 29);
             this.btn_Filter_All.TabIndex = 15;
@@ -1007,7 +1002,7 @@
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Bahnschrift", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(18, 262);
+            this.label23.Location = new System.Drawing.Point(18, 266);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(66, 17);
             this.label23.TabIndex = 14;
@@ -1017,8 +1012,8 @@
             // 
             this.btn_Filter_Academic.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btn_Filter_Academic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Filter_Academic.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Filter_Academic.Location = new System.Drawing.Point(43, 358);
+            this.btn_Filter_Academic.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Filter_Academic.Location = new System.Drawing.Point(43, 362);
             this.btn_Filter_Academic.Name = "btn_Filter_Academic";
             this.btn_Filter_Academic.Size = new System.Drawing.Size(125, 29);
             this.btn_Filter_Academic.TabIndex = 13;
@@ -1030,8 +1025,8 @@
             // 
             this.btn_Filter_Non_Fictional.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btn_Filter_Non_Fictional.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Filter_Non_Fictional.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Filter_Non_Fictional.Location = new System.Drawing.Point(43, 323);
+            this.btn_Filter_Non_Fictional.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Filter_Non_Fictional.Location = new System.Drawing.Point(43, 327);
             this.btn_Filter_Non_Fictional.Name = "btn_Filter_Non_Fictional";
             this.btn_Filter_Non_Fictional.Size = new System.Drawing.Size(125, 29);
             this.btn_Filter_Non_Fictional.TabIndex = 12;
@@ -1043,8 +1038,8 @@
             // 
             this.btn_Filter_Fictional.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btn_Filter_Fictional.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Filter_Fictional.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Filter_Fictional.Location = new System.Drawing.Point(43, 288);
+            this.btn_Filter_Fictional.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Filter_Fictional.Location = new System.Drawing.Point(43, 292);
             this.btn_Filter_Fictional.Name = "btn_Filter_Fictional";
             this.btn_Filter_Fictional.Size = new System.Drawing.Size(125, 29);
             this.btn_Filter_Fictional.TabIndex = 11;
@@ -1056,16 +1051,16 @@
             // 
             this.label22.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.label22.Location = new System.Drawing.Point(21, 245);
+            this.label22.Location = new System.Drawing.Point(21, 244);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(168, 2);
+            this.label22.Size = new System.Drawing.Size(166, 2);
             this.label22.TabIndex = 10;
             // 
             // label19
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Bahnschrift", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(18, 95);
+            this.label19.Location = new System.Drawing.Point(18, 99);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(49, 17);
             this.label19.TabIndex = 9;
@@ -1075,8 +1070,8 @@
             // 
             this.btn_Filter_Reserved.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btn_Filter_Reserved.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Filter_Reserved.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Filter_Reserved.Location = new System.Drawing.Point(43, 191);
+            this.btn_Filter_Reserved.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Filter_Reserved.Location = new System.Drawing.Point(43, 195);
             this.btn_Filter_Reserved.Name = "btn_Filter_Reserved";
             this.btn_Filter_Reserved.Size = new System.Drawing.Size(125, 29);
             this.btn_Filter_Reserved.TabIndex = 8;
@@ -1088,8 +1083,8 @@
             // 
             this.btn_Filter_Borrowed.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btn_Filter_Borrowed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Filter_Borrowed.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Filter_Borrowed.Location = new System.Drawing.Point(43, 156);
+            this.btn_Filter_Borrowed.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Filter_Borrowed.Location = new System.Drawing.Point(43, 160);
             this.btn_Filter_Borrowed.Name = "btn_Filter_Borrowed";
             this.btn_Filter_Borrowed.Size = new System.Drawing.Size(125, 29);
             this.btn_Filter_Borrowed.TabIndex = 7;
@@ -1101,8 +1096,8 @@
             // 
             this.btn_Filter_Available.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btn_Filter_Available.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Filter_Available.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Filter_Available.Location = new System.Drawing.Point(43, 121);
+            this.btn_Filter_Available.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Filter_Available.Location = new System.Drawing.Point(43, 125);
             this.btn_Filter_Available.Name = "btn_Filter_Available";
             this.btn_Filter_Available.Size = new System.Drawing.Size(125, 29);
             this.btn_Filter_Available.TabIndex = 6;
@@ -1113,12 +1108,13 @@
             // panel14
             // 
             this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.panel14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel14.Controls.Add(this.label2);
             this.panel14.Controls.Add(this.label16);
             this.panel14.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel14.Location = new System.Drawing.Point(0, 0);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(207, 53);
+            this.panel14.Size = new System.Drawing.Size(205, 53);
             this.panel14.TabIndex = 5;
             // 
             // label2
@@ -1147,9 +1143,10 @@
             // 
             this.flp_BookList.AutoScroll = true;
             this.flp_BookList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.flp_BookList.Location = new System.Drawing.Point(13, 145);
+            this.flp_BookList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flp_BookList.Location = new System.Drawing.Point(12, 159);
             this.flp_BookList.Name = "flp_BookList";
-            this.flp_BookList.Size = new System.Drawing.Size(761, 350);
+            this.flp_BookList.Size = new System.Drawing.Size(761, 382);
             this.flp_BookList.TabIndex = 4;
             // 
             // label18
@@ -1157,11 +1154,11 @@
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.Black;
-            this.label18.Location = new System.Drawing.Point(9, 46);
+            this.label18.Location = new System.Drawing.Point(12, 46);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(95, 23);
+            this.label18.Size = new System.Drawing.Size(304, 23);
             this.label18.TabIndex = 2;
-            this.label18.Text = "Book List";
+            this.label18.Text = "Books at M E I N K R A F T E R S";
             // 
             // tb_BookBorrowing
             // 
@@ -1293,7 +1290,7 @@
             this.cb_Member_BorrowerType.Items.AddRange(new object[] {
             "Student",
             "Teacher"});
-            this.cb_Member_BorrowerType.Location = new System.Drawing.Point(509, 83);
+            this.cb_Member_BorrowerType.Location = new System.Drawing.Point(421, 71);
             this.cb_Member_BorrowerType.Margin = new System.Windows.Forms.Padding(2);
             this.cb_Member_BorrowerType.Name = "cb_Member_BorrowerType";
             this.cb_Member_BorrowerType.Size = new System.Drawing.Size(212, 24);
@@ -1305,7 +1302,7 @@
             // 
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(398, 86);
+            this.label29.Location = new System.Drawing.Point(313, 75);
             this.label29.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(103, 16);
@@ -1317,7 +1314,7 @@
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(27, 86);
+            this.label28.Location = new System.Drawing.Point(10, 75);
             this.label28.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(50, 16);
@@ -1329,7 +1326,7 @@
             this.cb_Member_Name.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_Member_Name.Font = new System.Drawing.Font("Bahnschrift", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_Member_Name.FormattingEnabled = true;
-            this.cb_Member_Name.Location = new System.Drawing.Point(79, 83);
+            this.cb_Member_Name.Location = new System.Drawing.Point(69, 71);
             this.cb_Member_Name.Margin = new System.Windows.Forms.Padding(2);
             this.cb_Member_Name.Name = "cb_Member_Name";
             this.cb_Member_Name.Size = new System.Drawing.Size(212, 24);
@@ -1339,6 +1336,7 @@
             // panel18
             // 
             this.panel18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.panel18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel18.Controls.Add(this.btn_Member_Clear);
             this.panel18.Controls.Add(this.btn_Member_Confirm);
             this.panel18.Controls.Add(this.lbl_Member_DueDate);
@@ -1347,7 +1345,7 @@
             this.panel18.Controls.Add(this.lbl_Member_BorrowerType);
             this.panel18.Controls.Add(this.lbl_Member_Name);
             this.panel18.Controls.Add(this.panel19);
-            this.panel18.Location = new System.Drawing.Point(794, 126);
+            this.panel18.Location = new System.Drawing.Point(780, 124);
             this.panel18.Name = "panel18";
             this.panel18.Size = new System.Drawing.Size(227, 401);
             this.panel18.TabIndex = 7;
@@ -1432,21 +1430,22 @@
             // 
             this.lbl_Member_Name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Member_Name.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Member_Name.Location = new System.Drawing.Point(11, 75);
+            this.lbl_Member_Name.Location = new System.Drawing.Point(11, 74);
             this.lbl_Member_Name.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_Member_Name.Name = "lbl_Member_Name";
-            this.lbl_Member_Name.Size = new System.Drawing.Size(204, 31);
+            this.lbl_Member_Name.Size = new System.Drawing.Size(202, 31);
             this.lbl_Member_Name.TabIndex = 9;
             this.lbl_Member_Name.Text = "Borrower Name:";
             // 
             // panel19
             // 
             this.panel19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.panel19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel19.Controls.Add(this.label26);
             this.panel19.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel19.Location = new System.Drawing.Point(0, 0);
             this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(227, 50);
+            this.panel19.Size = new System.Drawing.Size(225, 50);
             this.panel19.TabIndex = 5;
             // 
             // label26
@@ -1464,8 +1463,9 @@
             // panel15
             // 
             this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.panel15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel15.Controls.Add(this.label11);
-            this.panel15.Location = new System.Drawing.Point(27, 126);
+            this.panel15.Location = new System.Drawing.Point(13, 124);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(761, 50);
             this.panel15.TabIndex = 6;
@@ -1474,8 +1474,9 @@
             // 
             this.flp_Member_BookDisplay.AutoScroll = true;
             this.flp_Member_BookDisplay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.flp_Member_BookDisplay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flp_Member_BookDisplay.Enabled = false;
-            this.flp_Member_BookDisplay.Location = new System.Drawing.Point(27, 177);
+            this.flp_Member_BookDisplay.Location = new System.Drawing.Point(13, 175);
             this.flp_Member_BookDisplay.Name = "flp_Member_BookDisplay";
             this.flp_Member_BookDisplay.Size = new System.Drawing.Size(761, 350);
             this.flp_Member_BookDisplay.TabIndex = 5;
@@ -2647,19 +2648,20 @@
             this.label62.AutoSize = true;
             this.label62.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label62.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(80)))), ((int)(((byte)(88)))));
-            this.label62.Location = new System.Drawing.Point(78, 66);
+            this.label62.Location = new System.Drawing.Point(66, 51);
             this.label62.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label62.Name = "label62";
             this.label62.Size = new System.Drawing.Size(318, 16);
             this.label62.TabIndex = 18;
             this.label62.Text = "Click the box to open (choose from the borrower type first)";
+            this.label62.Click += new System.EventHandler(this.label62_Click);
             // 
             // label63
             // 
             this.label63.AutoSize = true;
             this.label63.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label63.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(80)))), ((int)(((byte)(88)))));
-            this.label63.Location = new System.Drawing.Point(506, 65);
+            this.label63.Location = new System.Drawing.Point(418, 51);
             this.label63.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label63.Name = "label63";
             this.label63.Size = new System.Drawing.Size(123, 16);
@@ -2874,11 +2876,32 @@
             this.label77.AutoSize = true;
             this.label77.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label77.ForeColor = System.Drawing.Color.Black;
-            this.label77.Location = new System.Drawing.Point(15, 24);
+            this.label77.Location = new System.Drawing.Point(10, 3);
             this.label77.Name = "label77";
             this.label77.Size = new System.Drawing.Size(386, 46);
             this.label77.TabIndex = 26;
             this.label77.Text = "M E I N K R A F T E R S - Book Borrowing\r\n\r\n";
+            // 
+            // panel37
+            // 
+            this.panel37.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(218)))), ((int)(((byte)(218)))));
+            this.panel37.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel37.Controls.Add(this.label78);
+            this.panel37.Location = new System.Drawing.Point(3, 43);
+            this.panel37.Name = "panel37";
+            this.panel37.Size = new System.Drawing.Size(1040, 530);
+            this.panel37.TabIndex = 8;
+            // 
+            // label78
+            // 
+            this.label78.AutoSize = true;
+            this.label78.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label78.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.label78.Location = new System.Drawing.Point(409, 21);
+            this.label78.Name = "label78";
+            this.label78.Size = new System.Drawing.Size(150, 23);
+            this.label78.TabIndex = 0;
+            this.label78.Text = "Library Metrics";
             // 
             // Dashboard
             // 
@@ -2985,6 +3008,8 @@
             this.panel35.PerformLayout();
             this.panel36.ResumeLayout(false);
             this.panel36.PerformLayout();
+            this.panel37.ResumeLayout(false);
+            this.panel37.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -3039,7 +3064,6 @@
         private System.Windows.Forms.Label lbl_BooksAvailable_Quantity;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Label lbl_TopLineDesign;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.FlowLayoutPanel flp_BookList;
         private System.Windows.Forms.Panel panel17;
@@ -3203,5 +3227,7 @@
         private System.Windows.Forms.Label label76;
         private System.Windows.Forms.Label label75;
         private System.Windows.Forms.Label label77;
+        private System.Windows.Forms.Panel panel37;
+        private System.Windows.Forms.Label label78;
     }
 }
