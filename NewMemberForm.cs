@@ -65,6 +65,7 @@ namespace Final_Project_OOP_and_DSA
 
         private void btn_NewMember_Register_Click(object sender, EventArgs e)
         {
+            frm_Login.ds.startTime();
             try
             {
                 DatabaseConnection databaseConnection = new DatabaseConnection();
@@ -130,6 +131,8 @@ namespace Final_Project_OOP_and_DSA
                         }
                     }
                 }
+                frm_Login.ds.endTime();
+                this.Close();
             }catch(Exception ex)
             {
                 Debug.WriteLine(ex);

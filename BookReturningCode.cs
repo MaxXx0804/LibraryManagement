@@ -348,7 +348,7 @@ namespace Final_Project_OOP_and_DSA
         public static bool InitiateBookReturning()
         {
             Debug.WriteLine(diffDays);
-            if (diffDays > 0) {
+            if (diffDays > 0 && frm_Login.ds.cb_BookReturn_BorrowerType.Text == "Student") {
                 DialogResult res = MessageBox.Show("The book is past its due date. Do you want to settle the overdue fee?", "Confirmation", MessageBoxButtons.OKCancel);
                 if (res == DialogResult.OK)
                 {

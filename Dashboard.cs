@@ -808,38 +808,50 @@ namespace Final_Project_OOP_and_DSA
 
         private void btn_Member_Confirm_Click(object sender, EventArgs e)
         {
-            startTime();
-            BookBorrowingCode.BookBorrowing(BooksBeingBorrowed);
-            InitializeBookListContentByFilterWithCheckBox("SELECT * FROM Books WHERE book_status = 'Available' AND NOT book_category = 'Academic'");
-            memberCurrentBookNumberSelected = 0;
-            ResetAll();
-            endTime();
+            if (cb_Member_Name.Text != "" && cb_Member_BorrowerType.Text != "") {
+                startTime();
+                BookBorrowingCode.BookBorrowing(BooksBeingBorrowed);
+                InitializeBookListContentByFilterWithCheckBox("SELECT * FROM Books WHERE book_status = 'Available' AND NOT book_category = 'Academic'");
+                memberCurrentBookNumberSelected = 0;
+                ResetAll();
+                endTime();
+            }
+            else
+            {
+                MessageBox.Show("Please fill up all the fields.");
+            }
         }
         private void btn_Reserve_Reserve_Click(object sender, EventArgs e)
         {
-            startTime();   
-            
-            if (cb_Reserve_Academic.Checked) {
-                if (reserveInsideLocation)
+            if (cb_Reserve_BorrowerType.Text != "" && cb_Reserve_Name.Text != "") {
+                startTime();
+
+                if (cb_Reserve_Academic.Checked) {
+                    if (reserveInsideLocation)
+                    {
+                        BookReserved.BookReserve(BooksBeingReserve);
+                        InitializeBookListContentByFilterWithCheckBoxForBookReserve("SELECT * FROM Books WHERE book_status = 'Available' AND NOT book_category = 'Academic'");
+                        reserveCurrentBookNumberSelected = 0;
+                        ResetAll();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Academic Books can not be borrowed outside the library");
+                    }
+                }
+                else
                 {
                     BookReserved.BookReserve(BooksBeingReserve);
                     InitializeBookListContentByFilterWithCheckBoxForBookReserve("SELECT * FROM Books WHERE book_status = 'Available' AND NOT book_category = 'Academic'");
                     reserveCurrentBookNumberSelected = 0;
                     ResetAll();
                 }
-                else
-                {
-                    MessageBox.Show("Academic Books can not be borrowed outside the library");
-                }
+                endTime();
             }
-            else 
+            else
             {
-                BookReserved.BookReserve(BooksBeingReserve);
-                InitializeBookListContentByFilterWithCheckBoxForBookReserve("SELECT * FROM Books WHERE book_status = 'Available' AND NOT book_category = 'Academic'");
-                reserveCurrentBookNumberSelected = 0;
-                ResetAll();
+                MessageBox.Show("Please fill up all the fields");
             }
-            endTime();
         }
 
 
@@ -857,13 +869,20 @@ namespace Final_Project_OOP_and_DSA
 
         private void btn_BookReturn_Return_Click(object sender, EventArgs e)
         {
-            startTime();
-            if (BookReturningCode.InitiateBookReturning())
-            {
-                InitializeBookListContentByFilterWithCheckBox("SELECT * FROM Books WHERE book_status = 'Available' AND NOT book_category = 'Academic'");
-                ResetAll();
+            if (cb_BookReturn_BorrowerType.Text != "" && cb_BookReturn_Name.Text != "") {
+                startTime();
+
+                if (BookReturningCode.InitiateBookReturning())
+                {
+                    InitializeBookListContentByFilterWithCheckBox("SELECT * FROM Books WHERE book_status = 'Available' AND NOT book_category = 'Academic'");
+                    ResetAll();
+                }
+                endTime();
             }
-            endTime();
+            else
+            {
+                MessageBox.Show("Please fill up all the fields.");
+            }
         }
 
         
