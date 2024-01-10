@@ -54,6 +54,8 @@
             this.tmr_Sidebar_SidebarEntryAnimation = new System.Windows.Forms.Timer(this.components);
             this.tc_Dashboard_TabControl = new System.Windows.Forms.TabControl();
             this.tb_Dashboard = new System.Windows.Forms.TabPage();
+            this.panel34 = new System.Windows.Forms.Panel();
+            this.label78 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel_BookListed = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
@@ -77,6 +79,7 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tb_BookList = new System.Windows.Forms.TabPage();
+            this.label62 = new System.Windows.Forms.Label();
             this.panel17 = new System.Windows.Forms.Panel();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
@@ -99,6 +102,9 @@
             this.tb_BookBorrowing = new System.Windows.Forms.TabPage();
             this.tc_Member_New = new System.Windows.Forms.TabControl();
             this.tb_Choice = new System.Windows.Forms.TabPage();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label64 = new System.Windows.Forms.Label();
             this.panel16 = new System.Windows.Forms.Panel();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.panel_NewMember = new System.Windows.Forms.Panel();
@@ -111,7 +117,6 @@
             this.label28 = new System.Windows.Forms.Label();
             this.cb_Member_Name = new System.Windows.Forms.ComboBox();
             this.panel18 = new System.Windows.Forms.Panel();
-            this.btn_Member_Clear = new System.Windows.Forms.Button();
             this.btn_Member_Confirm = new System.Windows.Forms.Button();
             this.lbl_Member_DueDate = new System.Windows.Forms.Label();
             this.lbl_Member_DateBorrowed = new System.Windows.Forms.Label();
@@ -125,6 +130,13 @@
             this.label13 = new System.Windows.Forms.Label();
             this.flp_Member_BookDisplay = new System.Windows.Forms.FlowLayoutPanel();
             this.tb_BookReturning = new System.Windows.Forms.TabPage();
+            this.panel36 = new System.Windows.Forms.Panel();
+            this.label76 = new System.Windows.Forms.Label();
+            this.label73 = new System.Windows.Forms.Label();
+            this.label74 = new System.Windows.Forms.Label();
+            this.label72 = new System.Windows.Forms.Label();
+            this.label63 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
             this.cb_BookReturn_BorrowerType = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -137,10 +149,20 @@
             this.lbl_BookReturn_BookList = new System.Windows.Forms.Label();
             this.lbl_BookReturn_ReturnerName = new System.Windows.Forms.Label();
             this.panel22 = new System.Windows.Forms.Panel();
+            this.label75 = new System.Windows.Forms.Label();
             this.flp_BooksReturn = new System.Windows.Forms.FlowLayoutPanel();
             this.tb_BorrowerList = new System.Windows.Forms.TabPage();
-            this.flp_BorrowerList_Teacher = new System.Windows.Forms.FlowLayoutPanel();
+            this.label39 = new System.Windows.Forms.Label();
+            this.panel35 = new System.Windows.Forms.Panel();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label65 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.flp_BorrowerList_Student = new System.Windows.Forms.FlowLayoutPanel();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.flp_BorrowerList_Teacher = new System.Windows.Forms.FlowLayoutPanel();
+            this.label37 = new System.Windows.Forms.Label();
             this.tb_Payment = new System.Windows.Forms.TabPage();
             this.panel23 = new System.Windows.Forms.Panel();
             this.label36 = new System.Windows.Forms.Label();
@@ -177,6 +199,14 @@
             this.label35 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.tb_Reservation = new System.Windows.Forms.TabPage();
+            this.panel37 = new System.Windows.Forms.Panel();
+            this.label71 = new System.Windows.Forms.Label();
+            this.label70 = new System.Windows.Forms.Label();
+            this.label69 = new System.Windows.Forms.Label();
+            this.label68 = new System.Windows.Forms.Label();
+            this.label67 = new System.Windows.Forms.Label();
+            this.label66 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
             this.cb_Reserve_Inside = new System.Windows.Forms.CheckBox();
             this.cb_Reserve_Academic = new System.Windows.Forms.CheckBox();
             this.dtp_DateReserved = new System.Windows.Forms.DateTimePicker();
@@ -196,6 +226,7 @@
             this.lbl_Reserve_BookList = new System.Windows.Forms.Label();
             this.lbl_Reserve_Name = new System.Windows.Forms.Label();
             this.panel31 = new System.Windows.Forms.Panel();
+            this.label77 = new System.Windows.Forms.Label();
             this.flp_Reserve = new System.Windows.Forms.FlowLayoutPanel();
             this.tb_ViewReservation = new System.Windows.Forms.TabPage();
             this.flp_ViewReservation = new System.Windows.Forms.FlowLayoutPanel();
@@ -216,38 +247,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.processTime = new System.Windows.Forms.Timer(this.components);
-            this.panel34 = new System.Windows.Forms.Panel();
-            this.label78 = new System.Windows.Forms.Label();
-            this.label62 = new System.Windows.Forms.Label();
-            this.label64 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label63 = new System.Windows.Forms.Label();
-            this.label72 = new System.Windows.Forms.Label();
-            this.label74 = new System.Windows.Forms.Label();
-            this.label73 = new System.Windows.Forms.Label();
-            this.panel36 = new System.Windows.Forms.Panel();
-            this.label76 = new System.Windows.Forms.Label();
-            this.label75 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
-            this.panel35 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label65 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.label39 = new System.Windows.Forms.Label();
-            this.label44 = new System.Windows.Forms.Label();
-            this.label66 = new System.Windows.Forms.Label();
-            this.label67 = new System.Windows.Forms.Label();
-            this.label68 = new System.Windows.Forms.Label();
-            this.label69 = new System.Windows.Forms.Label();
-            this.label70 = new System.Windows.Forms.Label();
-            this.panel37 = new System.Windows.Forms.Panel();
-            this.label71 = new System.Windows.Forms.Label();
-            this.label77 = new System.Windows.Forms.Label();
             this.panel_Sidebar_Sidebar.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -261,6 +260,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tc_Dashboard_TabControl.SuspendLayout();
             this.tb_Dashboard.SuspendLayout();
+            this.panel34.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel_BookListed.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -288,9 +288,11 @@
             this.panel19.SuspendLayout();
             this.panel15.SuspendLayout();
             this.tb_BookReturning.SuspendLayout();
+            this.panel36.SuspendLayout();
             this.panel20.SuspendLayout();
             this.panel22.SuspendLayout();
             this.tb_BorrowerList.SuspendLayout();
+            this.panel35.SuspendLayout();
             this.tb_Payment.SuspendLayout();
             this.panel23.SuspendLayout();
             this.panel25.SuspendLayout();
@@ -302,15 +304,12 @@
             this.panel27.SuspendLayout();
             this.panel26.SuspendLayout();
             this.tb_Reservation.SuspendLayout();
+            this.panel37.SuspendLayout();
             this.panel30.SuspendLayout();
             this.panel31.SuspendLayout();
             this.tb_ViewReservation.SuspendLayout();
             this.flp_ViewReservation.SuspendLayout();
             this.panel32.SuspendLayout();
-            this.panel34.SuspendLayout();
-            this.panel36.SuspendLayout();
-            this.panel35.SuspendLayout();
-            this.panel37.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_Sidebar_Sidebar
@@ -328,9 +327,9 @@
             this.panel_Sidebar_Sidebar.Controls.Add(this.panel3);
             this.panel_Sidebar_Sidebar.Controls.Add(this.panel_Logo_LogoHandler);
             this.panel_Sidebar_Sidebar.Location = new System.Drawing.Point(-140, 0);
-            this.panel_Sidebar_Sidebar.Margin = new System.Windows.Forms.Padding(2);
+            this.panel_Sidebar_Sidebar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel_Sidebar_Sidebar.Name = "panel_Sidebar_Sidebar";
-            this.panel_Sidebar_Sidebar.Size = new System.Drawing.Size(175, 600);
+            this.panel_Sidebar_Sidebar.Size = new System.Drawing.Size(175, 703);
             this.panel_Sidebar_Sidebar.TabIndex = 0;
             // 
             // panel10
@@ -338,8 +337,8 @@
             this.panel10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel10.Controls.Add(this.btn_Sidebar_SidebarExit);
-            this.panel10.Location = new System.Drawing.Point(153, 573);
-            this.panel10.Margin = new System.Windows.Forms.Padding(2);
+            this.panel10.Location = new System.Drawing.Point(153, 676);
+            this.panel10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(20, 25);
             this.panel10.TabIndex = 4;
@@ -358,7 +357,7 @@
             this.btn_Sidebar_SidebarExit.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Sidebar_SidebarExit.ForeColor = System.Drawing.Color.White;
             this.btn_Sidebar_SidebarExit.Location = new System.Drawing.Point(0, 0);
-            this.btn_Sidebar_SidebarExit.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Sidebar_SidebarExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_Sidebar_SidebarExit.Name = "btn_Sidebar_SidebarExit";
             this.btn_Sidebar_SidebarExit.Size = new System.Drawing.Size(20, 25);
             this.btn_Sidebar_SidebarExit.TabIndex = 0;
@@ -370,7 +369,7 @@
             // 
             this.panel9.Controls.Add(this.btn_Sidebar_Logout);
             this.panel9.Location = new System.Drawing.Point(0, 310);
-            this.panel9.Margin = new System.Windows.Forms.Padding(2);
+            this.panel9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(177, 39);
             this.panel9.TabIndex = 3;
@@ -385,7 +384,7 @@
             this.btn_Sidebar_Logout.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Sidebar_Logout.ForeColor = System.Drawing.Color.White;
             this.btn_Sidebar_Logout.Location = new System.Drawing.Point(0, 0);
-            this.btn_Sidebar_Logout.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Sidebar_Logout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_Sidebar_Logout.Name = "btn_Sidebar_Logout";
             this.btn_Sidebar_Logout.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
             this.btn_Sidebar_Logout.Size = new System.Drawing.Size(177, 39);
@@ -399,7 +398,7 @@
             // 
             this.panel8.Controls.Add(this.btn_Payment);
             this.panel8.Location = new System.Drawing.Point(0, 267);
-            this.panel8.Margin = new System.Windows.Forms.Padding(2);
+            this.panel8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(177, 39);
             this.panel8.TabIndex = 3;
@@ -414,7 +413,7 @@
             this.btn_Payment.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Payment.ForeColor = System.Drawing.Color.White;
             this.btn_Payment.Location = new System.Drawing.Point(0, 0);
-            this.btn_Payment.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Payment.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_Payment.Name = "btn_Payment";
             this.btn_Payment.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
             this.btn_Payment.Size = new System.Drawing.Size(177, 39);
@@ -428,7 +427,7 @@
             // 
             this.panel7.Controls.Add(this.btn_BorrowerList);
             this.panel7.Location = new System.Drawing.Point(0, 224);
-            this.panel7.Margin = new System.Windows.Forms.Padding(2);
+            this.panel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(177, 39);
             this.panel7.TabIndex = 2;
@@ -443,7 +442,7 @@
             this.btn_BorrowerList.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_BorrowerList.ForeColor = System.Drawing.Color.White;
             this.btn_BorrowerList.Location = new System.Drawing.Point(0, 0);
-            this.btn_BorrowerList.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_BorrowerList.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_BorrowerList.Name = "btn_BorrowerList";
             this.btn_BorrowerList.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
             this.btn_BorrowerList.Size = new System.Drawing.Size(177, 39);
@@ -457,7 +456,7 @@
             // 
             this.panel6.Controls.Add(this.btn_BookReturning);
             this.panel6.Location = new System.Drawing.Point(0, 181);
-            this.panel6.Margin = new System.Windows.Forms.Padding(2);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(175, 39);
             this.panel6.TabIndex = 2;
@@ -472,7 +471,7 @@
             this.btn_BookReturning.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_BookReturning.ForeColor = System.Drawing.Color.White;
             this.btn_BookReturning.Location = new System.Drawing.Point(0, 0);
-            this.btn_BookReturning.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_BookReturning.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_BookReturning.Name = "btn_BookReturning";
             this.btn_BookReturning.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
             this.btn_BookReturning.Size = new System.Drawing.Size(175, 39);
@@ -486,7 +485,7 @@
             // 
             this.panel5.Controls.Add(this.btn_BookBorrowing);
             this.panel5.Location = new System.Drawing.Point(0, 138);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(175, 39);
             this.panel5.TabIndex = 2;
@@ -501,7 +500,7 @@
             this.btn_BookBorrowing.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_BookBorrowing.ForeColor = System.Drawing.Color.White;
             this.btn_BookBorrowing.Location = new System.Drawing.Point(0, 0);
-            this.btn_BookBorrowing.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_BookBorrowing.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_BookBorrowing.Name = "btn_BookBorrowing";
             this.btn_BookBorrowing.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
             this.btn_BookBorrowing.Size = new System.Drawing.Size(175, 39);
@@ -515,7 +514,7 @@
             // 
             this.panel4.Controls.Add(this.btn_BookList);
             this.panel4.Location = new System.Drawing.Point(0, 95);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(175, 39);
             this.panel4.TabIndex = 2;
@@ -530,7 +529,7 @@
             this.btn_BookList.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_BookList.ForeColor = System.Drawing.Color.White;
             this.btn_BookList.Location = new System.Drawing.Point(0, 0);
-            this.btn_BookList.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_BookList.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_BookList.Name = "btn_BookList";
             this.btn_BookList.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
             this.btn_BookList.Size = new System.Drawing.Size(175, 39);
@@ -544,7 +543,7 @@
             // 
             this.panel3.Controls.Add(this.btn_Dashboard);
             this.panel3.Location = new System.Drawing.Point(0, 52);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(175, 39);
             this.panel3.TabIndex = 1;
@@ -559,7 +558,7 @@
             this.btn_Dashboard.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Dashboard.ForeColor = System.Drawing.Color.White;
             this.btn_Dashboard.Location = new System.Drawing.Point(0, 0);
-            this.btn_Dashboard.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Dashboard.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_Dashboard.Name = "btn_Dashboard";
             this.btn_Dashboard.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
             this.btn_Dashboard.Size = new System.Drawing.Size(175, 39);
@@ -576,7 +575,7 @@
             this.panel_Logo_LogoHandler.Controls.Add(this.pictureBox1);
             this.panel_Logo_LogoHandler.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_Logo_LogoHandler.Location = new System.Drawing.Point(0, 0);
-            this.panel_Logo_LogoHandler.Margin = new System.Windows.Forms.Padding(2);
+            this.panel_Logo_LogoHandler.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel_Logo_LogoHandler.Name = "panel_Logo_LogoHandler";
             this.panel_Logo_LogoHandler.Size = new System.Drawing.Size(175, 50);
             this.panel_Logo_LogoHandler.TabIndex = 0;
@@ -593,7 +592,7 @@
             this.btn_Sidebar.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Sidebar.ForeColor = System.Drawing.Color.White;
             this.btn_Sidebar.Location = new System.Drawing.Point(145, 5);
-            this.btn_Sidebar.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Sidebar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_Sidebar.Name = "btn_Sidebar";
             this.btn_Sidebar.Size = new System.Drawing.Size(25, 20);
             this.btn_Sidebar.TabIndex = 1;
@@ -607,7 +606,7 @@
             this.pictureBox1.Image = global::Final_Project_OOP_and_DSA.Properties.Resources.Icon;
             this.pictureBox1.InitialImage = global::Final_Project_OOP_and_DSA.Properties.Resources.Icon;
             this.pictureBox1.Location = new System.Drawing.Point(55, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(60, 50);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -649,12 +648,33 @@
             this.tb_Dashboard.Controls.Add(this.label1);
             this.tb_Dashboard.Location = new System.Drawing.Point(4, 22);
             this.tb_Dashboard.Name = "tb_Dashboard";
-            this.tb_Dashboard.Padding = new System.Windows.Forms.Padding(3);
+            this.tb_Dashboard.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.tb_Dashboard.Size = new System.Drawing.Size(1052, 594);
             this.tb_Dashboard.TabIndex = 0;
             this.tb_Dashboard.Text = "Dashboard";
             this.tb_Dashboard.UseVisualStyleBackColor = true;
             this.tb_Dashboard.Click += new System.EventHandler(this.tb_Dashboard_Click);
+            // 
+            // panel34
+            // 
+            this.panel34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(218)))), ((int)(((byte)(218)))));
+            this.panel34.Controls.Add(this.label78);
+            this.panel34.Controls.Add(this.flowLayoutPanel1);
+            this.panel34.Location = new System.Drawing.Point(1, 31);
+            this.panel34.Name = "panel34";
+            this.panel34.Size = new System.Drawing.Size(1051, 567);
+            this.panel34.TabIndex = 8;
+            // 
+            // label78
+            // 
+            this.label78.AutoSize = true;
+            this.label78.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label78.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.label78.Location = new System.Drawing.Point(431, 31);
+            this.label78.Name = "label78";
+            this.label78.Size = new System.Drawing.Size(150, 23);
+            this.label78.TabIndex = 8;
+            this.label78.Text = "Library Metrics";
             // 
             // flowLayoutPanel1
             // 
@@ -664,7 +684,7 @@
             this.flowLayoutPanel1.Controls.Add(this.panel11);
             this.flowLayoutPanel1.Controls.Add(this.panel12);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(225, 85);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(590, 417);
             this.flowLayoutPanel1.TabIndex = 7;
@@ -928,12 +948,23 @@
             this.tb_BookList.Controls.Add(this.label18);
             this.tb_BookList.Location = new System.Drawing.Point(4, 22);
             this.tb_BookList.Name = "tb_BookList";
-            this.tb_BookList.Padding = new System.Windows.Forms.Padding(3);
+            this.tb_BookList.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.tb_BookList.Size = new System.Drawing.Size(1052, 594);
             this.tb_BookList.TabIndex = 1;
             this.tb_BookList.Text = "Book List";
             this.tb_BookList.UseVisualStyleBackColor = true;
             this.tb_BookList.Click += new System.EventHandler(this.tb_BookList_Click);
+            // 
+            // label62
+            // 
+            this.label62.AutoSize = true;
+            this.label62.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label62.ForeColor = System.Drawing.Color.Black;
+            this.label62.Location = new System.Drawing.Point(15, 46);
+            this.label62.Name = "label62";
+            this.label62.Size = new System.Drawing.Size(304, 23);
+            this.label62.TabIndex = 6;
+            this.label62.Text = "Books at M E I N K R A F T E R S";
             // 
             // panel17
             // 
@@ -953,7 +984,7 @@
             this.label20.ForeColor = System.Drawing.Color.White;
             this.label20.Location = new System.Drawing.Point(0, 0);
             this.label20.Name = "label20";
-            this.label20.Padding = new System.Windows.Forms.Padding(13);
+            this.label20.Padding = new System.Windows.Forms.Padding(13, 13, 13, 13);
             this.label20.Size = new System.Drawing.Size(120, 50);
             this.label20.TabIndex = 1;
             this.label20.Text = "Book List";
@@ -1126,7 +1157,7 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Name = "label2";
-            this.label2.Padding = new System.Windows.Forms.Padding(13);
+            this.label2.Padding = new System.Windows.Forms.Padding(13, 13, 13, 13);
             this.label2.Size = new System.Drawing.Size(111, 50);
             this.label2.TabIndex = 1;
             this.label2.Text = "Filter by";
@@ -1189,11 +1220,44 @@
             this.tb_Choice.Controls.Add(this.panel_NewMember);
             this.tb_Choice.Location = new System.Drawing.Point(4, 22);
             this.tb_Choice.Name = "tb_Choice";
-            this.tb_Choice.Padding = new System.Windows.Forms.Padding(3);
+            this.tb_Choice.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.tb_Choice.Size = new System.Drawing.Size(1044, 568);
             this.tb_Choice.TabIndex = 0;
             this.tb_Choice.Text = "Choice";
             this.tb_Choice.UseVisualStyleBackColor = true;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.label9.Location = new System.Drawing.Point(666, 407);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(111, 19);
+            this.label9.TabIndex = 9;
+            this.label9.Text = "Add a Patron";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.label3.Location = new System.Drawing.Point(265, 407);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(118, 19);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Existing Patron";
+            // 
+            // label64
+            // 
+            this.label64.AutoSize = true;
+            this.label64.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label64.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.label64.Location = new System.Drawing.Point(403, 120);
+            this.label64.Name = "label64";
+            this.label64.Size = new System.Drawing.Size(239, 28);
+            this.label64.TabIndex = 7;
+            this.label64.Text = "Choose your action";
             // 
             // panel16
             // 
@@ -1251,7 +1315,7 @@
             this.tb_Member.Controls.Add(this.flp_Member_BookDisplay);
             this.tb_Member.Location = new System.Drawing.Point(4, 22);
             this.tb_Member.Name = "tb_Member";
-            this.tb_Member.Padding = new System.Windows.Forms.Padding(3);
+            this.tb_Member.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.tb_Member.Size = new System.Drawing.Size(1044, 568);
             this.tb_Member.TabIndex = 1;
             this.tb_Member.Text = "Member";
@@ -1289,7 +1353,7 @@
             "Student",
             "Teacher"});
             this.cb_Member_BorrowerType.Location = new System.Drawing.Point(402, 23);
-            this.cb_Member_BorrowerType.Margin = new System.Windows.Forms.Padding(2);
+            this.cb_Member_BorrowerType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cb_Member_BorrowerType.Name = "cb_Member_BorrowerType";
             this.cb_Member_BorrowerType.Size = new System.Drawing.Size(212, 24);
             this.cb_Member_BorrowerType.TabIndex = 17;
@@ -1325,7 +1389,7 @@
             this.cb_Member_Name.Font = new System.Drawing.Font("Bahnschrift", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_Member_Name.FormattingEnabled = true;
             this.cb_Member_Name.Location = new System.Drawing.Point(72, 24);
-            this.cb_Member_Name.Margin = new System.Windows.Forms.Padding(2);
+            this.cb_Member_Name.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cb_Member_Name.Name = "cb_Member_Name";
             this.cb_Member_Name.Size = new System.Drawing.Size(212, 24);
             this.cb_Member_Name.TabIndex = 8;
@@ -1334,7 +1398,6 @@
             // panel18
             // 
             this.panel18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.panel18.Controls.Add(this.btn_Member_Clear);
             this.panel18.Controls.Add(this.btn_Member_Confirm);
             this.panel18.Controls.Add(this.lbl_Member_DueDate);
             this.panel18.Controls.Add(this.lbl_Member_DateBorrowed);
@@ -1347,22 +1410,6 @@
             this.panel18.Size = new System.Drawing.Size(227, 401);
             this.panel18.TabIndex = 7;
             // 
-            // btn_Member_Clear
-            // 
-            this.btn_Member_Clear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.btn_Member_Clear.FlatAppearance.BorderSize = 0;
-            this.btn_Member_Clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Member_Clear.Font = new System.Drawing.Font("Bahnschrift", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Member_Clear.ForeColor = System.Drawing.Color.White;
-            this.btn_Member_Clear.Location = new System.Drawing.Point(128, 358);
-            this.btn_Member_Clear.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_Member_Clear.Name = "btn_Member_Clear";
-            this.btn_Member_Clear.Size = new System.Drawing.Size(86, 30);
-            this.btn_Member_Clear.TabIndex = 14;
-            this.btn_Member_Clear.Text = "Clear";
-            this.btn_Member_Clear.UseVisualStyleBackColor = false;
-            this.btn_Member_Clear.Click += new System.EventHandler(this.btn_Member_Clear_Click);
-            // 
             // btn_Member_Confirm
             // 
             this.btn_Member_Confirm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
@@ -1370,8 +1417,8 @@
             this.btn_Member_Confirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Member_Confirm.Font = new System.Drawing.Font("Bahnschrift", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Member_Confirm.ForeColor = System.Drawing.Color.White;
-            this.btn_Member_Confirm.Location = new System.Drawing.Point(14, 358);
-            this.btn_Member_Confirm.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Member_Confirm.Location = new System.Drawing.Point(68, 358);
+            this.btn_Member_Confirm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_Member_Confirm.Name = "btn_Member_Confirm";
             this.btn_Member_Confirm.Size = new System.Drawing.Size(86, 30);
             this.btn_Member_Confirm.TabIndex = 8;
@@ -1472,7 +1519,7 @@
             this.label11.ForeColor = System.Drawing.Color.White;
             this.label11.Location = new System.Drawing.Point(0, 0);
             this.label11.Name = "label11";
-            this.label11.Padding = new System.Windows.Forms.Padding(13);
+            this.label11.Padding = new System.Windows.Forms.Padding(13, 13, 13, 13);
             this.label11.Size = new System.Drawing.Size(181, 50);
             this.label11.TabIndex = 1;
             this.label11.Text = "Available Books";
@@ -1518,6 +1565,84 @@
             this.tb_BookReturning.Text = "Book Returning";
             this.tb_BookReturning.UseVisualStyleBackColor = true;
             // 
+            // panel36
+            // 
+            this.panel36.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.panel36.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel36.Controls.Add(this.label76);
+            this.panel36.Location = new System.Drawing.Point(793, 159);
+            this.panel36.Name = "panel36";
+            this.panel36.Size = new System.Drawing.Size(227, 50);
+            this.panel36.TabIndex = 44;
+            // 
+            // label76
+            // 
+            this.label76.AutoSize = true;
+            this.label76.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label76.ForeColor = System.Drawing.Color.White;
+            this.label76.Location = new System.Drawing.Point(4, 16);
+            this.label76.Name = "label76";
+            this.label76.Size = new System.Drawing.Size(57, 18);
+            this.label76.TabIndex = 4;
+            this.label76.Text = "Details";
+            // 
+            // label73
+            // 
+            this.label73.AutoSize = true;
+            this.label73.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label73.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(80)))), ((int)(((byte)(88)))));
+            this.label73.Location = new System.Drawing.Point(452, 96);
+            this.label73.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label73.Name = "label73";
+            this.label73.Size = new System.Drawing.Size(123, 16);
+            this.label73.TabIndex = 43;
+            this.label73.Text = "Click the box to open";
+            // 
+            // label74
+            // 
+            this.label74.AutoSize = true;
+            this.label74.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label74.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(80)))), ((int)(((byte)(88)))));
+            this.label74.Location = new System.Drawing.Point(70, 96);
+            this.label74.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label74.Name = "label74";
+            this.label74.Size = new System.Drawing.Size(318, 16);
+            this.label74.TabIndex = 41;
+            this.label74.Text = "Click the box to open (choose from the borrower type first)";
+            // 
+            // label72
+            // 
+            this.label72.AutoSize = true;
+            this.label72.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label72.ForeColor = System.Drawing.Color.Black;
+            this.label72.Location = new System.Drawing.Point(347, 128);
+            this.label72.Name = "label72";
+            this.label72.Size = new System.Drawing.Size(103, 16);
+            this.label72.TabIndex = 39;
+            this.label72.Text = "Borrower Type:";
+            // 
+            // label63
+            // 
+            this.label63.AutoSize = true;
+            this.label63.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label63.ForeColor = System.Drawing.Color.Black;
+            this.label63.Location = new System.Drawing.Point(14, 128);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(54, 16);
+            this.label63.TabIndex = 38;
+            this.label63.Text = "Name: ";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.ForeColor = System.Drawing.Color.Black;
+            this.label24.Location = new System.Drawing.Point(13, 16);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(381, 23);
+            this.label24.TabIndex = 26;
+            this.label24.Text = "M E I N K R A F T E R S - Book Returning";
+            // 
             // cb_BookReturn_BorrowerType
             // 
             this.cb_BookReturn_BorrowerType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -1527,7 +1652,7 @@
             "Student",
             "Teacher"});
             this.cb_BookReturn_BorrowerType.Location = new System.Drawing.Point(455, 125);
-            this.cb_BookReturn_BorrowerType.Margin = new System.Windows.Forms.Padding(2);
+            this.cb_BookReturn_BorrowerType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cb_BookReturn_BorrowerType.Name = "cb_BookReturn_BorrowerType";
             this.cb_BookReturn_BorrowerType.Size = new System.Drawing.Size(212, 24);
             this.cb_BookReturn_BorrowerType.TabIndex = 24;
@@ -1559,7 +1684,7 @@
             this.cb_BookReturn_Name.Font = new System.Drawing.Font("Bahnschrift", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_BookReturn_Name.FormattingEnabled = true;
             this.cb_BookReturn_Name.Location = new System.Drawing.Point(73, 125);
-            this.cb_BookReturn_Name.Margin = new System.Windows.Forms.Padding(2);
+            this.cb_BookReturn_Name.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cb_BookReturn_Name.Name = "cb_BookReturn_Name";
             this.cb_BookReturn_Name.Size = new System.Drawing.Size(212, 24);
             this.cb_BookReturn_Name.TabIndex = 21;
@@ -1651,6 +1776,17 @@
             this.panel22.Size = new System.Drawing.Size(761, 50);
             this.panel22.TabIndex = 19;
             // 
+            // label75
+            // 
+            this.label75.AutoSize = true;
+            this.label75.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label75.ForeColor = System.Drawing.Color.White;
+            this.label75.Location = new System.Drawing.Point(13, 17);
+            this.label75.Name = "label75";
+            this.label75.Size = new System.Drawing.Size(154, 18);
+            this.label75.TabIndex = 45;
+            this.label75.Text = "Books due for return";
+            // 
             // flp_BooksReturn
             // 
             this.flp_BooksReturn.AutoScroll = true;
@@ -1672,14 +1808,77 @@
             this.tb_BorrowerList.Text = "Borrower List";
             this.tb_BorrowerList.UseVisualStyleBackColor = true;
             // 
-            // flp_BorrowerList_Teacher
+            // label39
             // 
-            this.flp_BorrowerList_Teacher.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flp_BorrowerList_Teacher.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flp_BorrowerList_Teacher.Location = new System.Drawing.Point(3, 318);
-            this.flp_BorrowerList_Teacher.Name = "flp_BorrowerList_Teacher";
-            this.flp_BorrowerList_Teacher.Size = new System.Drawing.Size(1045, 254);
-            this.flp_BorrowerList_Teacher.TabIndex = 3;
+            this.label39.AutoSize = true;
+            this.label39.BackColor = System.Drawing.Color.White;
+            this.label39.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.Location = new System.Drawing.Point(14, 9);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(269, 19);
+            this.label39.TabIndex = 14;
+            this.label39.Text = "M E I N K R A F T E R S - Borrower List";
+            // 
+            // panel35
+            // 
+            this.panel35.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(218)))), ((int)(((byte)(218)))));
+            this.panel35.Controls.Add(this.label38);
+            this.panel35.Controls.Add(this.label17);
+            this.panel35.Controls.Add(this.label65);
+            this.panel35.Controls.Add(this.label5);
+            this.panel35.Controls.Add(this.flp_BorrowerList_Student);
+            this.panel35.Controls.Add(this.label41);
+            this.panel35.Controls.Add(this.label40);
+            this.panel35.Controls.Add(this.flp_BorrowerList_Teacher);
+            this.panel35.Controls.Add(this.label37);
+            this.panel35.Location = new System.Drawing.Point(-4, 39);
+            this.panel35.Name = "panel35";
+            this.panel35.Size = new System.Drawing.Size(1060, 559);
+            this.panel35.TabIndex = 13;
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(218)))), ((int)(((byte)(218)))));
+            this.label38.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label38.Location = new System.Drawing.Point(787, 6);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(54, 16);
+            this.label38.TabIndex = 7;
+            this.label38.Text = "Section";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(218)))), ((int)(((byte)(218)))));
+            this.label17.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(524, 6);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(75, 16);
+            this.label17.TabIndex = 6;
+            this.label17.Text = "Year-Level";
+            // 
+            // label65
+            // 
+            this.label65.AutoSize = true;
+            this.label65.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(218)))), ((int)(((byte)(218)))));
+            this.label65.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label65.Location = new System.Drawing.Point(268, 6);
+            this.label65.Name = "label65";
+            this.label65.Size = new System.Drawing.Size(72, 16);
+            this.label65.TabIndex = 5;
+            this.label65.Text = "Student ID";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(218)))), ((int)(((byte)(218)))));
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(12, 6);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(46, 16);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Name";
             // 
             // flp_BorrowerList_Student
             // 
@@ -1689,6 +1888,48 @@
             this.flp_BorrowerList_Student.Name = "flp_BorrowerList_Student";
             this.flp_BorrowerList_Student.Size = new System.Drawing.Size(1045, 254);
             this.flp_BorrowerList_Student.TabIndex = 0;
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(218)))), ((int)(((byte)(218)))));
+            this.label41.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label41.Location = new System.Drawing.Point(524, 292);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(83, 16);
+            this.label41.TabIndex = 12;
+            this.label41.Text = "Department";
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(218)))), ((int)(((byte)(218)))));
+            this.label40.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label40.Location = new System.Drawing.Point(268, 292);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(88, 16);
+            this.label40.TabIndex = 11;
+            this.label40.Text = "Employee ID";
+            // 
+            // flp_BorrowerList_Teacher
+            // 
+            this.flp_BorrowerList_Teacher.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flp_BorrowerList_Teacher.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flp_BorrowerList_Teacher.Location = new System.Drawing.Point(3, 318);
+            this.flp_BorrowerList_Teacher.Name = "flp_BorrowerList_Teacher";
+            this.flp_BorrowerList_Teacher.Size = new System.Drawing.Size(1045, 254);
+            this.flp_BorrowerList_Teacher.TabIndex = 3;
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(218)))), ((int)(((byte)(218)))));
+            this.label37.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.Location = new System.Drawing.Point(12, 292);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(46, 16);
+            this.label37.TabIndex = 10;
+            this.label37.Text = "Name";
             // 
             // tb_Payment
             // 
@@ -2171,6 +2412,96 @@
             this.tb_Reservation.Text = "Reservation";
             this.tb_Reservation.UseVisualStyleBackColor = true;
             // 
+            // panel37
+            // 
+            this.panel37.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.panel37.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel37.Controls.Add(this.label71);
+            this.panel37.Location = new System.Drawing.Point(801, 134);
+            this.panel37.Name = "panel37";
+            this.panel37.Size = new System.Drawing.Size(227, 50);
+            this.panel37.TabIndex = 29;
+            // 
+            // label71
+            // 
+            this.label71.AutoSize = true;
+            this.label71.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label71.ForeColor = System.Drawing.Color.White;
+            this.label71.Location = new System.Drawing.Point(4, 15);
+            this.label71.Name = "label71";
+            this.label71.Size = new System.Drawing.Size(57, 18);
+            this.label71.TabIndex = 1;
+            this.label71.Text = "Details";
+            // 
+            // label70
+            // 
+            this.label70.AutoSize = true;
+            this.label70.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label70.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(80)))), ((int)(((byte)(88)))));
+            this.label70.Location = new System.Drawing.Point(798, 74);
+            this.label70.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label70.Name = "label70";
+            this.label70.Size = new System.Drawing.Size(146, 16);
+            this.label70.TabIndex = 44;
+            this.label70.Text = "Select date of reservation";
+            // 
+            // label69
+            // 
+            this.label69.AutoSize = true;
+            this.label69.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label69.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(80)))), ((int)(((byte)(88)))));
+            this.label69.Location = new System.Drawing.Point(396, 74);
+            this.label69.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label69.Name = "label69";
+            this.label69.Size = new System.Drawing.Size(123, 16);
+            this.label69.TabIndex = 43;
+            this.label69.Text = "Click the box to open";
+            // 
+            // label68
+            // 
+            this.label68.AutoSize = true;
+            this.label68.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label68.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(80)))), ((int)(((byte)(88)))));
+            this.label68.Location = new System.Drawing.Point(70, 73);
+            this.label68.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label68.Name = "label68";
+            this.label68.Size = new System.Drawing.Size(318, 16);
+            this.label68.TabIndex = 42;
+            this.label68.Text = "Click the box to open (choose from the borrower type first)";
+            // 
+            // label67
+            // 
+            this.label67.AutoSize = true;
+            this.label67.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label67.ForeColor = System.Drawing.Color.Black;
+            this.label67.Location = new System.Drawing.Point(293, 101);
+            this.label67.Name = "label67";
+            this.label67.Size = new System.Drawing.Size(103, 16);
+            this.label67.TabIndex = 41;
+            this.label67.Text = "Borrower Type:";
+            // 
+            // label66
+            // 
+            this.label66.AutoSize = true;
+            this.label66.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label66.ForeColor = System.Drawing.Color.Black;
+            this.label66.Location = new System.Drawing.Point(14, 101);
+            this.label66.Name = "label66";
+            this.label66.Size = new System.Drawing.Size(54, 16);
+            this.label66.TabIndex = 40;
+            this.label66.Text = "Name: ";
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label44.ForeColor = System.Drawing.Color.Black;
+            this.label44.Location = new System.Drawing.Point(3, 5);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(403, 23);
+            this.label44.TabIndex = 39;
+            this.label44.Text = "M E I N K R A F T E R S - Book Reservation";
+            // 
             // cb_Reserve_Inside
             // 
             this.cb_Reserve_Inside.AutoSize = true;
@@ -2214,7 +2545,7 @@
             "Student",
             "Teacher"});
             this.cb_Reserve_BorrowerType.Location = new System.Drawing.Point(399, 98);
-            this.cb_Reserve_BorrowerType.Margin = new System.Windows.Forms.Padding(2);
+            this.cb_Reserve_BorrowerType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cb_Reserve_BorrowerType.Name = "cb_Reserve_BorrowerType";
             this.cb_Reserve_BorrowerType.Size = new System.Drawing.Size(212, 24);
             this.cb_Reserve_BorrowerType.TabIndex = 32;
@@ -2246,7 +2577,7 @@
             this.cb_Reserve_Name.Font = new System.Drawing.Font("Bahnschrift", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_Reserve_Name.FormattingEnabled = true;
             this.cb_Reserve_Name.Location = new System.Drawing.Point(73, 98);
-            this.cb_Reserve_Name.Margin = new System.Windows.Forms.Padding(2);
+            this.cb_Reserve_Name.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cb_Reserve_Name.Name = "cb_Reserve_Name";
             this.cb_Reserve_Name.Size = new System.Drawing.Size(212, 24);
             this.cb_Reserve_Name.TabIndex = 29;
@@ -2375,6 +2706,17 @@
             this.panel31.Name = "panel31";
             this.panel31.Size = new System.Drawing.Size(761, 50);
             this.panel31.TabIndex = 27;
+            // 
+            // label77
+            // 
+            this.label77.AutoSize = true;
+            this.label77.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label77.ForeColor = System.Drawing.Color.White;
+            this.label77.Location = new System.Drawing.Point(14, 16);
+            this.label77.Name = "label77";
+            this.label77.Size = new System.Drawing.Size(127, 18);
+            this.label77.TabIndex = 3;
+            this.label77.Text = "Available Books";
             // 
             // flp_Reserve
             // 
@@ -2581,377 +2923,17 @@
             this.processTime.Interval = 1;
             this.processTime.Tick += new System.EventHandler(this.processTime_Tick);
             // 
-            // panel34
-            // 
-            this.panel34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(218)))), ((int)(((byte)(218)))));
-            this.panel34.Controls.Add(this.label78);
-            this.panel34.Controls.Add(this.flowLayoutPanel1);
-            this.panel34.Location = new System.Drawing.Point(1, 31);
-            this.panel34.Name = "panel34";
-            this.panel34.Size = new System.Drawing.Size(1051, 567);
-            this.panel34.TabIndex = 8;
-            // 
-            // label78
-            // 
-            this.label78.AutoSize = true;
-            this.label78.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label78.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.label78.Location = new System.Drawing.Point(431, 31);
-            this.label78.Name = "label78";
-            this.label78.Size = new System.Drawing.Size(150, 23);
-            this.label78.TabIndex = 8;
-            this.label78.Text = "Library Metrics";
-            // 
-            // label62
-            // 
-            this.label62.AutoSize = true;
-            this.label62.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label62.ForeColor = System.Drawing.Color.Black;
-            this.label62.Location = new System.Drawing.Point(15, 46);
-            this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(304, 23);
-            this.label62.TabIndex = 6;
-            this.label62.Text = "Books at M E I N K R A F T E R S";
-            // 
-            // label64
-            // 
-            this.label64.AutoSize = true;
-            this.label64.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label64.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.label64.Location = new System.Drawing.Point(403, 120);
-            this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(239, 28);
-            this.label64.TabIndex = 7;
-            this.label64.Text = "Choose your action";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.label3.Location = new System.Drawing.Point(265, 407);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(118, 19);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Existing Patron";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.label9.Location = new System.Drawing.Point(666, 407);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(111, 19);
-            this.label9.TabIndex = 9;
-            this.label9.Text = "Add a Patron";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.ForeColor = System.Drawing.Color.Black;
-            this.label24.Location = new System.Drawing.Point(13, 16);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(381, 23);
-            this.label24.TabIndex = 26;
-            this.label24.Text = "M E I N K R A F T E R S - Book Returning";
-            // 
-            // label63
-            // 
-            this.label63.AutoSize = true;
-            this.label63.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label63.ForeColor = System.Drawing.Color.Black;
-            this.label63.Location = new System.Drawing.Point(14, 128);
-            this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(54, 16);
-            this.label63.TabIndex = 38;
-            this.label63.Text = "Name: ";
-            // 
-            // label72
-            // 
-            this.label72.AutoSize = true;
-            this.label72.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label72.ForeColor = System.Drawing.Color.Black;
-            this.label72.Location = new System.Drawing.Point(347, 128);
-            this.label72.Name = "label72";
-            this.label72.Size = new System.Drawing.Size(103, 16);
-            this.label72.TabIndex = 39;
-            this.label72.Text = "Borrower Type:";
-            // 
-            // label74
-            // 
-            this.label74.AutoSize = true;
-            this.label74.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label74.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(80)))), ((int)(((byte)(88)))));
-            this.label74.Location = new System.Drawing.Point(70, 96);
-            this.label74.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label74.Name = "label74";
-            this.label74.Size = new System.Drawing.Size(318, 16);
-            this.label74.TabIndex = 41;
-            this.label74.Text = "Click the box to open (choose from the borrower type first)";
-            // 
-            // label73
-            // 
-            this.label73.AutoSize = true;
-            this.label73.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label73.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(80)))), ((int)(((byte)(88)))));
-            this.label73.Location = new System.Drawing.Point(452, 96);
-            this.label73.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label73.Name = "label73";
-            this.label73.Size = new System.Drawing.Size(123, 16);
-            this.label73.TabIndex = 43;
-            this.label73.Text = "Click the box to open";
-            // 
-            // panel36
-            // 
-            this.panel36.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.panel36.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel36.Controls.Add(this.label76);
-            this.panel36.Location = new System.Drawing.Point(793, 159);
-            this.panel36.Name = "panel36";
-            this.panel36.Size = new System.Drawing.Size(227, 50);
-            this.panel36.TabIndex = 44;
-            // 
-            // label76
-            // 
-            this.label76.AutoSize = true;
-            this.label76.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label76.ForeColor = System.Drawing.Color.White;
-            this.label76.Location = new System.Drawing.Point(4, 16);
-            this.label76.Name = "label76";
-            this.label76.Size = new System.Drawing.Size(57, 18);
-            this.label76.TabIndex = 4;
-            this.label76.Text = "Details";
-            // 
-            // label75
-            // 
-            this.label75.AutoSize = true;
-            this.label75.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label75.ForeColor = System.Drawing.Color.White;
-            this.label75.Location = new System.Drawing.Point(13, 17);
-            this.label75.Name = "label75";
-            this.label75.Size = new System.Drawing.Size(154, 18);
-            this.label75.TabIndex = 45;
-            this.label75.Text = "Books due for return";
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(218)))), ((int)(((byte)(218)))));
-            this.label37.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.Location = new System.Drawing.Point(12, 292);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(46, 16);
-            this.label37.TabIndex = 10;
-            this.label37.Text = "Name";
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(218)))), ((int)(((byte)(218)))));
-            this.label40.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label40.Location = new System.Drawing.Point(268, 292);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(88, 16);
-            this.label40.TabIndex = 11;
-            this.label40.Text = "Employee ID";
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(218)))), ((int)(((byte)(218)))));
-            this.label41.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label41.Location = new System.Drawing.Point(524, 292);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(83, 16);
-            this.label41.TabIndex = 12;
-            this.label41.Text = "Department";
-            // 
-            // panel35
-            // 
-            this.panel35.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(218)))), ((int)(((byte)(218)))));
-            this.panel35.Controls.Add(this.label38);
-            this.panel35.Controls.Add(this.label17);
-            this.panel35.Controls.Add(this.label65);
-            this.panel35.Controls.Add(this.label5);
-            this.panel35.Controls.Add(this.flp_BorrowerList_Student);
-            this.panel35.Controls.Add(this.label41);
-            this.panel35.Controls.Add(this.label40);
-            this.panel35.Controls.Add(this.flp_BorrowerList_Teacher);
-            this.panel35.Controls.Add(this.label37);
-            this.panel35.Location = new System.Drawing.Point(-4, 39);
-            this.panel35.Name = "panel35";
-            this.panel35.Size = new System.Drawing.Size(1060, 559);
-            this.panel35.TabIndex = 13;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(218)))), ((int)(((byte)(218)))));
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(12, 6);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(46, 16);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Name";
-            // 
-            // label65
-            // 
-            this.label65.AutoSize = true;
-            this.label65.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(218)))), ((int)(((byte)(218)))));
-            this.label65.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label65.Location = new System.Drawing.Point(268, 6);
-            this.label65.Name = "label65";
-            this.label65.Size = new System.Drawing.Size(72, 16);
-            this.label65.TabIndex = 5;
-            this.label65.Text = "Student ID";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(218)))), ((int)(((byte)(218)))));
-            this.label17.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(524, 6);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(75, 16);
-            this.label17.TabIndex = 6;
-            this.label17.Text = "Year-Level";
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(218)))), ((int)(((byte)(218)))));
-            this.label38.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label38.Location = new System.Drawing.Point(787, 6);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(54, 16);
-            this.label38.TabIndex = 7;
-            this.label38.Text = "Section";
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.BackColor = System.Drawing.Color.White;
-            this.label39.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.Location = new System.Drawing.Point(14, 9);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(269, 19);
-            this.label39.TabIndex = 14;
-            this.label39.Text = "M E I N K R A F T E R S - Borrower List";
-            // 
-            // label44
-            // 
-            this.label44.AutoSize = true;
-            this.label44.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label44.ForeColor = System.Drawing.Color.Black;
-            this.label44.Location = new System.Drawing.Point(3, 5);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(403, 23);
-            this.label44.TabIndex = 39;
-            this.label44.Text = "M E I N K R A F T E R S - Book Reservation";
-            // 
-            // label66
-            // 
-            this.label66.AutoSize = true;
-            this.label66.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label66.ForeColor = System.Drawing.Color.Black;
-            this.label66.Location = new System.Drawing.Point(14, 101);
-            this.label66.Name = "label66";
-            this.label66.Size = new System.Drawing.Size(54, 16);
-            this.label66.TabIndex = 40;
-            this.label66.Text = "Name: ";
-            // 
-            // label67
-            // 
-            this.label67.AutoSize = true;
-            this.label67.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label67.ForeColor = System.Drawing.Color.Black;
-            this.label67.Location = new System.Drawing.Point(293, 101);
-            this.label67.Name = "label67";
-            this.label67.Size = new System.Drawing.Size(103, 16);
-            this.label67.TabIndex = 41;
-            this.label67.Text = "Borrower Type:";
-            // 
-            // label68
-            // 
-            this.label68.AutoSize = true;
-            this.label68.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label68.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(80)))), ((int)(((byte)(88)))));
-            this.label68.Location = new System.Drawing.Point(70, 73);
-            this.label68.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label68.Name = "label68";
-            this.label68.Size = new System.Drawing.Size(318, 16);
-            this.label68.TabIndex = 42;
-            this.label68.Text = "Click the box to open (choose from the borrower type first)";
-            // 
-            // label69
-            // 
-            this.label69.AutoSize = true;
-            this.label69.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label69.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(80)))), ((int)(((byte)(88)))));
-            this.label69.Location = new System.Drawing.Point(396, 74);
-            this.label69.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label69.Name = "label69";
-            this.label69.Size = new System.Drawing.Size(123, 16);
-            this.label69.TabIndex = 43;
-            this.label69.Text = "Click the box to open";
-            // 
-            // label70
-            // 
-            this.label70.AutoSize = true;
-            this.label70.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label70.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(80)))), ((int)(((byte)(88)))));
-            this.label70.Location = new System.Drawing.Point(798, 74);
-            this.label70.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label70.Name = "label70";
-            this.label70.Size = new System.Drawing.Size(146, 16);
-            this.label70.TabIndex = 44;
-            this.label70.Text = "Select date of reservation";
-            // 
-            // panel37
-            // 
-            this.panel37.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.panel37.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel37.Controls.Add(this.label71);
-            this.panel37.Location = new System.Drawing.Point(801, 134);
-            this.panel37.Name = "panel37";
-            this.panel37.Size = new System.Drawing.Size(227, 50);
-            this.panel37.TabIndex = 29;
-            // 
-            // label71
-            // 
-            this.label71.AutoSize = true;
-            this.label71.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label71.ForeColor = System.Drawing.Color.White;
-            this.label71.Location = new System.Drawing.Point(4, 15);
-            this.label71.Name = "label71";
-            this.label71.Size = new System.Drawing.Size(57, 18);
-            this.label71.TabIndex = 1;
-            this.label71.Text = "Details";
-            // 
-            // label77
-            // 
-            this.label77.AutoSize = true;
-            this.label77.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label77.ForeColor = System.Drawing.Color.White;
-            this.label77.Location = new System.Drawing.Point(14, 16);
-            this.label77.Name = "label77";
-            this.label77.Size = new System.Drawing.Size(127, 18);
-            this.label77.TabIndex = 3;
-            this.label77.Text = "Available Books";
-            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1100, 600);
+            this.ClientSize = new System.Drawing.Size(1084, 561);
             this.Controls.Add(this.panel_Sidebar_Sidebar);
             this.Controls.Add(this.tc_Dashboard_TabControl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
@@ -2969,6 +2951,8 @@
             this.tc_Dashboard_TabControl.ResumeLayout(false);
             this.tb_Dashboard.ResumeLayout(false);
             this.tb_Dashboard.PerformLayout();
+            this.panel34.ResumeLayout(false);
+            this.panel34.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panel_BookListed.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -3006,12 +2990,16 @@
             this.panel15.PerformLayout();
             this.tb_BookReturning.ResumeLayout(false);
             this.tb_BookReturning.PerformLayout();
+            this.panel36.ResumeLayout(false);
+            this.panel36.PerformLayout();
             this.panel20.ResumeLayout(false);
             this.panel20.PerformLayout();
             this.panel22.ResumeLayout(false);
             this.panel22.PerformLayout();
             this.tb_BorrowerList.ResumeLayout(false);
             this.tb_BorrowerList.PerformLayout();
+            this.panel35.ResumeLayout(false);
+            this.panel35.PerformLayout();
             this.tb_Payment.ResumeLayout(false);
             this.panel23.ResumeLayout(false);
             this.panel23.PerformLayout();
@@ -3032,6 +3020,8 @@
             this.panel26.PerformLayout();
             this.tb_Reservation.ResumeLayout(false);
             this.tb_Reservation.PerformLayout();
+            this.panel37.ResumeLayout(false);
+            this.panel37.PerformLayout();
             this.panel30.ResumeLayout(false);
             this.panel30.PerformLayout();
             this.panel31.ResumeLayout(false);
@@ -3040,14 +3030,6 @@
             this.flp_ViewReservation.ResumeLayout(false);
             this.panel32.ResumeLayout(false);
             this.panel32.PerformLayout();
-            this.panel34.ResumeLayout(false);
-            this.panel34.PerformLayout();
-            this.panel36.ResumeLayout(false);
-            this.panel36.PerformLayout();
-            this.panel35.ResumeLayout(false);
-            this.panel35.PerformLayout();
-            this.panel37.ResumeLayout(false);
-            this.panel37.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -3141,7 +3123,6 @@
         private System.Windows.Forms.Label lbl_Member_Name;
         private System.Windows.Forms.Label lbl_Member_DueDate;
         private System.Windows.Forms.Label lbl_Member_DateBorrowed;
-        private System.Windows.Forms.Button btn_Member_Clear;
         private System.Windows.Forms.Button btn_Member_Confirm;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label29;

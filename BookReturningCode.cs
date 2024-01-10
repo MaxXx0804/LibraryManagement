@@ -370,6 +370,8 @@ namespace Final_Project_OOP_and_DSA
             if(BookBorrowedChange() && BookReturnBookBorrowing())
             {
                 MessageBox.Show("Return Successful");
+                booksRemaining.Clear();
+                booksReturning.Clear();
             }
             else
             {

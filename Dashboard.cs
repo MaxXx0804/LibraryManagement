@@ -163,6 +163,7 @@ namespace Final_Project_OOP_and_DSA
                 lbl_BooksAvailable_Quantity.Text = resultBooksAvailable.Count.ToString();
                 lbl_BooksLent_Quantity.Text = resultBooksBorrowed.Count.ToString();
                 lbl_PendingPayment_Quantity.Text = numberOfPayment.ToString();
+                endTime();
             }
             catch (Exception ex)
             {
@@ -808,49 +809,65 @@ namespace Final_Project_OOP_and_DSA
 
         private void btn_Member_Confirm_Click(object sender, EventArgs e)
         {
-            if (cb_Member_Name.Text != "" && cb_Member_BorrowerType.Text != "") {
-                startTime();
-                BookBorrowingCode.BookBorrowing(BooksBeingBorrowed);
-                InitializeBookListContentByFilterWithCheckBox("SELECT * FROM Books WHERE book_status = 'Available' AND NOT book_category = 'Academic'");
-                memberCurrentBookNumberSelected = 0;
-                ResetAll();
-                endTime();
+            if (cb_BookBorrowing_Academic.Checked && !cb_BookBorrowing_Inside.Checked)
+            {
+                MessageBox.Show("Academic books are only allowed inside the library!");
             }
             else
             {
-                MessageBox.Show("Please fill up all the fields.");
+                if (cb_Member_Name.Text != "" && cb_Member_BorrowerType.Text != "") {
+                    startTime();
+                    BookBorrowingCode.BookBorrowing(BooksBeingBorrowed);
+                    InitializeBookListContentByFilterWithCheckBox("SELECT * FROM Books WHERE book_status = 'Available' AND NOT book_category = 'Academic'");
+                    memberCurrentBookNumberSelected = 0;
+                    ResetAll();
+                    endTime();
+                }
+                else
+                {
+                    MessageBox.Show("Please fill up all the fields.");
+                }
             }
         }
         private void btn_Reserve_Reserve_Click(object sender, EventArgs e)
         {
-            if (cb_Reserve_BorrowerType.Text != "" && cb_Reserve_Name.Text != "") {
-                startTime();
+            if (cb_Reserve_Academic.Checked && !cb_Reserve_Inside.Checked)
+            {
+                MessageBox.Show("Academic books are only allowed inside the library!");
+            }
+            else
+            {
+                if (cb_Reserve_BorrowerType.Text != "" && cb_Reserve_Name.Text != "")
+                {
+                    startTime();
 
-                if (cb_Reserve_Academic.Checked) {
-                    if (reserveInsideLocation)
+                    if (cb_Reserve_Academic.Checked)
+                    {
+                        if (reserveInsideLocation)
+                        {
+                            BookReserved.BookReserve(BooksBeingReserve);
+                            InitializeBookListContentByFilterWithCheckBoxForBookReserve("SELECT * FROM Books WHERE book_status = 'Available' AND NOT book_category = 'Academic'");
+                            reserveCurrentBookNumberSelected = 0;
+                            ResetAll();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Academic Books can not be borrowed outside the library");
+                        }
+                    }
+                    else
                     {
                         BookReserved.BookReserve(BooksBeingReserve);
                         InitializeBookListContentByFilterWithCheckBoxForBookReserve("SELECT * FROM Books WHERE book_status = 'Available' AND NOT book_category = 'Academic'");
                         reserveCurrentBookNumberSelected = 0;
                         ResetAll();
                     }
-                    else
-                    {
-                        MessageBox.Show("Academic Books can not be borrowed outside the library");
-                    }
+                    endTime();
                 }
                 else
                 {
-                    BookReserved.BookReserve(BooksBeingReserve);
-                    InitializeBookListContentByFilterWithCheckBoxForBookReserve("SELECT * FROM Books WHERE book_status = 'Available' AND NOT book_category = 'Academic'");
-                    reserveCurrentBookNumberSelected = 0;
-                    ResetAll();
+                    MessageBox.Show("Please fill up all the fields");
                 }
-                endTime();
-            }
-            else
-            {
-                MessageBox.Show("Please fill up all the fields");
             }
         }
 

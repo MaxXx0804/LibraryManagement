@@ -25,7 +25,9 @@ namespace Final_Project_OOP_and_DSA
         {
             if(txt_Login_Password.Text == temporaryPassword && txt_Login_Username.Text == temporaryUser)
             {
+                
                 ds = new Dashboard();
+                frm_Login.ds.startTime();
                 ds.Show();
                 this.Hide();
                 notifyIcon = new NotifyIcon();
