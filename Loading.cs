@@ -16,6 +16,7 @@ namespace Final_Project_OOP_and_DSA
     {
         private int ticks = 2;
         private NotifyIcon notifyIcon;
+        public static frm_Login frm;
         public Loading()
         {
                 InitializeComponent();
@@ -28,7 +29,7 @@ namespace Final_Project_OOP_and_DSA
 
         private void TextChange_Tick(object sender, EventArgs e)
         {
-            string[] LoadingScreenText = { "Finding books...", "Cleaning books...", "Checking dictionary...", "Debugging program..." , "No one knows what the future holds...", "To be strong is not just about physical strength..." };
+            string[] LoadingScreenText = { "Finding books...", "Cleaning books...", "Checking dictionary...", "Debugging program..." , "No one knows what the future holds...", "To be strong is not just about physical strength...","Water is illegal in some places...", "Chipi Chipi Chapa Chapa..."};
             Random rand = new Random();
             int num = rand.Next(LoadingScreenText.Length);
             lbl_LoadingScreenText.Text = LoadingScreenText[num];
@@ -38,7 +39,7 @@ namespace Final_Project_OOP_and_DSA
             }
             else
             {
-                frm_Login frm = new frm_Login();
+                frm = new frm_Login();
                 frm.Show();
                 notifyIcon = new NotifyIcon();
                 notifyIcon.Icon = this.Icon;

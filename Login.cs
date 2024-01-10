@@ -31,6 +31,7 @@ namespace Final_Project_OOP_and_DSA
                 notifyIcon = new NotifyIcon();
                 notifyIcon.Icon = this.Icon;
                 notifyIcon.Visible = false;
+                
             }
             else
             {

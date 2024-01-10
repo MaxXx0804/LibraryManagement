@@ -227,6 +227,7 @@
             this.label31 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.processTime = new System.Windows.Forms.Timer(this.components);
             this.panel_Sidebar_Sidebar.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -2666,6 +2667,11 @@
             this.button1.Text = "Clear";
             this.button1.UseVisualStyleBackColor = false;
             // 
+            // processTime
+            // 
+            this.processTime.Interval = 1;
+            this.processTime.Tick += new System.EventHandler(this.processTime_Tick);
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2674,7 +2680,7 @@
             this.ClientSize = new System.Drawing.Size(1100, 600);
             this.Controls.Add(this.panel_Sidebar_Sidebar);
             this.Controls.Add(this.tc_Dashboard_TabControl);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Dashboard";
@@ -2964,5 +2970,6 @@
         private System.Windows.Forms.CheckBox cb_Reserve_Inside;
         private System.Windows.Forms.CheckBox cb_BookBorrowing_Inside;
         private System.Windows.Forms.CheckBox cb_BookBorrowing_Academic;
+        public System.Windows.Forms.Timer processTime;
     }
 }

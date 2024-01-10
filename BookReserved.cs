@@ -139,7 +139,6 @@ namespace Final_Project_OOP_and_DSA
                 }
                 new ViewReservationContainers(item[1].ToString(), item[3].ToString(), contents, item[2].ToString());
                 contents = "";
-                //Array.Clear(arr,0,arr.Length);
 
             }
 
@@ -185,6 +184,7 @@ namespace Final_Project_OOP_and_DSA
         }
         public static void BorrowOnClick(object sender, EventArgs e)
         {
+            frm_Login.ds.startTime();
             try
             {
                 Button btn = (Button)sender;
@@ -237,7 +237,7 @@ namespace Final_Project_OOP_and_DSA
             {
                 Debug.WriteLine(ex.Message);
             }
-
+            frm_Login.ds.endTime();
         }
         public static void RemoveFromDatabase(DataRow dr)
         {
