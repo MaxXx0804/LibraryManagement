@@ -820,6 +820,7 @@ namespace Final_Project_OOP_and_DSA
                     BookBorrowingCode.BookBorrowing(BooksBeingBorrowed);
                     InitializeBookListContentByFilterWithCheckBox("SELECT * FROM Books WHERE book_status = 'Available' AND NOT book_category = 'Academic'");
                     memberCurrentBookNumberSelected = 0;
+                    lbl_Member_BookListDisplay.Text = "Book List: ";
                     ResetAll();
                     endTime();
                 }

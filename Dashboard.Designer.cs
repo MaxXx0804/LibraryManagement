@@ -329,7 +329,7 @@
             this.panel_Sidebar_Sidebar.Location = new System.Drawing.Point(-140, 0);
             this.panel_Sidebar_Sidebar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel_Sidebar_Sidebar.Name = "panel_Sidebar_Sidebar";
-            this.panel_Sidebar_Sidebar.Size = new System.Drawing.Size(175, 703);
+            this.panel_Sidebar_Sidebar.Size = new System.Drawing.Size(175, 600);
             this.panel_Sidebar_Sidebar.TabIndex = 0;
             // 
             // panel10
@@ -337,7 +337,7 @@
             this.panel10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel10.Controls.Add(this.btn_Sidebar_SidebarExit);
-            this.panel10.Location = new System.Drawing.Point(153, 676);
+            this.panel10.Location = new System.Drawing.Point(153, 573);
             this.panel10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(20, 25);
@@ -639,7 +639,7 @@
             this.tc_Dashboard_TabControl.Location = new System.Drawing.Point(35, 0);
             this.tc_Dashboard_TabControl.Name = "tc_Dashboard_TabControl";
             this.tc_Dashboard_TabControl.SelectedIndex = 0;
-            this.tc_Dashboard_TabControl.Size = new System.Drawing.Size(1060, 620);
+            this.tc_Dashboard_TabControl.Size = new System.Drawing.Size(1076, 659);
             this.tc_Dashboard_TabControl.TabIndex = 1;
             // 
             // tb_Dashboard
@@ -1195,7 +1195,7 @@
             this.tb_BookBorrowing.Controls.Add(this.tc_Member_New);
             this.tb_BookBorrowing.Location = new System.Drawing.Point(4, 22);
             this.tb_BookBorrowing.Name = "tb_BookBorrowing";
-            this.tb_BookBorrowing.Size = new System.Drawing.Size(1052, 594);
+            this.tb_BookBorrowing.Size = new System.Drawing.Size(1068, 633);
             this.tb_BookBorrowing.TabIndex = 2;
             this.tb_BookBorrowing.Text = "Book Borrowing";
             this.tb_BookBorrowing.UseVisualStyleBackColor = true;
@@ -1208,7 +1208,7 @@
             this.tc_Member_New.Location = new System.Drawing.Point(0, 0);
             this.tc_Member_New.Name = "tc_Member_New";
             this.tc_Member_New.SelectedIndex = 0;
-            this.tc_Member_New.Size = new System.Drawing.Size(1052, 594);
+            this.tc_Member_New.Size = new System.Drawing.Size(1068, 633);
             this.tc_Member_New.TabIndex = 0;
             // 
             // tb_Choice
@@ -1316,7 +1316,7 @@
             this.tb_Member.Location = new System.Drawing.Point(4, 22);
             this.tb_Member.Name = "tb_Member";
             this.tb_Member.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tb_Member.Size = new System.Drawing.Size(1044, 568);
+            this.tb_Member.Size = new System.Drawing.Size(1060, 607);
             this.tb_Member.TabIndex = 1;
             this.tb_Member.Text = "Member";
             this.tb_Member.UseVisualStyleBackColor = true;
@@ -2407,7 +2407,7 @@
             this.tb_Reservation.Controls.Add(this.flp_Reserve);
             this.tb_Reservation.Location = new System.Drawing.Point(4, 22);
             this.tb_Reservation.Name = "tb_Reservation";
-            this.tb_Reservation.Size = new System.Drawing.Size(1052, 594);
+            this.tb_Reservation.Size = new System.Drawing.Size(1068, 633);
             this.tb_Reservation.TabIndex = 6;
             this.tb_Reservation.Text = "Reservation";
             this.tb_Reservation.UseVisualStyleBackColor = true;
@@ -2928,10 +2928,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1084, 561);
+            this.ClientSize = new System.Drawing.Size(1100, 600);
             this.Controls.Add(this.panel_Sidebar_Sidebar);
             this.Controls.Add(this.tc_Dashboard_TabControl);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Dashboard";
