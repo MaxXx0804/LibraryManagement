@@ -1064,6 +1064,18 @@ namespace Final_Project_OOP_and_DSA
                 InitializeBookListContentByFilterWithCheckBox("SELECT * FROM Books WHERE NOT book_category = 'Academic' AND book_status = 'Available'");
             }
         }
+
+        private void event_CheckIfUserLeaves(object sender, EventArgs e)
+        {
+            tmr_Sidebar_SidebarExitAnimation.Start();
+            btn_Dashboard.Enabled = false;
+            btn_BookList.Enabled = false;
+            btn_BookBorrowing.Enabled = false;
+            btn_BookReturning.Enabled = false;
+            btn_BorrowerList.Enabled = false;
+            btn_Payment.Enabled = false;
+            btn_Sidebar_Logout.Enabled = false;
+        }
     }
 
 }
