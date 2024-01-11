@@ -27,7 +27,6 @@ namespace Final_Project_OOP_and_DSA
             {
                 
                 ds = new Dashboard();
-                frm_Login.ds.startTime();
                 ds.Show();
                 this.Hide();
                 notifyIcon = new NotifyIcon();

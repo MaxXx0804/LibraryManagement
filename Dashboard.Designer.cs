@@ -2924,7 +2924,6 @@
             // processTime
             // 
             this.processTime.Interval = 1;
-            this.processTime.Tick += new System.EventHandler(this.processTime_Tick);
             // 
             // Dashboard
             // 

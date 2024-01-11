@@ -186,7 +186,6 @@ namespace Final_Project_OOP_and_DSA
         }
         public static void BorrowOnClick(object sender, EventArgs e)
         {
-            frm_Login.ds.startTime();
             try
             {
                 Button btn = (Button)sender;
@@ -241,7 +240,6 @@ namespace Final_Project_OOP_and_DSA
             }
             Start();
             frm_Login.ds.InitializeBookReserveContents();
-            frm_Login.ds.endTime();
         }
         public static void RemoveFromDatabase(DataRow dr)
         {
