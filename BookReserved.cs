@@ -181,6 +181,8 @@ namespace Final_Project_OOP_and_DSA
             {
                 Debug.WriteLine(ex.Message);
             }
+            Start();
+            frm_Login.ds.InitializeBookReserveContents();
         }
         public static void BorrowOnClick(object sender, EventArgs e)
         {
@@ -237,6 +239,8 @@ namespace Final_Project_OOP_and_DSA
             {
                 Debug.WriteLine(ex.Message);
             }
+            Start();
+            frm_Login.ds.InitializeBookReserveContents();
             frm_Login.ds.endTime();
         }
         public static void RemoveFromDatabase(DataRow dr)

@@ -639,7 +639,7 @@
             this.tc_Dashboard_TabControl.Location = new System.Drawing.Point(35, 0);
             this.tc_Dashboard_TabControl.Name = "tc_Dashboard_TabControl";
             this.tc_Dashboard_TabControl.SelectedIndex = 0;
-            this.tc_Dashboard_TabControl.Size = new System.Drawing.Size(1076, 659);
+            this.tc_Dashboard_TabControl.Size = new System.Drawing.Size(1060, 620);
             this.tc_Dashboard_TabControl.TabIndex = 1;
             // 
             // tb_Dashboard
@@ -949,7 +949,7 @@
             this.tb_BookList.Location = new System.Drawing.Point(4, 22);
             this.tb_BookList.Name = "tb_BookList";
             this.tb_BookList.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tb_BookList.Size = new System.Drawing.Size(1052, 594);
+            this.tb_BookList.Size = new System.Drawing.Size(1068, 633);
             this.tb_BookList.TabIndex = 1;
             this.tb_BookList.Text = "Book List";
             this.tb_BookList.UseVisualStyleBackColor = true;
@@ -1195,7 +1195,7 @@
             this.tb_BookBorrowing.Controls.Add(this.tc_Member_New);
             this.tb_BookBorrowing.Location = new System.Drawing.Point(4, 22);
             this.tb_BookBorrowing.Name = "tb_BookBorrowing";
-            this.tb_BookBorrowing.Size = new System.Drawing.Size(1068, 633);
+            this.tb_BookBorrowing.Size = new System.Drawing.Size(1052, 594);
             this.tb_BookBorrowing.TabIndex = 2;
             this.tb_BookBorrowing.Text = "Book Borrowing";
             this.tb_BookBorrowing.UseVisualStyleBackColor = true;
@@ -1208,7 +1208,7 @@
             this.tc_Member_New.Location = new System.Drawing.Point(0, 0);
             this.tc_Member_New.Name = "tc_Member_New";
             this.tc_Member_New.SelectedIndex = 0;
-            this.tc_Member_New.Size = new System.Drawing.Size(1068, 633);
+            this.tc_Member_New.Size = new System.Drawing.Size(1052, 594);
             this.tc_Member_New.TabIndex = 0;
             // 
             // tb_Choice
@@ -1316,7 +1316,7 @@
             this.tb_Member.Location = new System.Drawing.Point(4, 22);
             this.tb_Member.Name = "tb_Member";
             this.tb_Member.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tb_Member.Size = new System.Drawing.Size(1060, 607);
+            this.tb_Member.Size = new System.Drawing.Size(1060, 608);
             this.tb_Member.TabIndex = 1;
             this.tb_Member.Text = "Member";
             this.tb_Member.UseVisualStyleBackColor = true;
@@ -1560,7 +1560,7 @@
             this.tb_BookReturning.Controls.Add(this.flp_BooksReturn);
             this.tb_BookReturning.Location = new System.Drawing.Point(4, 22);
             this.tb_BookReturning.Name = "tb_BookReturning";
-            this.tb_BookReturning.Size = new System.Drawing.Size(1052, 594);
+            this.tb_BookReturning.Size = new System.Drawing.Size(1068, 633);
             this.tb_BookReturning.TabIndex = 3;
             this.tb_BookReturning.Text = "Book Returning";
             this.tb_BookReturning.UseVisualStyleBackColor = true;
@@ -1882,6 +1882,8 @@
             // 
             // flp_BorrowerList_Student
             // 
+            this.flp_BorrowerList_Student.AutoScroll = true;
+            this.flp_BorrowerList_Student.AutoScrollMinSize = new System.Drawing.Size(1045, 0);
             this.flp_BorrowerList_Student.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flp_BorrowerList_Student.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flp_BorrowerList_Student.Location = new System.Drawing.Point(3, 26);
@@ -1913,6 +1915,7 @@
             // 
             // flp_BorrowerList_Teacher
             // 
+            this.flp_BorrowerList_Teacher.AutoScroll = true;
             this.flp_BorrowerList_Teacher.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flp_BorrowerList_Teacher.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flp_BorrowerList_Teacher.Location = new System.Drawing.Point(3, 318);
@@ -1936,7 +1939,7 @@
             this.tb_Payment.Controls.Add(this.panel23);
             this.tb_Payment.Location = new System.Drawing.Point(4, 22);
             this.tb_Payment.Name = "tb_Payment";
-            this.tb_Payment.Size = new System.Drawing.Size(1052, 594);
+            this.tb_Payment.Size = new System.Drawing.Size(1068, 633);
             this.tb_Payment.TabIndex = 5;
             this.tb_Payment.Text = "Payment";
             this.tb_Payment.UseVisualStyleBackColor = true;
@@ -2625,7 +2628,7 @@
             // 
             this.label59.AutoSize = true;
             this.label59.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label59.Location = new System.Drawing.Point(3, 154);
+            this.label59.Location = new System.Drawing.Point(3, 237);
             this.label59.Name = "label59";
             this.label59.Size = new System.Drawing.Size(86, 13);
             this.label59.TabIndex = 9;
@@ -2734,7 +2737,7 @@
             this.tb_ViewReservation.Controls.Add(this.btn_ViewReservation_Return);
             this.tb_ViewReservation.Location = new System.Drawing.Point(4, 22);
             this.tb_ViewReservation.Name = "tb_ViewReservation";
-            this.tb_ViewReservation.Size = new System.Drawing.Size(1052, 594);
+            this.tb_ViewReservation.Size = new System.Drawing.Size(1068, 633);
             this.tb_ViewReservation.TabIndex = 7;
             this.tb_ViewReservation.Text = "View Reservations";
             this.tb_ViewReservation.UseVisualStyleBackColor = true;

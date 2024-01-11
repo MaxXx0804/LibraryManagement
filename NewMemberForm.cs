@@ -137,6 +137,7 @@ namespace Final_Project_OOP_and_DSA
             {
                 Debug.WriteLine(ex);
             }
+            frm_Login.ds.InitializeBorrowerListContent();
         }
     }
 }
