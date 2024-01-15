@@ -36,10 +36,6 @@ namespace Final_Project_OOP_and_DSA
             InitializeBorrowerListContent();
             InitializeBookReserveContents();
             CHANGEDEFAULTSETTINGS();
-            cb_BookBorrowing_Academic.Checked = false;
-            cb_BookBorrowing_Inside.Checked = false;
-            cb_Reserve_Academic.Checked = false;
-            cb_Reserve_Inside.Checked = false;
         }
         public Dashboard()
         {
